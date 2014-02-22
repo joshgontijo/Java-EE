@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+  <context-root>/mavenproject1</context-root>
+<!--  <resource-ref>
+    <res-ref-name>/ConnectionFactory</res-ref-name>
+    <jndi-name>ConnectionFactory</jndi-name>
+  </resource-ref>
+  <message-destination-ref>
+    <message-destination-ref-name>queue/test</message-destination-ref-name>
+    <jndi-name>queue/test</jndi-name>
+  </message-destination-ref>-->
+</jboss-web>
