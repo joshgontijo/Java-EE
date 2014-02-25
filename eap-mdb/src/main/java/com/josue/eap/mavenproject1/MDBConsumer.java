@@ -18,10 +18,10 @@ import javax.jms.TextMessage;
  *
  * @author Josue
  */
-@MessageDriven(name = "queue/test", activationConfig = {
+@MessageDriven(name = "queue/mdb-queue", activationConfig = {
     @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
     @ActivationConfigProperty(propertyName = "destination",
-            propertyValue = "queue/test")
+            propertyValue = "queue/mdb-queue")
 })
 public class MDBConsumer implements MessageListener {
 

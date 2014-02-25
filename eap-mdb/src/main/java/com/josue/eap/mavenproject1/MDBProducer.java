@@ -25,7 +25,7 @@ import javax.jms.TextMessage;
 @Stateless
 @LocalBean
 public class MDBProducer {
-    @Resource(lookup = "java:jboss/exported/jms/queue/test")
+    @Resource(lookup = "java:jboss/exported/jms/queue/mdb-queue")
     private Queue queueTest;
     @Resource(mappedName = "java:/ConnectionFactory")
     private ConnectionFactory connectionFactory;
