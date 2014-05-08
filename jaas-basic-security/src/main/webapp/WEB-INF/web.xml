@@ -29,6 +29,7 @@
     <login-config>
         <auth-method>BASIC</auth-method>
         <realm-name>jBossJaasMysqlRealm</realm-name>
+        <!-- for form login -->
 <!--        <form-login-config>
             <form-login-page>/login.jsp</form-login-page>
             <form-error-page>/error.html</form-error-page>
