@@ -6,14 +6,15 @@
 
 package com.josue.jee.jaas.basic.security;
 
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.UriInfo;
-import javax.ws.rs.PathParam;
+import java.util.logging.Logger;
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
 import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.SecurityContext;
 
 /**
  * REST Web Service
@@ -21,10 +22,12 @@ import javax.ws.rs.Produces;
  * @author Josue
  */
 @Path("/")
+@DeclareRoles({"user","ADMIN"}) // case sensitive
 public class SimpleResource {
 
     
     // project reference: http://www.thejavageek.com/2013/09/18/configure-jaas-jboss-7-1-mysql/
+    //http://blog.amatya.net/2012/09/implementing-security-with-jaas-on.html
     //check for web.xml and JBOSS-JAAS-FRAGMENT
     // A tatabase table should be created to store credentials
 
@@ -39,7 +42,13 @@ public class SimpleResource {
     @GET
     @Path("secured")
     @Consumes("text/plain")
-    public String secured() {
+    @RolesAllowed("user") //  Either this or <security-role><description>desc</description><role-name>user</role-name> in web.xml
+    public String secured(@Context SecurityContext sc) {
+        
+        LOG.info(String.valueOf(sc.getUserPrincipal()));
+        LOG.info(String.valueOf(sc.getAuthenticationScheme()));
+        LOG.info(String.valueOf(sc.isUserInRole("user")));
         return "PROTECTED RESOURCE";
     }
+    private static final Logger LOG = Logger.getLogger(SimpleResource.class.getName());
 }

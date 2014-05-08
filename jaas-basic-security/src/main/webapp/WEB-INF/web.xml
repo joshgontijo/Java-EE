@@ -14,11 +14,11 @@
         <display-name>Example Security Constraint</display-name>
         <web-resource-collection>
             <web-resource-name>Protected Area</web-resource-name>
-            <url-pattern>/webresources/secured</url-pattern>
+            <url-pattern>/webresources/*</url-pattern>
             <http-method>GET</http-method>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>user</role-name>
+            <role-name>*</role-name><!-- all roles-->
         </auth-constraint>
         <user-data-constraint>
             <transport-guarantee>NONE</transport-guarantee>
@@ -29,14 +29,16 @@
     <login-config>
         <auth-method>BASIC</auth-method>
         <realm-name>jBossJaasMysqlRealm</realm-name>
-        <form-login-config>
+<!--        <form-login-config>
             <form-login-page>/login.jsp</form-login-page>
             <form-error-page>/error.html</form-error-page>
-        </form-login-config>
+        </form-login-config>-->
     </login-config>
-    <security-role>
+    
+    <!-- Either this or @DeclareRoles must be present -->
+<!--    <security-role>
         <description> A user </description>
         <role-name>user</role-name>
-    </security-role>
+    </security-role>-->
     
 </web-app>
