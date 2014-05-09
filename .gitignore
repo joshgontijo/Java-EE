@@ -1,2 +1,3 @@
 /jaas-basic-security/target/
 /arqullian-wildfly-managed/target/
+/jpa-jta-basics/target/

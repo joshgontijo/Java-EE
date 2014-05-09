@@ -11,7 +11,7 @@ import org.jboss.arquillian.container.test.api.TargetsContainer;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,12 +28,12 @@ public class NewSessionBeanTest {
 
     @Deployment
     @TargetsContainer("wildfly-managed")
-    public static WebArchive createDeployment() {
+    public static JavaArchive createDeployment() {
 
-        WebArchive war = ShrinkWrap
-                .create(WebArchive.class, "wildfly-test.war")
+        JavaArchive war = ShrinkWrap
+                .create(JavaArchive.class, "wildfly-test.jar")
                 .addPackage(NewSessionBean.class.getPackage())
-                .addAsWebInfResource(EmptyAsset.INSTANCE, "beans.xml");
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 
         return war;
     }
