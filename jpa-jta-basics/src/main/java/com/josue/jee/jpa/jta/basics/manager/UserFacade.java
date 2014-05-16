@@ -15,18 +15,16 @@ import javax.persistence.PersistenceContext;
  * @author Josue
  */
 @Stateless(name = "uf")
-public class UserFacade extends AbstractFacade<User> {
+public class UserFacade {
 
     @PersistenceContext(unitName = "MY-PU")
     private EntityManager em;
 
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
+    public User find(Object uuid) {
+        return em.find(User.class, uuid);
     }
 
-    public UserFacade() {
-        super(User.class);
+    public void persist(User user) {
+        em.persist(user);
     }
-
 }

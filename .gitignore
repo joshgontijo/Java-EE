@@ -1,3 +1,8 @@
 /jaas-basic-security/target/
 /arqullian-wildfly-managed/target/
 /jpa-jta-basics/target/
+/liquibase-cdi/target/
+/liquibase-cdi-as7/liquibase-cdi-as7/target/
+/basic-liquibasecdi/target/
+/basic-liquibase-cdi-ear/basic-liquibase-cdi-ear-ear/target/
+/basic-liquibase-cdi-ear/basic-cdiliquibase/target/

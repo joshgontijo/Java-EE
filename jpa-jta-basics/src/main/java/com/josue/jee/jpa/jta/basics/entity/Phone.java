@@ -89,7 +89,7 @@ public class Phone implements Serializable {
 
     @Override
     public String toString() {
-        return "Phone{" + "id=" + id + ", number=" + number + ", owner=" + owner + '}';
+        return "Phone{" + "id=" + id + ", number=" + number + '}';
     }
 
 }

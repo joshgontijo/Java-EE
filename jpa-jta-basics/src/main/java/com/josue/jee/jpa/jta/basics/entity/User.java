@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -39,6 +40,8 @@ public class User implements Serializable {
 
     private String name;
 
+    //Use columnDefinition param for timesstamps. This avoid milliseconds error
+    @Column(name = "date_created", columnDefinition = "TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateCreated;
 

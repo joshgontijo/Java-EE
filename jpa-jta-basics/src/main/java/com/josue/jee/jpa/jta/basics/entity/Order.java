@@ -37,7 +37,7 @@ public class Order implements Serializable {
     @ManyToMany(mappedBy = "orders", fetch = FetchType.EAGER)
     private Set<User> user;
 
-    @Column(name = "order_date")
+    @Column(name = "order_date", columnDefinition = "TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate;
 
@@ -69,7 +69,6 @@ public class Order implements Serializable {
     public int hashCode() {
         int hash = 7;
         hash = 17 * hash + Objects.hashCode(this.id);
-        hash = 17 * hash + Objects.hashCode(this.user);
         hash = 17 * hash + Objects.hashCode(this.orderDate);
         return hash;
     }
@@ -97,7 +96,7 @@ public class Order implements Serializable {
 
     @Override
     public String toString() {
-        return "Order{" + "id=" + id + ", user=" + user + ", orderDate=" + orderDate + '}';
+        return "Order{" + "id=" + id + "+ orderDate=" + orderDate + '}';
     }
 
 }

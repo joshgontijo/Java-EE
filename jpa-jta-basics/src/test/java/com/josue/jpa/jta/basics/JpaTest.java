@@ -16,11 +16,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.annotation.Resource;
 import javax.ejb.EJB;
+import javax.transaction.TransactionSynchronizationRegistry;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.TargetsContainer;
 import org.jboss.arquillian.junit.Arquillian;
+import org.jboss.arquillian.transaction.api.annotation.TransactionMode;
+import org.jboss.arquillian.transaction.api.annotation.Transactional;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
@@ -33,11 +38,16 @@ import org.junit.runner.RunWith;
  * @author Josue
  */
 @RunWith(Arquillian.class)
-//@Transactional(TransactionMode.DISABLED)
+//@Transactional(TransactionMode.COMMIT)
 public class JpaTest {
+
+    private static final Logger LOG = Logger.getLogger(JpaTest.class.getName());
 
     @EJB(name = "uf")
     private UserFacade userFacade;
+
+    @Resource
+    TransactionSynchronizationRegistry tRegistry;
 
     @Deployment
     @TargetsContainer("wildfly-managed")
@@ -90,23 +100,47 @@ public class JpaTest {
         return orders;
     }
 
-    @Test
-    public void testSimple() { //todo change name
-
+    private User createUser() {
         User user1 = new User();
         user1.setAddress(createAddress(user1));
         user1.setDateCreated(new Date());
         user1.setPhones(createPhones(user1, 3));
         user1.setOrders(createOrders(Arrays.asList(user1), 3));
+        return user1;
+    }
 
-        userFacade.create(user1);
+    private enum TSTATUS {
+
+        STATUS_ACTIVE,
+        STATUS_MARKED_ROLLBACK,
+        STATUS_PREPARED,
+        STATUS_COMMITTED,
+        STATUS_ROLLEDBACK,
+        STATUS_UNKNOWN,
+        STATUS_NO_TRANSACTION,
+        STATUS_PREPARING,
+        STATUS_COMMITTING,
+        STATUS_ROLLING_BACK
+    }
+
+    private void traceTransaction() {
+        LOG.log(Level.INFO, "Transaction Status - METHOD: {0} - STATUS: {1}",
+                new String[]{Thread.currentThread().getStackTrace()[2].getMethodName(),
+                    TSTATUS.values()[tRegistry.getTransactionStatus()].name()});
+    }
+
+    @Test
+    @Transactional(TransactionMode.COMMIT)
+    public void testSimple() { //todo change name
+        User user1 = createUser();
+        userFacade.persist(user1);
 
         User foundUser = userFacade.find(user1.getId());
         LOG.info(user1.toString());
         LOG.info(foundUser.toString());
 
+        //assertion for timestamp custom def
+        Assert.assertEquals(user1.getDateCreated(), foundUser.getDateCreated());
         Assert.assertEquals(user1, foundUser);
-
     }
-    private static final Logger LOG = Logger.getLogger(JpaTest.class.getName());
 }
