@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <!-- Credential -->
+<!--    <changeSet author="josue" id="security-import-01">
+        <createTable tableName="credential">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="login" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="access_level_uuid" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+     User 
+    <changeSet author="josue" id="security-import-02">
+        <createTable tableName="user">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="credential_uuid" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    
+      Access level 
+    <changeSet author="josue" id="security-import-03">
+        <createTable tableName="access_level">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="access_level" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    
+     IMPORT ACCESS LEVEL 
+    <changeSet author="josue" id="security-import-04">
+        <insert tableName="access_level">
+            <column name="uuid" value="111111" />
+            <column name="access_level" value="GUEST" />
+        </insert>
+        <insert tableName="access_level">
+            <column name="uuid" value="222222" />
+            <column name="access_level" value="USER" />
+        </insert>
+        <insert tableName="access_level">
+            <column name="uuid" value="333333" />
+            <column name="access_level" value="ADMIN" />
+        </insert>
+    </changeSet>
+    
+     IMPORT CREDENTIAL 
+    <changeSet author="josue" id="security-import-06">
+        <insert tableName="credential">
+            <column name="uuid" value="aaaaaa" />
+            <column name="login" value="user1" />
+            <column name="password" value="user1PSW" />
+            <column name="access_level_uuid" value="111111" />
+        </insert>
+        <insert tableName="credential">
+            <column name="uuid" value="bbbbbb" />
+            <column name="login" value="user2" />
+            <column name="password" value="user2PSW" />
+            <column name="access_level_uuid" value="222222" />
+        </insert>
+        <insert tableName="credential">
+            <column name="uuid" value="cccccc" />
+            <column name="login" value="user3" />
+            <column name="password" value="user3PSW" />
+            <column name="access_level_uuid" value="333333" />
+        </insert>
+    </changeSet>
+    
+    
+     IMPORT USER 
+    <changeSet author="josue" id="security-import-05">
+        <insert tableName="user">
+            <column name="uuid" value="123456" />
+            <column name="email" value="user@guest.com" />
+            <column name="credential_uuid" value="aaaaaa" />
+        </insert>
+        <insert tableName="user">
+            <column name="uuid" value="78464654" />
+            <column name="email" value="user@user.com" />
+            <column name="credential_uuid" value="bbbbbb" />
+        </insert>
+        <insert tableName="user">
+            <column name="uuid" value="6554222" />
+            <column name="email" value="user@admin.com" />
+            <column name="credential_uuid" value="cccccc" />
+        </insert>
+    </changeSet>-->
+    
+    <!-- credential -->
+    <changeSet author="josue" id="security-import-01">
+        <createTable tableName="credential">
+            <column name="login" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <!-- roles -->
+    <changeSet author="josue" id="security-import-02">
+        <createTable tableName="roles">
+            <column name="role_name" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <!-- credential-roles -->
+    <changeSet author="josue" id="security-import-03">
+        <createTable tableName="credential_roles">
+            <column name="credential" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    <!-- FKs -->
+    <changeSet author="josue" id="security-import-04">
+        <addForeignKeyConstraint baseColumnNames="credential"
+                                 baseTableName="credential_roles"
+                                 constraintName="fk_credential"
+                                 referencedColumnNames="login"
+                                 referencedTableName="credential"/>
+    </changeSet>
+    
+    <changeSet author="josue" id="security-import-05">
+        <addForeignKeyConstraint baseColumnNames="role"
+                                 baseTableName="credential_roles"
+                                 constraintName="fk_roles"
+                                 referencedColumnNames="role_name"
+                                 referencedTableName="roles"/>
+    </changeSet>
+
+    <!-- insert credential-->
+    <changeSet author="josue" id="security-import-06">
+        <insert tableName="credential">
+            <column name="login" value="josue1" />
+            <column name="password" value="1" />
+        </insert>
+        <insert tableName="credential">
+            <column name="login" value="josue2" />
+            <column name="password" value="2" />
+        </insert>
+        <insert tableName="credential">
+            <column name="login" value="josue3" />
+            <column name="password" value="3" />
+        </insert>
+    </changeSet>
+    
+    <!-- insert roles -->
+    <changeSet author="josue" id="security-import-07">
+        <insert tableName="roles">
+            <column name="role_name" value="GUEST" />
+        </insert>
+        <insert tableName="roles">
+            <column name="role_name" value="USER" />
+        </insert>
+        <insert tableName="roles">
+            <column name="role_name" value="ADMIN" />
+        </insert>
+    </changeSet>
+    
+    <!-- insert credential-roles -->
+    <changeSet author="josue" id="security-import-08">
+        <insert tableName="credential_roles">
+            <column name="credential" value="josue1" />
+            <column name="role" value="GUEST" />
+        </insert>
+        <insert tableName="credential_roles">
+            <column name="credential" value="josue2" />
+            <column name="role" value="USER" />
+        </insert>
+        <insert tableName="credential_roles">
+            <column name="credential" value="josue3" />
+            <column name="role" value="ADMIN" />
+        </insert>
+    </changeSet>
+    
+
+</databaseChangeLog>

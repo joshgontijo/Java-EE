@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.josue.jee</groupId>
-    <artifactId>cdi-web</artifactId>
+    <artifactId>custom-security</artifactId>
     <version>0.1</version>
     <packaging>war</packaging>
 
-    <name>cdi-web</name>
+    <name>custom-security</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -15,6 +15,35 @@
     </properties>
     
     <dependencies>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-cdi</artifactId>
+            <version>3.1.1</version>
+            <type>jar</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.picketbox</groupId>
+            <artifactId>picketbox</artifactId>
+            <version>4.0.20.Beta2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.as</groupId>
+            <artifactId>jboss-as-ejb3</artifactId>
+            <version>7.2.0.Final</version>
+            <type>jar</type>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>

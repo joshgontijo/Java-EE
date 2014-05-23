@@ -6,3 +6,15 @@
 /basic-liquibasecdi/target/
 /basic-liquibase-cdi-ear/basic-liquibase-cdi-ear-ear/target/
 /basic-liquibase-cdi-ear/basic-cdiliquibase/target/
+/rest-apikey/target/
+/JavaApplication1/nbproject/private/
+/JavaApplication1/build/
+/basic-custom-security/target/
+/custom-security/target/
+/custom-security-eap/custom-security-eap-ejb/target/
+/custom-security-eap/custom-security-eap-ear/target/
+/javaee-cdi/target/
+/javaee-cdi/nbproject/private/
+/async-jaxrs/target/
+/event-observer-pattern/target/
+/mail-jbossas7/target/
