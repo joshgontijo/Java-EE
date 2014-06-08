@@ -1,0 +1,5 @@
+com\josue\jee\batch\csv\database\MyItemWriter.class
+com\josue\jee\batch\csv\database\MyItemReader.class
+com\josue\jee\batch\csv\database\MyItemProcessor.class
+com\josue\jee\batch\csv\database\rest\BatchServlet.class
+com\josue\jee\batch\csv\database\Person.class

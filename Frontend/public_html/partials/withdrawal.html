@@ -1,0 +1,187 @@
+<div id="page-wrapper">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Retirada <small>Retirada de materiais</small></h1>
+            <ol class="breadcrumb">
+                <li><a href="#/main"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                <li class="active"><i class="fa fa-bar-chart-o"></i> Retirada</li>
+            </ol>
+            <!--            <div class="alert alert-info alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            There are two options for charts: <a href="http://www.flotcharts.org/" target="_blank" class="alert-link">Flot charts</a> and <a href="http://www.oesmith.co.uk/morris.js/" class="alert-link" target="_blank">morris.js</a>. Choose which one best suits your needs, and make sure to master the documentation to get the most out of these charts!
+                        </div>-->
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-save"></i> Cadastrar</h3>
+            </div>
+            <div class="panel-body">
+
+
+                <div class="col-lg-6">
+                    <div class="row">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!--                    <legend>Busca</legend>-->
+                                    <div class="form-group">
+                                        <label class="col-md-1 control-label" for="textinput">ID</label>  
+                                        <div class="col-md-4">
+                                            <input ng-model="userSearch.id" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-save"></i> Funcionario</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped tablesorter">
+                                    <thead>
+                                        <tr>
+                                            <th>Id <i class="fa fa-tag"></i></th>
+                                            <th>Nome <i class="fa fa-sort"></i></th>
+                                            <th>Sobrenome <i class="fa fa-sort"></i></th>
+                                            <th>Departamento <i class="fa fa-sort"></i></th>
+                                            <th>Selecione <i class="fa fa-sort"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="user in users| filter:userSearch">
+                                            <td>{{user.id}}</td>
+                                            <td>{{user.firstName}}</td>
+                                            <td>{{user.lastName}}</td>
+                                            <td>{{user.department.name}}</td>
+                                            <td><button class="btn btn-success center-block" ng-click="setUser(user)"><i class="fa fa-check"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="row">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <!--                    <legend>Busca</legend>-->
+                                    <div class="form-group">
+                                        <label class="col-md-1 control-label" for="textinput">ID</label>  
+                                        <div class="col-md-4">
+                                            <input ng-model="gearSearch.id" type="text" placeholder="" class="form-control input-md">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-save"></i> Material</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="table-responsive">
+                                <table class="table table-hover table-striped tablesorter">
+                                    <thead>
+                                        <tr>
+                                            <th>Id <i class="fa fa-tag"></i></th>
+                                            <th>Tipo <i class="fa fa-sort"></i></th>
+                                            <th>Detalhe <i class="fa fa-sort"></i></th>
+                                            <th>Marca <i class="fa fa-sort"></i></th>
+                                            <th>Qtd. <i class="fa fa-sort"></i></th>
+                                            <th>Selecione <i class="fa fa-sort"></i></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="gear in gears| filter:gearSearch">
+                                            <td>{{gear.id}}</td>
+                                            <td>{{gear.gearType}}</td>
+                                            <td>{{gear.details}}</td>
+                                            <td>{{gear.mark}}</td>
+                                            <td>{{gear.available}}</td>
+                                            <td><button class="btn btn-success center-block" ng-click="setGear(gear)"><i class="fa fa-check"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="col-lg-12">
+                    <div class="col-lg-6">
+                        <span class="label label-success">{{selectedUser.id}}</span>
+                    </div>
+                    <div class="col-lg-6">
+                        <span class="label label-success">{{selectedgear.id}}</span>
+                    </div>
+                    <br />
+                    <hr />
+                    <div class="col-lg-6">
+                        <button class="btn btn-success" ng-click="finish()">Finalizar</button>
+                        <button class="btn btn-warning" ng-click="cancel()">Cancelar</button>
+                    </div>
+                </div>
+
+                <!--<span class="label label-primary center">user</span>-->
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Pie Chart Example with Tooltips</h3>
+            </div>
+            <div class="panel-body">
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped tablesorter">
+                        <thead>
+                            <tr>
+                                <th>Id<i class="fa fa-sort"></i></th>
+                                <th>Material Id <i class="fa fa-sort"></i></th>
+                                <th>Material Tipo <i class="fa fa-sort"></i></th>
+                                <th>Func Id <i class="fa fa-sort"></i></th>
+                                <th>Func Nome <i class="fa fa-sort"></i></th>
+                                <th>Qtd <i class="fa fa-sort"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="withdrawal in withdrawals| filter:searchText">
+                                <td>{{withdrawal.id}}</td>
+                                <td>{{withdrawal.gear.id}}</td>
+                                <td>{{withdrawal.gear.gearType}}</td>
+                                <td>{{withdrawal.worker.id}}</td>
+                                <td>{{withdrawal.worker.firstName}}</td>
+                                <td>adicionar QTD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

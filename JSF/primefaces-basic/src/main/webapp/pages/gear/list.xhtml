@@ -1,0 +1,42 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <p:panel id="basic" header="Gears" footer="Movie Details" style="margin-bottom:20px">
+
+        <h:panelGrid columns="2" cellpadding="10">
+            <h:form>
+                <label>Total: #{gearBean.gears.size()}</label>
+                <p:dataTable id="listtable" var="gear" value="#{gearBean.gears}">
+                    <p:column headerText="UUID">
+                        <h:outputText value="#{gear.uuid}" />
+                    </p:column>
+
+                    <p:column headerText="Type">
+                        <h:outputText value="#{gear.gearType}" />
+                    </p:column>
+
+                    <p:column headerText="Created">
+                        <h:outputText value="#{gear.dateCreated}" />
+                    </p:column>
+
+                    <p:column headerText="Remove">
+                        <p:commandButton action="#{gearBean.removeGear()}" icon="ui-icon-trash" update="@form" ajax="true">
+                            <f:setPropertyActionListener 
+                                target="#{gearBean.selected}" value="#{gear}" />
+                        </p:commandButton>
+                    </p:column>
+                    <p:column headerText="Edit">
+                        <p:commandButton action="#{gearBean.editGear()}" icon="ui-icon-edit" update="@form" ajax="true" onclick="GearEditDialog.show()">
+                            <f:setPropertyActionListener 
+                                target="#{gearBean.selected}" value="#{gear}" />
+                            <p:growl id="editDialog" showDetail="true" />
+                        </p:commandButton>
+                    </p:column>
+                </p:dataTable>
+            </h:form>
+        </h:panelGrid>
+    </p:panel>
+</ui:composition>
+

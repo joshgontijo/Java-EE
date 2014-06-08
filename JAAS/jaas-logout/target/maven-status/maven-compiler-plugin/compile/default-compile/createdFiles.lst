@@ -1,0 +1,3 @@
+com\josue\jee\jaas\custom\login\logout\LoginResource.class
+com\josue\jee\jaas\custom\login\logout\SimpleResource.class
+com\josue\jee\jaas\custom\login\logout\ApplicationConfig.class

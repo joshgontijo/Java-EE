@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="18.942" errors="1" skipped="0" tests="1" name="com.josue.jpa.jta.basics.JpaTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_51\jre\bin"/>
+    <property name="java.vm.version" value="24.51-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="test" value="com.josue.jpa.jta.basics.JpaTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\Josue\Documents\NetBeansProjects\Repository\javaee\jpa-jta-basics"/>
+    <property name="java.runtime.version" value="1.7.0_51-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_51\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Josue\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.0\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.0\java\maven\bin\m2.conf"/>
+    <property name="netbeansProjectMappings" value=""/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Ruby193\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Maven/bin;C:\Program Files\Java\jdk1.7.0_51/bin;C:\Program Files\MySQL\MySQL Server 5.5\bin;C:\apache-ant-1.9.2/bin;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\gource-0.39.win32;C:\apache-jmeter-2.10/bin;C:\Program Files\nodejs\;C:\Program Files (x86)\MySQL\MySQL Utilities 1.3.4\;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\Groovy\Groovy-2.2.1\bin;C:\android-sdk;C:\Users\Josue\AppData\Roaming\npm\;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Josue"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="Josue"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.0\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_51\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.josue.jpa.jta.basics.JpaTest -DnetbeansProjectMappings= -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.0\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_51"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_51\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_51\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_51\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_51\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 8.0\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0.235" classname="com.josue.jpa.jta.basics.JpaTest" name="testSimple">
+    <error message="Could not inject members" type="java.lang.RuntimeException">java.lang.RuntimeException: Could not inject members
+	at org.jboss.arquillian.testenricher.cdi.CDIInjectionEnricher.injectClass(CDIInjectionEnricher.java:135)
+	at org.jboss.arquillian.testenricher.cdi.CDIInjectionEnricher.enrich(CDIInjectionEnricher.java:78)
+	at org.jboss.arquillian.test.impl.TestInstanceEnricher.enrich(TestInstanceEnricher.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+	at org.jboss.arquillian.core.impl.EventContextImpl.invokeObservers(EventContextImpl.java:99)
+	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:81)
+	at org.jboss.arquillian.test.impl.TestContextHandler.createTestContext(TestContextHandler.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:88)
+	at org.jboss.arquillian.test.impl.TestContextHandler.createClassContext(TestContextHandler.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:88)
+	at org.jboss.arquillian.test.impl.TestContextHandler.createSuiteContext(TestContextHandler.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.jboss.arquillian.core.impl.ObserverImpl.invoke(ObserverImpl.java:94)
+	at org.jboss.arquillian.core.impl.EventContextImpl.proceed(EventContextImpl.java:88)
+	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:135)
+	at org.jboss.arquillian.core.impl.ManagerImpl.fire(ManagerImpl.java:115)
+	at org.jboss.arquillian.test.impl.EventTestRunnerAdaptor.before(EventTestRunnerAdaptor.java:95)
+	at org.jboss.arquillian.junit.Arquillian$4.evaluate(Arquillian.java:222)
+	at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:314)
+	at org.jboss.arquillian.junit.Arquillian.access$100(Arquillian.java:46)
+	at org.jboss.arquillian.junit.Arquillian$5.evaluate(Arquillian.java:240)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.jboss.arquillian.junit.Arquillian$2.evaluate(Arquillian.java:185)
+	at org.jboss.arquillian.junit.Arquillian.multiExecute(Arquillian.java:314)
+	at org.jboss.arquillian.junit.Arquillian.access$100(Arquillian.java:46)
+	at org.jboss.arquillian.junit.Arquillian$3.evaluate(Arquillian.java:199)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.jboss.arquillian.junit.Arquillian.run(Arquillian.java:147)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+	at org.jboss.arquillian.junit.container.JUnitTestRunner.execute(JUnitTestRunner.java:65)
+	at org.jboss.arquillian.protocol.servlet.runner.ServletTestRunner.executeTest(ServletTestRunner.java:160)
+	at org.jboss.arquillian.protocol.servlet.runner.ServletTestRunner.execute(ServletTestRunner.java:126)
+	at org.jboss.arquillian.protocol.servlet.runner.ServletTestRunner.doGet(ServletTestRunner.java:90)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:85)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:61)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.extension.undertow.security.SecurityContextAssociationHandler.handleRequest(SecurityContextAssociationHandler.java:78)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:113)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:56)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:45)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:61)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:58)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:70)
+	at io.undertow.security.handlers.SecurityInitialHandler.handleRequest(SecurityInitialHandler.java:76)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25)
+	at org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:61)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:25)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:240)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:227)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:73)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:146)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:168)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:727)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.lang.IllegalArgumentException: JBAS016081: Error injecting resource into CDI managed bean. Can&apos;t find a resource named java:comp/env/com.josue.jpa.jta.basics.JpaTest/tRegistry defined on javax.transaction.TransactionSynchronizationRegistry com.josue.jpa.jta.basics.JpaTest.tRegistry
+	at org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices.resolveResource(WeldResourceInjectionServices.java:188)
+	at org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices$1.createResource(WeldResourceInjectionServices.java:139)
+	at org.jboss.weld.injection.AbstractResourceInjection.getResourceReference(AbstractResourceInjection.java:44)
+	at org.jboss.weld.injection.AbstractResourceInjection.injectResourceReference(AbstractResourceInjection.java:53)
+	at org.jboss.weld.util.Beans.injectEEFields(Beans.java:331)
+	at org.jboss.weld.injection.producer.ResourceInjector.inject(ResourceInjector.java:59)
+	at org.jboss.weld.injection.producer.DefaultInjector$1.proceed(DefaultInjector.java:66)
+	at org.jboss.weld.injection.InjectionContextImpl.run(InjectionContextImpl.java:48)
+	at org.jboss.weld.injection.producer.DefaultInjector.inject(DefaultInjector.java:64)
+	at org.jboss.weld.injection.producer.BasicInjectionTarget.inject(BasicInjectionTarget.java:90)
+	at org.jboss.arquillian.testenricher.cdi.CDIInjectionEnricher.injectNonContextualInstance(CDIInjectionEnricher.java:145)
+	at org.jboss.arquillian.testenricher.cdi.CDIInjectionEnricher.injectClass(CDIInjectionEnricher.java:125)
+	... 84 more
+Caused by: javax.naming.NameNotFoundException: env/com.josue.jpa.jta.basics.JpaTest/tRegistry -- service jboss.naming.context.java.module.wildfly-test.wildfly-test.env.&quot;com.josue.jpa.jta.basics.JpaTest&quot;.tRegistry
+	at org.jboss.as.naming.ServiceBasedNamingStore.lookup(ServiceBasedNamingStore.java:104)
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:202)
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:179)
+	at org.jboss.as.naming.InitialContext$DefaultInitialContext.lookup(InitialContext.java:235)
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:188)
+	at org.jboss.as.naming.NamingContext.lookup(NamingContext.java:184)
+	at javax.naming.InitialContext.lookup(InitialContext.java:411)
+	at javax.naming.InitialContext.lookup(InitialContext.java:411)
+	at org.jboss.as.weld.services.bootstrap.WeldResourceInjectionServices.resolveResource(WeldResourceInjectionServices.java:186)
+	... 95 more
+</error>
+    <system-err>May 11, 2014 7:26:15 PM org.xnio.Xnio &lt;clinit&gt;
+INFO: XNIO version 3.2.0.Final
+May 11, 2014 7:26:15 PM org.xnio.nio.NioXnio &lt;clinit&gt;
+INFO: XNIO NIO Implementation Version 3.2.0.Final
+May 11, 2014 7:26:15 PM org.jboss.remoting3.EndpointImpl &lt;clinit&gt;
+INFO: JBoss Remoting version 4.0.0.Final
+</system-err>
+  </testcase>
+</testsuite>

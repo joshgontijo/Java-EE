@@ -1,0 +1,14 @@
+ <!-- FOR JBOSS AS 7 ONLY (MMODULE MAIL 1.0 / 1.1) -->
+ 
+ <!-- <subsystem xmlns="urn:jboss:domain:mail:1.0"> -->
+ <mail-session jndi-name="java:jboss/mail/gmail">
+	<smtp-server ssl="true" outbound-socket-binding-ref="gmail-smtp">
+        <login name="EMAIL_OR_LOGIN" password="PASSWORD"/>
+    </smtp-server>
+</mail-session>
+
+
+<!-- socket-binding-group section -->
+ <outbound-socket-binding name="gmail-smtp">
+    <remote-destination host="smtp.gmail.com" port="465"/>
+ </outbound-socket-binding>

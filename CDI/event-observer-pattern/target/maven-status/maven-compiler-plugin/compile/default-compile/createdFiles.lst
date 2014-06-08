@@ -1,0 +1,5 @@
+com\josue\jee\event\observer\pattern\events\EventObserver.class
+com\josue\jee\event\observer\pattern\events\EventDispatcher.class
+com\josue\jee\event\observer\pattern\EventResource.class
+com\josue\jee\event\observer\pattern\events\MyEvent.class
+com\josue\jee\event\observer\pattern\ApplicationConfig.class

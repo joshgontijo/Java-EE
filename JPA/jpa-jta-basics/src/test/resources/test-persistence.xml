@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="         http://java.sun.com/xml/ns/persistence         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="MY-PU" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>jdbc/mysql-test-ds</jta-data-source>
+        <properties>
+            <!-- Do not use this with Hibernate, its cause mysql syntax exception -->
+            <!--<property name="javax.persistence.schema-generation.database.action" value="create"/>-->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+        </properties>
+    </persistence-unit>
+</persistence>
