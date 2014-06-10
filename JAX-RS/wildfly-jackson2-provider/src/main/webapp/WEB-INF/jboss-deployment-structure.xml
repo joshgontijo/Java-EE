@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+    <deployment><!-- user sub-deployment in EAR projects -->
+        <exclusions>
+            <module name="org.jboss.resteasy.resteasy-jackson-provider"/>
+            <module name="org.jboss.resteasy.resteasy-jettison-provider"/>
+        </exclusions>
+ 
+        <dependencies>
+            <module name="org.jboss.resteasy.resteasy-jackson2-provider"/>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure> 
