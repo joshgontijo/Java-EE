@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.josue.jsf</groupId>
-    <artifactId>wildfly-jackson2-provider</artifactId>
+    <artifactId>wildfly-jackson-provider</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>wildfly-jackson2-provider</name>
+    <name>wildfly-jackson-provider</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
