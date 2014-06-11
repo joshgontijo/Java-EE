@@ -1,4 +1,4 @@
-com\josue\jsf\novapontocom\App.class
-com\josue\jsf\novapontocom\CustomJacksonProvider.class
-com\josue\jsf\novapontocom\GenericResource.class
-com\josue\jsf\novapontocom\ApplicationConfig.class
+com\josue\jaxrs\jackson2\provider\GenericResource.class
+com\josue\jaxrs\jackson2\provider\ApplicationConfig.class
+com\josue\jaxrs\jackson2\provider\App.class
+com\josue\jaxrs\jackson2\provider\CustomJacksonProvider.class
