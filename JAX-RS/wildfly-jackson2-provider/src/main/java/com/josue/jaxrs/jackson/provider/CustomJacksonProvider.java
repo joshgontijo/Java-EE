@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.josue.jaxrs.jackson2.provider;
+package com.josue.jaxrs.jackson.provider;
 
 import java.io.IOException;
 import java.io.OutputStream;

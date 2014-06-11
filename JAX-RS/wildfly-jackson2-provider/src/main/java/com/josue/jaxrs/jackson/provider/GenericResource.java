@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.josue.jaxrs.jackson2.provider;
+package com.josue.jaxrs.jackson.provider;
 
 import java.util.Date;
 import javax.ws.rs.core.Context;

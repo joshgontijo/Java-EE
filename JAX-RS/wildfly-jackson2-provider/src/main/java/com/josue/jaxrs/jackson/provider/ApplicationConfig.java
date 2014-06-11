@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.josue.jaxrs.jackson2.provider;
+package com.josue.jaxrs.jackson.provider;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -31,11 +31,15 @@ public class ApplicationConfig extends Application {
      * out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(com.josue.jaxrs.jackson2.provider.CustomJacksonProvider.class);
-        resources.add(com.josue.jaxrs.jackson2.provider.GenericResource.class);
+        resources.add(com.josue.jaxrs.jackson.provider.CustomJacksonProvider.class);
+        resources.add(com.josue.jaxrs.jackson.provider.GenericResource.class);
 //        resources.add(org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider.class);
 //        resources.add(org.codehaus.jackson.jaxrs.JacksonJsonProvider.class);
 //        resources.add(org.codehaus.jackson.jaxrs.JsonMappingExceptionMapper.class);
 //        resources.add(org.codehaus.jackson.jaxrs.JsonParseExceptionMapper.class);
+        resources.add(org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider.class);
+        resources.add(org.codehaus.jackson.jaxrs.JacksonJsonProvider.class);
+        resources.add(org.codehaus.jackson.jaxrs.JsonMappingExceptionMapper.class);
+        resources.add(org.codehaus.jackson.jaxrs.JsonParseExceptionMapper.class);
     }
 }
