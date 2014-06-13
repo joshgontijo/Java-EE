@@ -46,3 +46,10 @@
 /mavenproject3/target/
 /infinispan-basic/target/
 /JAX-RS/wildfly-jackson-provider/target/
+/EJB/standalone-ejb-local/main-ejb/target/
+/EJB/standalone-ejb-local/mavenproject1/main-ejb/target/
+/EJB/standalone-ejb-local/mavenproject1/mavenproject1-ear/target/
+/EJB/Remote/commons-remote/target/
+/EJB/Remote/commons/commons-ear/target/
+/EJB/Remote/commons/commons-ejb/target/
+/EJB/Remote/main-app/target/
