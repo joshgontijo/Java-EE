@@ -6,6 +6,7 @@
 package com.josue.eap.cdi.app.config.rest;
 
 import com.josue.eap.cdi.app.config.rest.cfg.Config;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -26,13 +27,21 @@ public class GenericResource {
 
     @Inject
     @Config(key = "email")
-    private String sampleString;
+    private String email;
+
+    @Inject
+    @Config(key = "name")
+    private String name;
+
+    @Inject
+    @Config(key = "age")
+    private int age;
 
     @GET
     @Produces("text/plain")
     public String getText() {
-        LOG.info(sampleString);
-        return sampleString;
+        LOG.log(Level.INFO, "Email={0} Name={1} Age={2}", new Object[]{email, name, age});
+        return "Email=" + email + " Name=" + name + " Age=" + age;
     }
 
 }
