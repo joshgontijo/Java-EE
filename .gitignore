@@ -53,3 +53,6 @@
 /EJB/Remote/commons/commons-ear/target/
 /EJB/Remote/commons/commons-ejb/target/
 /EJB/Remote/main-app/target/
+/CDI/cdi-app-config/target/
+/CDI/cdi-producer/target/
+/CDI/cdi-dynamic-injection/target/
