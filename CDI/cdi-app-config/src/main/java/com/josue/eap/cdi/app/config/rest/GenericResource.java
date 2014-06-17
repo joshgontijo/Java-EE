@@ -25,7 +25,7 @@ public class GenericResource {
     private static final Logger LOG = Logger.getLogger(GenericResource.class.getName());
 
     @Inject
-    @Config(key = "myKey")
+    @Config(key = "email")
     private String sampleString;
 
     @GET
