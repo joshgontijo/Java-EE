@@ -56,3 +56,5 @@
 /CDI/cdi-app-config/target/
 /CDI/cdi-producer/target/
 /CDI/cdi-dynamic-injection/target/
+/JAX-RS/jaxrs-filter/target/
+/JAX-RS/jaxrs-filter-binding/target/
