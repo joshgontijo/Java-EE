@@ -60,17 +60,21 @@
 
     <build>
         <plugins>
+            
+            <!-- Surefire plugin should b configured for tests-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.17</version>
                 <configuration>
-                    <!-- Fork every test because it will launch a separate AS instance -->
+                     <!-- Fork every test because it will launch a separate AS instance -->
+                     <!-- Set the system variables for testing -->
                     <forkMode>always</forkMode>
                     <systemPropertyVariables>
+                        <!-- Sets the default Log manager-->
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                        <jboss.home>${project.basedir}/target/wildfly-8.1.0.Final</jboss.home>
-                        <module.path>${project.basedir}/target/wildfly-8.1.0.Final/modules</module.path>
+<!--                        <jboss.home>${project.basedir}/target/wildfly-8.1.0.Final</jboss.home>
+                        <module.path>${project.basedir}/target/wildfly-8.1.0.Final/modules</module.path>-->
                     </systemPropertyVariables>
                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                 </configuration>
@@ -101,14 +105,16 @@
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>2.6</version>
                 <executions>
+                    
+                    
+                    <!-- This execution will download and unpack the server to target folder -->
                     <execution>
-                        <phase>validate</phase>
+                        <id>unpack</id>
+                        <phase>process-test-classes</phase>
                         <goals>
-                            <goal>copy</goal>
+                            <goal>unpack</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${endorsed.dir}</outputDirectory>
-                            <silent>true</silent>
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>org.wildfly</groupId>
@@ -118,6 +124,21 @@
                                     <overWrite>false</overWrite>
                                     <outputDirectory>target</outputDirectory>
                                 </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                    <!-- Execution ends here -->
+                    
+                    
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${endorsed.dir}</outputDirectory>
+                            <silent>true</silent>
+                            <artifactItems>
                                 <artifactItem>
                                     <groupId>javax</groupId>
                                     <artifactId>javaee-endorsed-api</artifactId>
