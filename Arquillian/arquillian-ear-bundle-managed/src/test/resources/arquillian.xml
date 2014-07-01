@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="
+        http://jboss.org/schema/arquillian
+        http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+
+    <!-- <container qualifier="glassfish-embedded"> -->
+    <!-- <configuration> -->
+    <!-- <property name="resourcesXml"> -->
+    <!-- src/test/resources-glassfish-embedded/glassfish-resources.xml -->
+    <!-- </property> -->
+    <!-- </configuration> -->
+    <!-- </container> -->
+
+    <!-- Exports test war file -->
+    <!-- 	<engine> -->
+    <!-- 	<property name="deploymentExportPath">target/deployments</property> -->
+    <!-- 	</engine> -->
+    <container qualifier="wildfly-managed" default="true">
+        <configuration>
+            <!-- If you want to use an existing JBoss AS installation, change the 
+            value of this property to that path -->
+            <!-- If you've already set the JBOSS_HOME environment variable, you can 
+            remove this configuration block -->
+            <property name="jbossHome">D:\JBoss\wildfly-8.1.0.CR1</property>
+            <property name="serverConfig">standalone-full.xml</property>
+            <property name="allowConnectingToRunningServer">true</property>
+            <property name="outputToConsole">true</property>
+        </configuration>
+    </container>
+
+    <!-- exports generated .jar / .war -->
+    <engine>
+        <property name="deploymentExportPath">target/</property>
+    </engine>
+
+
+    <!-- not used -->
+    <!-- <container qualifier="jbossas-managed-test-specific" > -->
+    <!-- <configuration> -->
+    <!-- If you want to use an existing JBoss AS installation, change the value 
+    of this property to that path -->
+    <!-- If you've already set the JBOSS_HOME environment variable, you can 
+    remove this configuration block -->
+    <!-- <property name="jbossHome">target\jboss-as-7.1.1.Final</property> -->
+    <!-- <property name="allowConnectingToRunningServer">true</property> -->
+    <!-- <property name="javaVmArguments">-Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n</property> -->
+    <!-- <property name="outputToConsole">true</property> -->
+    <!-- </configuration> -->
+    <!-- </container> -->
+
+</arquillian>
