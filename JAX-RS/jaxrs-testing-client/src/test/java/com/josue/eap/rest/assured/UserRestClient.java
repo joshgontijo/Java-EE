@@ -16,7 +16,7 @@ import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
 
 public class UserRestClient {
 
-    private static final String BASE_URI = "http://localhost:8080/rest-assured-1.0-SNAPSHOT/webresources";
+    private static final String BASE_URI = "http://localhost:8080/jaxrs-testing-client-1.0-SNAPSHOT/webresources";
     private static final String USER_RESOURCE = "user";
 
     Client client;
@@ -54,8 +54,8 @@ public class UserRestClient {
                 .accept(MediaType.APPLICATION_JSON).get(ClientResponse.class);
     }
 
-    public ClientResponse update(Object requestEntity) {
-        return webResource.path(USER_RESOURCE)
+    public ClientResponse update(Object requestEntity, String uuid) {
+        return webResource.path(USER_RESOURCE).path(uuid)
                 .type(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
                 .put(ClientResponse.class, requestEntity);

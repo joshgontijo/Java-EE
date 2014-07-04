@@ -56,6 +56,7 @@ public class UserResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response createUser(User user) {
 
         user.setUuid(UUID.randomUUID().toString());
@@ -66,8 +67,10 @@ public class UserResource {
     }
 
     @PUT
+    @Path("{uuid}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response updateUser(User user) {
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response updateUser(@PathParam("uuid") String uuid, User user) {
 
         User foundUser = users.get(user.getUuid());
         if (foundUser == null) {
@@ -80,7 +83,8 @@ public class UserResource {
     @DELETE
     @Path("{uuid}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response updateUser(@PathParam("uuid") String uuid) {
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteUser(@PathParam("uuid") String uuid) {
 
         User foundUser = users.get(uuid);
         if (foundUser == null) {

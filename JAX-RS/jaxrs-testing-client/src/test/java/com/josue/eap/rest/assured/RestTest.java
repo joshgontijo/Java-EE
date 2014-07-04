@@ -33,16 +33,6 @@ public class RestTest {
     public void testCreateUser() {
         User user = createUser(null);
 
-//        ClientResponse createResp = client.createUser(user);
-//        ClientResponse getByUuidResp = client.getByUuid("54e5f2fb-897d-4fb2-baff-901534c2c205");
-//        ClientResponse allResp = client.getAll();
-//
-//        User sample = getByUuidResp.getEntity(User.class);
-//        List<User> users = allResp.getEntity(List.class);
-//
-//        sample.setName("newName");
-//        ClientResponse updateResp = client.update(sample);
-//        ClientResponse deleteResp = client.delete(sample.getUuid());
         ClientResponse createResponse = client.createUser(user);
         User responseUser = createResponse.getEntity(User.class);
         assertEquals(Response.Status.CREATED.getStatusCode(), createResponse.getStatus());
@@ -55,16 +45,6 @@ public class RestTest {
     public void testGetByUuid() {
         User user = createUser(null);
 
-//        ClientResponse createResp = client.createUser(user);
-//        ClientResponse getByUuidResp = client.getByUuid("54e5f2fb-897d-4fb2-baff-901534c2c205");
-//        ClientResponse allResp = client.getAll();
-//
-//        User sample = getByUuidResp.getEntity(User.class);
-//        List<User> users = allResp.getEntity(List.class);
-//
-//        sample.setName("newName");
-//        ClientResponse updateResp = client.update(sample);
-//        ClientResponse deleteResp = client.delete(sample.getUuid());
         User createdUser = client.createUser(user).getEntity(User.class);
 
         ClientResponse foundByUuidResp = client.getByUuid(createdUser.getUuid());
@@ -84,25 +64,36 @@ public class RestTest {
             users.add(createdUser);
         }
 
-//        ClientResponse createResp = client.createUser(user);
-//        ClientResponse getByUuidResp = client.getByUuid("54e5f2fb-897d-4fb2-baff-901534c2c205");
-//        ClientResponse allResp = client.getAll();
-//
-//        User sample = getByUuidResp.getEntity(User.class);
-//        List<User> users = allResp.getEntity(List.class);
-//
-//        sample.setName("newName");
-//        ClientResponse updateResp = client.update(sample);
-//        ClientResponse deleteResp = client.delete(sample.getUuid());
         ClientResponse allUsersResponse = client.getAll();
 
         assertEquals(Response.Status.OK.getStatusCode(), allUsersResponse.getStatus());
         List<User> foundUsers = allUsersResponse.getEntity(List.class);
         assertTrue(foundUsers.size() >= users.size());
 
-        for (User u : users) {
-            assertTrue("foundUsers doesnt contains user: " + u, foundUsers.contains(u));
-        }
+    }
+
+    @Test
+    public void testUpdate() {
+        User user = createUser(null);
+
+        User created = client.createUser(user).getEntity(User.class);
+
+        created.setName("TheNewName");
+        ClientResponse response = client.update(created, created.getUuid());
+
+        assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
+        assertEquals(created, response.getEntity(User.class));
+
+    }
+
+    @Test
+    public void testDelete() {
+        User user = createUser(null);
+
+        User created = client.createUser(user).getEntity(User.class);
+
+        ClientResponse response = client.delete(created.getUuid());
+        assertEquals(Response.Status.NO_CONTENT.getStatusCode(), response.getStatus());
 
     }
 
