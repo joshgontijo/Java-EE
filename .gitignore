@@ -60,3 +60,4 @@
 /JAX-RS/jaxrs-filter-binding/target/
 /JAX-RS/jaxrs2-bean-param/target/
 /Arquillian/arquillian-ear-bundle-managed/target/
+/JAX-RS/jaxrs-subresources/target/
