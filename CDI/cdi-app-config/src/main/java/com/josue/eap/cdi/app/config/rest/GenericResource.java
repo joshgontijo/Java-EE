@@ -6,6 +6,7 @@
 package com.josue.eap.cdi.app.config.rest;
 
 import com.josue.eap.cdi.app.config.rest.cfg.Config;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Stateless;
@@ -37,11 +38,32 @@ public class GenericResource {
     @Config(key = "age")
     private int age;
 
+    @Inject
+    @Config
+    private Properties props;
+
     @GET
     @Produces("text/plain")
     public String getText() {
         LOG.log(Level.INFO, "Email={0} Name={1} Age={2}", new Object[]{email, name, age});
         return "Email=" + email + " Name=" + name + " Age=" + age;
+    }
+
+    @GET
+    @Path("all")
+    @Produces("text/plain")
+    public String getllProps() {
+        String all = "";
+
+        for (Object key : props.keySet()) {
+            String keyString = String.valueOf(key);
+            String val = props.getProperty(keyString);
+
+            all += key + "=" + val + "\n";
+        }
+        LOG.log(Level.INFO, "ALL: {0}", all);
+
+        return "".equals(all) ? "NO PROPERTIES" : "ALL PROPERTIES: \n" + all;
     }
 
 }

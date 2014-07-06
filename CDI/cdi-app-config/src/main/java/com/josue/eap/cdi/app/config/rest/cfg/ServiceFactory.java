@@ -24,7 +24,7 @@ public class ServiceFactory {
     private static final Logger log = Logger.getLogger(ServiceFactory.class.getName());
 
     @PostConstruct
-    private void loadProperties() {
+    public void loadProperties() {
         try {
             log.info("Initializing properties...");
             InputStream inputStream = ServiceFactory.class.getClassLoader().getResourceAsStream("app.properties");
@@ -57,6 +57,12 @@ public class ServiceFactory {
         String key = ip.getAnnotated().getAnnotation(Config.class).key();
         String prop = properties.getProperty(key);
         return Double.parseDouble(prop);
+    }
+
+    @Produces
+    @Config
+    public Properties getProperties() {
+        return this.properties;
     }
 
 }
