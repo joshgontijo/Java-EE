@@ -6,14 +6,13 @@
 package com.josue.jee.arqullian.wildfly.embedded;
 
 import com.josue.jee.arquillian.wildfly.embedded.NewSessionBean;
-import java.io.File;
 import javax.ejb.EJB;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.TargetsContainer;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.importer.ZipImporter;
-import org.jboss.shrinkwrap.api.spec.EnterpriseArchive;
+import org.jboss.shrinkwrap.api.asset.EmptyAsset;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,31 +29,32 @@ public class NewSessionBeanTest {
 
     @Deployment
     @TargetsContainer("wildfly-embedded")
-    public static EnterpriseArchive createDeployment() {
+    public static JavaArchive createDeployment() {
 
-        EnterpriseArchive ear = ShrinkWrap.create(EnterpriseArchive.class, "application-ear.ear")
-                .as(ZipImporter.class)
-                .importFrom(new File("eap-lottery-ear-1.0-SNAPSHOT.ear"))
-                .as(EnterpriseArchive.class);
+        JavaArchive war = ShrinkWrap
+                .create(JavaArchive.class, "wildfly-test.jar")
+                .addPackage(NewSessionBean.class.getPackage())
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 
-        return ear;
+        return war;
     }
 
+    
     @Test
-    public void testSessionBean1() {
-
+    public void testSessionBean1(){
+        
         assertEquals(sessionBean.businessMethod(), "josue");
     }
-
+    
     @Test
-    public void testSessionBean2() {
-
+    public void testSessionBean2(){
+        
         assertEquals(sessionBean.businessMethod(), "josue");
     }
-
+    
     @Test
-    public void testSessionBean3() {
-
+    public void testSessionBean3(){
+        
         assertEquals(sessionBean.businessMethod(), "josue");
     }
 }

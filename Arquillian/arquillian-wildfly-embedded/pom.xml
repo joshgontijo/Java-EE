@@ -73,11 +73,8 @@
                     <systemPropertyVariables>
                         <!-- Sets the default Log manager-->
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                        
-                        <!-- THIS PROP CHANGES THE TARGET CONTAINER, SEE: https://docs.jboss.org/author/display/ARQ/Container+config+runtime+selection -->
-                        <arquillian.launch>wildfly-embedded</arquillian.launch>
-                        
-
+<!--                        <jboss.home>${project.basedir}/target/wildfly-8.1.0.Final</jboss.home>
+                        <module.path>${project.basedir}/target/wildfly-8.1.0.Final/modules</module.path>-->
                     </systemPropertyVariables>
                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                 </configuration>

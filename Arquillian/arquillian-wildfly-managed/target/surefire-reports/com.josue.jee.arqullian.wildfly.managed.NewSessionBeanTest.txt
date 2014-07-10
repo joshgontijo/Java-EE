@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.josue.jee.arqullian.wildfly.managed.NewSessionBeanTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.102 sec

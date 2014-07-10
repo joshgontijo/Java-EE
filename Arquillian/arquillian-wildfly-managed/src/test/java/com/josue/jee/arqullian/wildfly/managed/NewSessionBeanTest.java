@@ -5,15 +5,14 @@
  */
 package com.josue.jee.arqullian.wildfly.managed;
 
-import java.io.File;
+import javax.ejb.EJB;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.container.test.api.TargetsContainer;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.importer.ZipImporter;
-import org.jboss.shrinkwrap.api.spec.EnterpriseArchive;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -24,34 +23,25 @@ import org.junit.runner.RunWith;
 @RunWith(Arquillian.class)
 public class NewSessionBeanTest {
 
-//    @EJB
-//    private NewSessionBean sessionBean;
-    //eap-lottery-ear-1.0-SNAPSHOT.ear
+    @EJB
+    private NewSessionBean sessionBean;
+
     @Deployment
     @TargetsContainer("wildfly-managed")
-    public static EnterpriseArchive createDeployment() {
+    public static JavaArchive createDeployment() {
 
-        //Load the target EAR
-        //Testin
-        EnterpriseArchive ear = ShrinkWrap.create(EnterpriseArchive.class, "application-ear.ear")
-                .as(ZipImporter.class)
-                .importFrom(new File("eap-lottery-ear-1.0-SNAPSHOT.ear"))
-                .as(EnterpriseArchive.class);
-
-        //Add this class and other general libs to deployment
-        JavaArchive testLibraryHelper = ShrinkWrap.create(JavaArchive.class)
-                .addClass(NewSessionBeanTest.class)
-                //now for CDI working in testLibraryHelper
+        JavaArchive war = ShrinkWrap
+                .create(JavaArchive.class, "wildfly-test.jar")
+                .addPackage(NewSessionBean.class.getPackage())
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 
-        ear.addAsLibrary(testLibraryHelper);
-
-        return ear;
+        return war;
     }
 
+    
     @Test
-    public void testSessionBean() {
-
-//        assertEquals(sessionBean.businessMethod(), "josue");
+    public void testSessionBean(){
+        
+        assertEquals(sessionBean.businessMethod(), "josue");
     }
 }
