@@ -1,13 +1,14 @@
 <job id="myJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
-    <step id="myStep">
-        <chunk item-count="1000">
+    <step id="myStep" next="step2">
+        <!-- Checkpoint is implicit for chunk items -->
+        <chunk item-count="4">
             <reader ref="myItemReader"/>
             <processor ref="myItemProcessor"/>
             <writer ref="myItemWriter"/>
         </chunk>
-        <listeners>
-            <listener ref="infoItemProcessListener"/>
-        </listeners>	
+    </step>
+    <step id="step2">
+        <batchlet ref="myBatchlet"/>
     </step>
     <listeners>
         <listener ref="infoJobListener"/>
