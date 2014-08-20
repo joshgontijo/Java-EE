@@ -1,0 +1,8 @@
+
+<!-- <subsystem xmlns="urn:jboss:domain:security:1.2"> -->
+
+<security-domain name="hackedRealm">
+    <authentication>
+        <login-module code="com.josue.jee.custom.security.rest.hacking.MySimpleUsernamePasswordLoginModule" flag="required"/>
+    </authentication>
+</security-domain>

@@ -1,0 +1,3 @@
+com\josue\eap\jboss\custom\loginmodule\rest\SimpleResource.class
+com\josue\eap\jboss\custom\loginmodule\rest\ApplicationConfig.class
+com\josue\eap\jboss\custom\loginmodule\rest\NewJaxRsFilter.class

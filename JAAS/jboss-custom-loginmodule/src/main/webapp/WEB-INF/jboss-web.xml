@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<jboss-web> 
+    <!-- enable custom login module -->
+     <security-domain>java:/jaas/hackedRealm</security-domain>
+</jboss-web>

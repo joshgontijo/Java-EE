@@ -29,7 +29,7 @@ public class SimpleResource {
     // project reference: http://www.thejavageek.com/2013/09/18/configure-jaas-jboss-7-1-mysql/
     //http://blog.amatya.net/2012/09/implementing-security-with-jaas-on.html
     //check for web.xml and JBOSS-JAAS-FRAGMENT
-    // A tatabase table should be created to store credentials
+    // A database table should be created to store credentials
     @Inject
     private Principal principal;
 

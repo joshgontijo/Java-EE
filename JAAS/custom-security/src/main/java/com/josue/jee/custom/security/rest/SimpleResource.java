@@ -33,6 +33,7 @@ public class SimpleResource {
     public String secured(@Context SecurityContext sc) {
 
         String name = principal == null ? "NONE" : principal.getName();
+        LOG.info(String.valueOf(sc.isUserInRole("josue")));
         return "PROTECTED RESOURCE, PRINCIPAL: " + name;// + customPrincipal.getLogin() + " - " + customPrincipal.getRole();
     }
     private static final Logger LOG = Logger.getLogger(SimpleResource.class.getName());
