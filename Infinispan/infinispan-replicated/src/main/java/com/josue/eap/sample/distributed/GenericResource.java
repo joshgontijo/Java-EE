@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.josue.jee.infinispan.basic;
+package com.josue.eap.sample.distributed;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -25,7 +25,7 @@ import org.infinispan.manager.CacheContainer;
 public class GenericResource {
 
     @SuppressWarnings("unused")
-    //java:jboss/infinispan/container/server --- cluster ready
+    //cache-container name="server" --- cluster ready
     @Resource(lookup = "java:jboss/infinispan/container/server")
     private CacheContainer container;
 
@@ -51,10 +51,12 @@ public class GenericResource {
     }
 
     /*
-     <subsystem xmlns="urn:jboss:domain:infinispan:2.0">
-     <cache-container name="myCache" default-cache="cachedb" jndi-name="java:jboss/infinispan/myCache">
-     <local-cache name="cachedb"/>
+     <cache-container name="server" default-cache="default" module="org.wildfly.clustering.server" aliases="singleton cluster">
+          <transport lock-timeout="60000"/>
+          <replicated-cache name="default" batching="true" mode="SYNC">
+             <locking isolation="REPEATABLE_READ"/>
+          </replicated-cache>
      </cache-container>
-     .....
      */
+
 }
