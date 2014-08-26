@@ -27,7 +27,7 @@ public class InifinispanResource {
 
     private static final Logger LOG = Logger.getLogger(InifinispanResource.class.getName());
 
-    @Resource(lookup = "java:jboss/infinispan/myCache")
+    @Resource(lookup = "java:jboss/infinispan/container/cluster")
     private CacheContainer container;
 //    @Inject
 //    transient AdvancedCache<Object, Object> cache;
@@ -42,10 +42,10 @@ public class InifinispanResource {
     @Produces("text/plain")
     public String getText(@QueryParam("name") String name) {
 
-//        Object cahedName = cache.get("name");
-//        LOG.info(cahedName.toString());
-//        return cahedName.toString();
-        return "OK";
+        Object cahedName = cache.get("name");
+        LOG.info(cahedName.toString());
+        return cahedName.toString();
+//        return "OK";
     }
 
 }
