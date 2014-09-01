@@ -1,0 +1,6 @@
+com\josue\eap\transaction\listener\TXStatusListener.class
+com\josue\eap\transaction\listener\core\AnotherTransactionBean.class
+com\josue\eap\transaction\listener\core\SampleEJB.class
+com\josue\eap\transaction\listener\rest\ApplicationConfig.class
+com\josue\eap\transaction\listener\rest\GenericResource.class
+com\josue\eap\transaction\listener\model\SampleUser.class
