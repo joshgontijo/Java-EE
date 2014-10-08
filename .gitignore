@@ -64,3 +64,4 @@
 /Arquillian/arquillian-service-stub/target/
 /Batch/batch-checkpoint/target/
 /JAX-RS/resteasy-file-upload/target/
+/Batch/batch-complete-jpa/target/

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+    <datasource enabled="true" jndi-name="jdbc/data-processorDS"
+                    pool-name="MysqlPool">
+        <connection-url>jdbc:mysql://localhost:3306/dynamic_db</connection-url>
+        <driver>mysql</driver>
+        <security>
+            <user-name>root</user-name>
+            <password>root</password>
+        </security>
+    </datasource>
+    
+<!--    <datasource enabled="true" jndi-name="jdbc/data-processorDS"
+                    pool-name="MysqlPool">
+        <connection-url>jdbc:mysql://mysql.cabuadnkzimv.us-west-2.rds.amazonaws.com:3306/data_processor</connection-url>
+        <driver>mysql</driver>
+        <security>
+            <user-name>josueeduardo</user-name>
+            <password>peugeot206</password>
+        </security>
+    </datasource>-->
+<!--    <datasource enabled="true" jndi-name="jdbc/data-processorDS"
+                    pool-name="MysqlPool">
+        <connection-url>jdbc:mysql://104.131.254.107:3306/data_processor</connection-url>
+        <driver>mysql</driver>
+        <security>
+            <user-name>root</user-name>
+            <password>root</password>
+        </security>
+    </datasource>-->
+</datasources> 

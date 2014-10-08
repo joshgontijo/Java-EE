@@ -5,9 +5,13 @@
  */
 package com.josue.eap.batch.checkpoint;
 
+import com.josue.eap.batch.checkpoint.tracker.Track;
+import java.util.UUID;
 import java.util.logging.Logger;
 import javax.batch.api.AbstractBatchlet;
 import javax.batch.runtime.BatchStatus;
+import javax.batch.runtime.context.JobContext;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 /**
@@ -19,11 +23,16 @@ public class MyBatchlet extends AbstractBatchlet {
 
     private static final Logger LOG = Logger.getLogger(MyBatchlet.class.getName());
 
+    @Inject
+    JobContext jobContext;
+    
     @Override
     public String process() throws Exception {
         LOG.info("Running iniside Batchlet");
 
-        return BatchStatus.COMPLETED.toString();
+        jobContext.setTransientUserData(new Track(10, UUID.randomUUID().toString()));
+        
+        return BatchStatus.STARTED.toString();
     }
 
 }

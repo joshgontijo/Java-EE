@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    
+    <changeSet author="Josue (generated)" id="data-processor-changeset-1">
+        <createTable tableName="document">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="file_name" type="VARCHAR(255)"/>
+            <column name="owner_uuid" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-2">
+        <createTable tableName="entry">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="content" type="VARCHAR(255)"/>
+            <column name="line" type="BIGINT(19)"/>
+            <column name="header_uuid" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-3">
+        <createTable tableName="header">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="header_order" type="INT(10)"/>
+            <column name="header_value" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="document_uuid" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-4">
+        <createTable tableName="job_info">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="completed" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="CURRENT_TIMESTAMP" name="create_date" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="0000-00-00 00:00:00" name="end_date" type="TIMESTAMP"/>
+            <column name="goal" type="BIGINT(19)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="job_id" type="BIGINT(19)"/>
+            <column name="job_name" type="VARCHAR(255)"/>
+            <column name="priority" type="VARCHAR(255)"/>
+            <column defaultValue="0000-00-00 00:00:00" name="start_date" type="TIMESTAMP"/>
+            <column name="status" type="VARCHAR(255)"/>
+            <column name="document_uuid" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-5">
+        <createTable tableName="message">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="message" type="VARCHAR(255)"/>
+            <column name="row_id" type="INT(10)"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="header_uuid" type="VARCHAR(255)"/>
+            <column name="jobInfo_uuid" type="VARCHAR(255)"/>
+            <column name="job_info_id" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-6">
+        <createTable tableName="script">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="content" type="VARCHAR(255)"/>
+            <column name="label" type="VARCHAR(255)"/>
+            <column name="target_type" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-7">
+        <createTable tableName="users_db">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    
+    
+    <changeSet author="Josue (generated)" id="data-processor-changeset-8">
+        <addForeignKeyConstraint baseColumnNames="jobInfo_uuid" baseTableName="message" constraintName="FK_5ahfjhnqvq1ndhrfsmxado6yf" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="uuid" referencedTableName="job_info"/>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-9">
+        <addForeignKeyConstraint baseColumnNames="document_uuid" baseTableName="header" constraintName="FK_613hbfxoc0b6893iih3oriuxa" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="uuid" referencedTableName="document"/>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-10">
+        <addForeignKeyConstraint baseColumnNames="owner_uuid" baseTableName="document" constraintName="FK_bnmg0v5p56h2naosurv2bvkeq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="uuid" referencedTableName="users_db"/>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-11">
+        <addForeignKeyConstraint baseColumnNames="document_uuid" baseTableName="job_info" constraintName="FK_jqy42off64m78lsqtq6iuvbpf" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="uuid" referencedTableName="document"/>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-12">
+        <addForeignKeyConstraint baseColumnNames="job_info_id" baseTableName="message" constraintName="FK_pkwt3i9baleg49adluf8lystg" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="uuid" referencedTableName="job_info"/>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-13">
+        <addForeignKeyConstraint baseColumnNames="header_uuid" baseTableName="message" constraintName="FK_r7yo7vhsi10n2jotxmt58xf2x" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="uuid" referencedTableName="header"/>
+    </changeSet>
+    <changeSet author="Josue (generated)" id="data-processor-changeset-14">
+        <addForeignKeyConstraint baseColumnNames="header_uuid" baseTableName="entry" constraintName="FK_sbrlr06q1gbjavfare52tiyfv" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="uuid" referencedTableName="header"/>
+    </changeSet>
+    
+    
+    <changeSet author="Josue" id="data-processor-changeset-15">
+        <insert tableName="script">
+            <column name="uuid" value="926caa10-43a4-11e4-916c-0800200c9a66"/>
+            <column name="content" value="value.toUpperCase()"/>
+            <column name="label" value="Uppercase"/>
+            <column name="target_type" value="java.lang.String"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Josue" id="data-processor-changeset-16">
+        <insert tableName="script">
+            <column name="uuid" value="c5ff2dd0-43a4-11e4-916c-0800200c9a66"/>
+            <column name="content" value="value.toLowerCase()"/>
+            <column name="label" value="LowerCase"/>
+            <column name="target_type" value="java.lang.String"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Josue" id="data-processor-changeset-17">
+        <insert tableName="script">
+            <column name="uuid" value="d8d1cb10-43a5-11e4-916c-0800200c9a66"/>
+            <column name="content" value="value * 2"/>
+            <column name="label" value="Uppercase"/>
+            <column name="target_type" value="java.lang.Integer"/>
+        </insert>
+    </changeSet>
+    <changeSet author="Josue" id="data-processor-changeset-18">
+        <insert tableName="script">
+            <column name="uuid" value="201078a0-43a6-11e4-916c-0800200c9a66"/>
+            <column name="content" value="new Date().format('dd-MM-yyyy')"/>
+            <column name="label" value="Date Format -testing-"/>
+            <column name="target_type" value="java.util.Date"/>
+        </insert>
+    </changeSet>
+    
+    
+<!--    
+    
+    
+     Credential 
+    <changeSet author="josue" id="data-processor-changeset-1">
+        <createTable tableName="document">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="date_created" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="date_updated" type="TIMESTAMP" />
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="access_level" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+     User 
+    <changeSet author="josue" id="data-processor-changeset-2">
+        <createTable tableName="users_db">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" primaryKey="true"/>
+            </column>
+            <column name="date_created" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="date_updated" type="TIMESTAMP" />
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="first_name" type="VARCHAR(255)" />
+            <column name="last_name" type="VARCHAR(255)" />
+            <column name="credential_uuid" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-3">
+        <addUniqueConstraint columnNames="email"
+                             constraintName="unique_email" tableName="users_db" />
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-4">
+        <addForeignKeyConstraint baseColumnNames="credential_uuid"
+                                 baseTableName="users_db" constraintName="fk_users_db_credential"
+                                 referencedColumnNames="uuid" referencedTableName="credential" />
+    </changeSet>
+
+     lotto 
+    <changeSet author="josue" id="data-processor-changeset-5">
+        <createTable tableName="lotto">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="date_created" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="date_updated" type="TIMESTAMP" />
+            <column name="draw_date" type="DATETIME" />
+            <column name="draw_id" type="INT(11)">
+                <constraints nullable="false" />
+            </column>
+            <column name="lotto_type" type="INT(11)">
+                <constraints nullable="false" />
+            </column>
+            <column name="next_draw_rating" type="DOUBLE" />
+            <column name="jackpot_value" type="DOUBLE" />
+            <column name="total_amount" type="DOUBLE" />
+        </createTable>
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-6">
+        <addUniqueConstraint columnNames="draw_id, lotto_type"
+                             constraintName="unique_drawId_lottoType" tableName="lotto" />
+    </changeSet>
+
+     draw 
+    <changeSet author="josue" id="data-processor-changeset-7">
+        <createTable tableName="draw">
+            <column name="lotto_uuid" type="VARCHAR(255)" />
+            <column name="draw_value" type="INT(11)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-8">
+        <addForeignKeyConstraint baseColumnNames="lotto_uuid"
+                                 baseTableName="draw" constraintName="fk_draw_lotto"
+                                 referencedColumnNames="uuid" referencedTableName="lotto" />
+    </changeSet>
+
+     winners 
+    <changeSet author="josue" id="data-processor-changeset-9">
+        <createTable tableName="winners">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="date_created" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="date_updated" type="TIMESTAMP" />
+            <column name="winners_count" type="INT(11)" />
+            <column name="winners_description" type="VARCHAR(255)" />
+            <column name="winners_prizes" type="DOUBLE" />
+            <column name="lotto_uuid" type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-10">
+        <addForeignKeyConstraint baseColumnNames="lotto_uuid"
+                                 baseTableName="winners" constraintName="fk_winners_lotto"
+                                 referencedColumnNames="uuid" referencedTableName="lotto" />
+    </changeSet>
+
+
+     Lotto criteria search 
+    <changeSet author="josue" id="data-processor-changeset-11">
+        <createTable tableName="lotto_criteria_search">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="date_created" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="date_updated" type="TIMESTAMP" />
+            <column name="name" type="VARCHAR(255)" />
+            <column name="owner_uuid" type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-12">
+        <addForeignKeyConstraint baseColumnNames="owner_uuid"
+                                 baseTableName="lotto_criteria_search" constraintName="fk_users_db_lottoCriteriaSearch"
+                                 referencedColumnNames="uuid" referencedTableName="users_db" />
+    </changeSet>
+
+     Lotto criteria 
+    <changeSet author="josue" id="data-processor-changeset-13">
+        <createTable tableName="lotto_criteria">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="date_created" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="date_updated" type="TIMESTAMP" />
+            <column name="field_name" type="VARCHAR(255)" />
+            <column name="lotto_criteria_search_uuid" type="VARCHAR(255)" />
+            <column name="logic_operand" type="INT(11)" />
+            <column name="operand_type" type="INT(11)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-14">
+        <createTable tableName="lotto_criteria_values">
+            <column name="lotto_criteria_uuid" type="VARCHAR(255)" />
+            <column name="field_value" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-15">
+        <addForeignKeyConstraint baseColumnNames="lotto_criteria_uuid"
+                                 baseTableName="lotto_criteria_values" constraintName="fk_lottocriteria_lottoCriteriaValues"
+                                 referencedColumnNames="uuid" referencedTableName="lotto_criteria" />
+    </changeSet>
+
+    <changeSet author="josue" id="data-processor-changeset-16">
+        <addForeignKeyConstraint baseColumnNames="lotto_criteria_search_uuid"
+                                 baseTableName="lotto_criteria" constraintName="fk_lottoCriteriaSearch_lottoCriteriaValues"
+                                 referencedColumnNames="uuid" referencedTableName="lotto_criteria_search" />
+    </changeSet>
+
+     Logging 
+     TODO move to utils project 
+    <changeSet author="josue" id="data-processor-changeset-117">
+        <createTable tableName="logging">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="date_created" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="type" type="TIMESTAMP">
+                <constraints nullable="false" />
+            </column>
+            <column name="log_level" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>-->
+
+</databaseChangeLog>
