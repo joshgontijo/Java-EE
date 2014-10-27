@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Properties;
+import java.util.StringTokenizer;
 import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.naming.NamingException;
@@ -58,6 +59,18 @@ public class UserResource {
         Database database = DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(connection));
         liquibase = new Liquibase("liquibase/changelog.xml", new ClassLoaderResourceAccessor(this.getClass().getClassLoader()), database);
         liquibase.update(new Contexts());
+    }
+
+    @POST
+    @Path("/update-datasource")
+    @Consumes(MediaType.TEXT_PLAIN)
+    public void updateDatasource(String propString) throws LiquibaseException, SQLException, NamingException {
+
+        Properties props = new Properties();
+        for (String line : propString.split("\n")) {
+            String[] keyValue = line.split(",");
+            props.put(keyValue[0], keyValue[1]);
+        }
     }
 
     @POST
