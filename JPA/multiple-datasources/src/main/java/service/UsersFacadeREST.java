@@ -7,6 +7,7 @@ package service;
 
 import com.sample.multiple.datasources.Users;
 import java.util.List;
+import java.util.Properties;
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -22,8 +23,10 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
 import service.externaldb.BMT;
+import service.externaldb.InMemoryDbProperties;
 
 /**
  *
@@ -40,6 +43,9 @@ public class UsersFacadeREST extends AbstractFacade<Users> {
     @Resource
     TransactionSynchronizationRegistry tsr;
 
+    @Inject
+    InMemoryDbProperties inMemorySampleStorage;
+
     @PersistenceContext(unitName = "com.sample_multiple-datasources_war_1.0PU")
     private EntityManager em;
 
@@ -50,12 +56,27 @@ public class UsersFacadeREST extends AbstractFacade<Users> {
         super(Users.class);
     }
 
+    @POST
+    @Path("/update-datasource")
+    @Consumes(MediaType.TEXT_PLAIN)
+    public void updateDatasource(String propString) {
+
+        Properties props = new Properties();
+        for (String line : propString.split("\n")) {
+            String[] keyValue = line.split("=");
+            props.put(keyValue[0], keyValue[1]);
+        }
+        //save to database
+        inMemorySampleStorage.saveProps(props);
+
+    }
+
     @GET
     @Path("migrate")
     @Produces({"application/xml", "application/json"})
     public List<Users> migrate() {
         List<Users> foundUsers = bmt.fetchUsersFromDynamicDatasource();
-        for(Users u : foundUsers){
+        for (Users u : foundUsers) {
             em.merge(u);
         }
         return foundUsers;
