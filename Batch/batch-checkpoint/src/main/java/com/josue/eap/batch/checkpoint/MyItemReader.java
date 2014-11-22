@@ -25,7 +25,7 @@ public class MyItemReader extends AbstractItemReader {
 
     @Override
     public Object readItem() throws Exception {
-        
+
         if (ACTUAL < SIZE) {
             ACTUAL++;
             LOG.log(Level.INFO, "READING ITEM: {0}", ACTUAL);
@@ -35,7 +35,7 @@ public class MyItemReader extends AbstractItemReader {
     }
 
     @Override
-    public void open(Serializable checkpoint)  {
+    public void open(Serializable checkpoint) {
         if (checkpoint != null) {
             LOG.log(Level.INFO, "**** CHECKPOINT STATE: {0}", checkpoint.toString());
         } else {
@@ -45,9 +45,7 @@ public class MyItemReader extends AbstractItemReader {
 
     @Override
     public Serializable checkpointInfo() throws Exception {
-        return super.checkpointInfo(); //To change body of generated methods, choose Tools | Templates.
+        return super.checkpointInfo();
     }
-    
-    
 
 }

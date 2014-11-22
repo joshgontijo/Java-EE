@@ -1,0 +1,6 @@
+com\josue\arquillian\batch\MyItemReader.class
+com\josue\arquillian\batch\BatchService.class
+com\josue\arquillian\batch\MyItemProcessor.class
+com\josue\arquillian\batch\Person.class
+com\josue\arquillian\batch\BatchRepository.class
+com\josue\arquillian\batch\MyItemWriter.class
