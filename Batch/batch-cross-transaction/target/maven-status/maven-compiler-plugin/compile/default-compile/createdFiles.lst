@@ -1,0 +1,5 @@
+com\josue\batch\cross\transaction\MyItemWriter.class
+com\josue\batch\cross\transaction\MyItemReader.class
+com\josue\batch\cross\transaction\MyItemProcessor.class
+com\josue\batch\cross\transaction\Person.class
+.netbeans_automatic_build
