@@ -21,43 +21,38 @@ import javax.inject.Inject;
 import javax.naming.NamingException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceUnit;
-
 
 /**
  * @author Josue
  */
-
 public class DatasourceProvider {
 
     @PersistenceUnit
     EntityManagerFactory emf;
-    
+
     @Inject
     InMemoryDbProperties properties;
-    
 
     @Produces
     @CustomDatabase
     @RequestScoped
     public EntityManager datasource() throws NamingException {
-        Properties props;
+        Properties props = properties.loadProps();
         LOG.info("GETTING DATASOURCE CONNECTION...");
         try {
-//            props.load(getClass().getClassLoader().getResourceAsStream("persistence.properties"));
-            props = properties.loadProps();
-            if(props.size() == 0){
-                props.load(getClass().getClassLoader().getResourceAsStream("persistence.properties"));
-            }
-            
+
             Map<String, String> map = new HashMap<String, String>();
             for (String key : props.stringPropertyNames()) {
                 map.put(key, props.getProperty(key));
-                if("hibernate.connection.url".equals(key)){
-                    LOG.info("DATASOURCE URL: "+ props.getProperty(key));
+                if ("hibernate.connection.url".equals(key)) {
+                    LOG.log(Level.INFO, "DATASOURCE URL: {0}", props.getProperty(key));
                 }
             }
-            EntityManager em = emf.createEntityManager();
+//            EntityManager em = emf.createEntityManager();
+            EntityManager em = Persistence.createEntityManagerFactory("com.sample_multiple-datasources_war_1.0PU", props).createEntityManager();
+
             return em;
         } catch (Exception e) {
             e.printStackTrace();
@@ -73,8 +68,6 @@ public class DatasourceProvider {
             Properties props;// = new Properties();
 //            props.load(getClass().getClassLoader().getResourceAsStream("persistence.properties"));
             props = properties.loadProps();
-            
-            
 
             String url = props.getProperty("hibernate.connection.url");
             String user = props.getProperty("hibernate.connection.username");
