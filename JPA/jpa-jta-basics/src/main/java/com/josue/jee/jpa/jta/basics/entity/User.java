@@ -110,10 +110,9 @@ public class User implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.id);
-        hash = 59 * hash + Objects.hashCode(this.name);
-        hash = 59 * hash + Objects.hashCode(this.dateCreated);
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.id);
+        hash = 29 * hash + Objects.hashCode(this.name);
         return hash;
     }
 
@@ -132,24 +131,14 @@ public class User implements Serializable {
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.dateCreated, other.dateCreated)) {
-            return false;
-        }
-        if (!Objects.equals(this.phones, other.phones)) {
-            return false;
-        }
-        if (!Objects.equals(this.address, other.address)) {
-            return false;
-        }
-        if (!Objects.equals(this.orders, other.orders)) {
-            return false;
-        }
         return true;
     }
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", dateCreated=" + dateCreated + ", phones=" + phones + ", address=" + address + ", orders=" + orders + '}';
+        return "User{" + "id=" + id + ", name=" + name + '}';
     }
+
+    
 
 }
