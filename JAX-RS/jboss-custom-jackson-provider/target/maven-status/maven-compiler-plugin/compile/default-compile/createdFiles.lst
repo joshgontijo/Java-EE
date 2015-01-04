@@ -1,0 +1,4 @@
+com\josue\jboss\custom\jackson\provider\CustomJacksonProvider.class
+com\josue\jboss\custom\jackson\provider\User.class
+com\josue\jboss\custom\jackson\provider\GenericResource.class
+com\josue\jboss\custom\jackson\provider\ApplicationConfig.class

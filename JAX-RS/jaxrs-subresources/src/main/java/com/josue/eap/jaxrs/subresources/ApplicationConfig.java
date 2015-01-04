@@ -19,13 +19,13 @@ public class ApplicationConfig extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new java.util.HashSet<>();
         addRestResourceClasses(resources);
+        resources.remove(com.josue.eap.jaxrs.subresources.UserRest.class);
+        resources.remove(com.josue.eap.jaxrs.subresources.AddressRest.class);
         return resources;
     }
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(com.josue.eap.jaxrs.subresources.RootResource.class);
-        resources.add(com.josue.eap.jaxrs.subresources.SubResourceA.class);
-        resources.add(com.josue.eap.jaxrs.subresources.SubResourceB.class);
+        resources.add(com.josue.eap.jaxrs.subresources.DatabaseRest.class);
     }
 
 }

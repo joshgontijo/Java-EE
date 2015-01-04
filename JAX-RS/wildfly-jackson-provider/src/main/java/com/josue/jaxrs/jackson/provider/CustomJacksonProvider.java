@@ -38,7 +38,7 @@ public class CustomJacksonProvider extends JacksonJsonProvider {
         ObjectMapper mapper = locateMapper(type, mediaType);
 
         mapper.setSerializationInclusion(JsonSerialize.Inclusion.NON_NULL);
-        mapper.setDateFormat(new SimpleDateFormat("dd.MM.yyyy"));
+        mapper.setDateFormat(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss"));
         mapper.configure(SerializationConfig.Feature.WRITE_DATES_AS_TIMESTAMPS,
                 false);
 

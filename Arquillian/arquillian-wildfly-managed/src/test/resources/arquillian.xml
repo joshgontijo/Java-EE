@@ -23,7 +23,7 @@
             value of this property to that path -->
             <!-- If you've already set the JBOSS_HOME environment variable, you can 
             remove this configuration block -->
-            <property name="jbossHome">D:\JBoss\wildfly-8.1.0.CR1</property>
+            <property name="jbossHome">D:\JBoss\wildfly-8.1.0.Final</property>
             <property name="serverConfig">standalone-full.xml</property>
             <property name="allowConnectingToRunningServer">true</property>
             <property name="outputToConsole">true</property>

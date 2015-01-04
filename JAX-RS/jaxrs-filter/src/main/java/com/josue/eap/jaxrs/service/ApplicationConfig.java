@@ -30,6 +30,7 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(com.josue.eap.jaxrs.filters.DynamicFilter.class);
 //        resources.add(com.josue.eap.jaxrs.filters.SimpleFilter.class);
+        resources.add(com.josue.eap.jaxrs.filters.SimpleFilter.class);
         resources.add(com.josue.eap.jaxrs.service.GenericResource.class);
     }
 
