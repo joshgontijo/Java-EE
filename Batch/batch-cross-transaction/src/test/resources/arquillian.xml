@@ -27,6 +27,7 @@
             <property name="serverConfig">standalone-full.xml</property>
             <property name="allowConnectingToRunningServer">true</property>
             <property name="outputToConsole">true</property>
+            <property name="javaVmArguments">-Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=n</property>
         </configuration>
     </container>
 
