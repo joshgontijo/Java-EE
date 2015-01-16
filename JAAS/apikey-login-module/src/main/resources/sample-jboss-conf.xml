@@ -1,0 +1,5 @@
+<security-domain name="custom-login">
+    <authentication>
+        <login-module code="com.josue.http.login.module.auth.APIKeyLoginModule" flag="required"/>
+    </authentication>
+</security-domain>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <!-- Account -->
+    <changeSet author="josue" id="security-import-01">
+        <createTable tableName="account">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="first_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="enabled" type="BOOLEAN" defaultValueBoolean="true">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <!-- Credential -->
+    <changeSet author="josue" id="security-import-02">
+        <createTable tableName="credential">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="account_uuid" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="auth_type" type="VARCHAR(25)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    
+    <changeSet author="josue" id="security-import-03">
+        <createTable tableName="login_credential">
+            <column name="credential_uuid" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="username" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <!-- API credential -->
+    <changeSet author="josue" id="security-import-04">
+        <createTable tableName="api_credential">
+            <column name="credential_uuid" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="api_key" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="josue" id="security-import-05">
+        <createTable tableName="group">
+            <column name="uuid" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="description" type="VARCHAR(255)" />
+        </createTable>
+    </changeSet>
+    
+    <!--     Roles ??? 
+    <changeSet author="josue" id="security-import-04">
+        <createTable tableName="roles">
+            <column name="role_name" type="VARCHAR(25)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>-->
+    
+    <!-- Credential-roles -->
+    <changeSet author="josue" id="security-import-06">
+        <createTable tableName="credential_group_roles">
+            <column name="credential_uuid" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="group_uuid" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role" type="VARCHAR(255)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <!-- FKs -->
+    <changeSet author="josue" id="security-import-07">
+        <addForeignKeyConstraint baseColumnNames="credential_uuid"
+                                 baseTableName="login_credential"
+                                 constraintName="fk_login_credential-credential"
+                                 referencedColumnNames="uuid"
+                                 referencedTableName="credential"/>
+    </changeSet>
+        
+    <changeSet author="josue" id="security-import-08">
+        <addForeignKeyConstraint baseColumnNames="credential_uuid"
+                                     baseTableName="api_credential"
+                                     constraintName="fk_api_credential-credential"
+                                     referencedColumnNames="uuid"
+                                     referencedTableName="credential"/>
+    </changeSet>
+    
+    <changeSet author="josue" id="security-import-09">
+        <addForeignKeyConstraint baseColumnNames="account_uuid"
+                                     baseTableName="credential"
+                                     constraintName="fk_credential_account"
+                                     referencedColumnNames="uuid"
+                                     referencedTableName="account"/>
+    
+    </changeSet>
+    
+    <changeSet author="josue" id="security-import-10">
+        <addForeignKeyConstraint baseColumnNames="credential_uuid"
+                                     baseTableName="credential_group_roles"
+                                     constraintName="fk_credential_group_roles-credential"
+                                     referencedColumnNames="uuid"
+                                     referencedTableName="credential"/>
+    </changeSet>
+            
+    <changeSet author="josue" id="security-import-11">
+        <addForeignKeyConstraint baseColumnNames="group_uuid"
+                                     baseTableName="credential_group_roles"
+                                     constraintName="fk_credential_group_roles-group"
+                                     referencedColumnNames="uuid"
+                                     referencedTableName="group"/>
+    </changeSet>
+
+
+            
+    <!-- insert credential-->
+    <changeSet author="josue" id="security-import-12">
+        <insert tableName="account">
+            <column name="uuid" value="uuid-account-josue1" />
+            <column name="first_name" value="josue1" />
+            <column name="last_name" value="eduardo1" />
+            <column name="email" value="josue1@gmail.com" />
+            <column name="enabled" valueBoolean="true"/>
+        </insert>
+        <!-- **** base credentials insert **** -->
+        <insert tableName="credential">
+            <column name="uuid" value="uuid-credential1-userpass-josue1" />
+            <column name="account_uuid" value="uuid-account-josue1" />
+            <column name="auth_type" value="USERPASS" />
+        </insert>
+        <insert tableName="credential">
+            <column name="uuid" value="uuid-credential2-api-josue1" />
+            <column name="account_uuid" value="uuid-account-josue1" />
+            <column name="auth_type" value="API" />
+        </insert>
+                
+        <insert tableName="login_credential">
+            <column name="credential_uuid" value="uuid-credential1-userpass-josue1" />
+            <column name="username" value="josueeduardo" />
+            <column name="password" value="pass123" />
+        </insert>
+        <insert tableName="api_credential">
+            <column name="credential_uuid" value="uuid-credential2-api-josue1" />
+            <column name="api_key" value="uuid-apikey-josue1" />
+        </insert>
+        <!-- **** end credentials **** -->
+                
+        <insert tableName="group">
+            <column name="uuid" value="uuid-group1" />
+            <column name="description" value="group1-description" />
+        </insert>
+                
+        <!-- ADMIN access to group when using USERPASS credential -->
+        <insert tableName="credential_group_roles">
+            <column name="credential_uuid" value="uuid-credential1-userpass-josue1" />
+            <column name="group_uuid" value="uuid-group1" />
+            <column name="role" value="ADMIN" />
+        </insert>
+        <!-- READ access to group when using API credential -->
+        <insert tableName="credential_group_roles">
+            <column name="credential_uuid" value="uuid-credential2-api-josue1" />
+            <column name="group_uuid" value="uuid-group1" />
+            <column name="role" value="READ" />
+        </insert>
+    </changeSet>
+    
+
+
+</databaseChangeLog>

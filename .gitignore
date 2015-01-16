@@ -1,3 +1,4 @@
+target/
 /jaas-basic-security/target/
 /arqullian-wildfly-managed/target/
 /jpa-jta-basics/target/
@@ -65,3 +66,5 @@
 /Batch/batch-checkpoint/target/
 /JAX-RS/resteasy-file-upload/target/
 /Batch/batch-complete-jpa/target/
+/JAX-RS/jaxrs-resourcecontext-subresources/target/
+/BeanValidation/simple-beanvalidation/target/
