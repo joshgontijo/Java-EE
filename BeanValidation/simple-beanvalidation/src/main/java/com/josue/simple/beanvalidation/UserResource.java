@@ -42,7 +42,7 @@ public class UserResource {
      "age" : 25,
      "address" : {
      "street" : null,
-     "number" : 9999999999
+     "number" : 999999
      },
      "birthdate" : 1421366158790
      }
