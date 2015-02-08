@@ -12,8 +12,6 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
-import service.externaldb.CustomDatabase;
-import service.externaldb.InMemoryDbProperties;
 
 /**
  *

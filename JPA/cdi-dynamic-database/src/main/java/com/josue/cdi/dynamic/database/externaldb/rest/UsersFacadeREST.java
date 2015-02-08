@@ -1,6 +1,7 @@
 package com.josue.cdi.dynamic.database.externaldb.rest;
 
 import com.josue.cdi.dynamic.database.externaldb.BMT;
+import com.josue.cdi.dynamic.database.externaldb.InMemoryDbProperties;
 import com.josue.cdi.dynamic.database.externaldb.Users;
 import java.util.List;
 import javax.inject.Inject;
@@ -16,7 +17,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import service.externaldb.InMemoryDbProperties;
 
 @Path("users")
 @Transactional(Transactional.TxType.REQUIRES_NEW)

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h2>This project uses simple qualifiers for choose the actual env</h2>
+        <br />
+        <h3>Change Environment... default is production</h3>
+        
+        <form action="http://localhost:8080/cdi-envstages2-param/api/generic/update-env">
+            <input type="hidden" name="stage" value="production" /> 
+            <input type="submit" value="Production">
+        </form>
+        <br />
+        <form action="http://localhost:8080/cdi-envstages2-param/api/generic/update-env">
+             <input type="hidden" name="stage" value="development" /> 
+            <input type="submit" value="Development">
+        </form>
+        <hr />
+        <h3>Sample Request</h3>
+        <form action="http://localhost:8080/cdi-envstages2-param/api/generic">
+            <input type="submit" value="Request">
+        </form>
+    </body>
+</html>
