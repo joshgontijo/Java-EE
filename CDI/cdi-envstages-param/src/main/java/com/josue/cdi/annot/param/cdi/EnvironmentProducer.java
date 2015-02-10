@@ -5,8 +5,6 @@
  */
 package com.josue.cdi.annot.param.cdi;
 
-import com.josue.cdi.annot.param.cdi.Environment;
-import com.josue.cdi.annot.param.cdi.Stage;
 import com.josue.cdi.annot.param.service.Service;
 import javax.enterprise.inject.Any;
 import javax.enterprise.inject.Instance;
