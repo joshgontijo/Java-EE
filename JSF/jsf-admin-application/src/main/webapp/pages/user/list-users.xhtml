@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>User</title>
+    </h:head>
+    <h:body>
+        <ui:composition>
+            <!--<f:event type="preRenderView" listener="#{userController.fetchData()}"/>-->
+
+            <p>List user</p>
+            <h:form id="myForm">
+                <p:dataTable value="#{userController.users}" var="item" id="usersTable">
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Id"/>
+                        </f:facet>
+                        <h:outputText value="#{item.id}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Name"/>
+                        </f:facet>
+                        <h:outputText value="#{item.name}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Age"/>
+                        </f:facet>
+                        <h:outputText value="#{item.age}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Delete"/>
+                        </f:facet>
+                        <p:commandLink action="#{userController.deleteUser(item)}" update="@form" process="@this" styleClass="ui-icon ui-icon-trash" />
+                    </p:column>
+                </p:dataTable>
+
+                <p:commandLink action="#{adminController.setPage('user/create-user')}" value="Create" process="@form" update=":layoutContent" />
+            </h:form> 
+
+            <h:form>
+                <p:commandLink action="#{adminController.setPage('main')}" value="Main" update=":layoutContent" />    
+            </h:form>
+        </ui:composition>
+    </h:body>
+</html>
+

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Admin template</title>
+    </h:head>
+
+    <h:body>
+        <h:outputScript name="jsf.js" library="javax.faces" target="head" />
+
+        <!-- JSF bugfix: http://stackoverflow.com/questions/11408130/jsf-commandbutton-works-on-second-click/11412138#11412138 -->
+        <h:outputScript library="js" name="jsf-bugfix.js" target="head" />
+        <!-- app specific css -->
+        <h:outputStylesheet library="css" name="app.css" />
+
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="45" style="display:block; overflow:auto; text-align: right;" resizable="false" closable="false" collapsible="false">
+                <h:form>
+                    <p:menuButton value="Options">
+                        <p:menuitem value="Save"   icon="ui-icon-disk"/>
+                        <p:menuitem value="Update"  icon="ui-icon-arrowrefresh-1-w"/>
+                        <p:menuitem value="Delete"  ajax="false" icon="ui-icon-close"/>
+                        <p:separator />
+                        <p:menuitem value="Homepage" url="http://www.primefaces.org" icon="ui-icon-extlink"/>
+                    </p:menuButton>
+                </h:form>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="west" style="display: inline-block; border: 0;" collapsible="false" resizable="false">
+                <h:form>
+                    <p:growl autoUpdate="true"/>
+
+                    <p:panelMenu>
+                        <p:submenu label="Users">
+                            <p:menuitem value="List" update=":layoutContent" action="#{adminController.setPage('user/list-users')}" icon="ui-icon-disk">
+                                <f:param name="test" value="josue" />
+                            </p:menuitem>
+                            <p:menuitem value="Create" update=":layoutContent" action="#{adminController.setPage('user/create-user')}" icon="ui-icon-arrowrefresh-1-w" />
+                        </p:submenu>
+                        <p:submenu label="Documents">
+                            <p:menuitem value="List" update=":layoutContent" action="#{adminController.setPage('documents/list-documents')}" icon="ui-icon-disk" />
+                            <p:menuitem value="Documents" update=":layoutContent" action="#{adminController.setPage('documents/list-documents')}" icon="ui-icon-arrowrefresh-1-w" />
+                        </p:submenu>
+                        <p:submenu label="Non-Ajax Menuitem">
+                            <p:menuitem value="Delete"   ajax="false" icon="ui-icon-close"/>
+                        </p:submenu>
+                        <p:separator />
+                        <p:submenu label="Navigations">
+                            <p:submenu label="Links" icon="ui-icon-extlink">
+                                <p:submenu label="PrimeFaces" icon="ui-icon-heart">
+                                    <p:menuitem value="Home" url="http://www.primefaces.org" icon="ui-icon-home" />
+                                    <p:menuitem value="Docs" url="http://www.primefaces.org/documentation" icon="ui-icon-document" />
+                                    <p:menuitem value="Download" url="http://www.primefaces.org/downloads" icon="ui-icon-arrowthick-1-s" />
+                                    <p:menuitem value="Support" url="http://www.primefaces.org/support" icon="ui-icon-wrench" />
+                                </p:submenu>
+                            </p:submenu>
+                            <p:menuitem value="Mobile" icon="ui-icon-signal" />
+                        </p:submenu>
+                    </p:panelMenu>
+                </h:form>
+            </p:layoutUnit>
+            <p:layoutUnit  position="center" style="border: 0;">
+
+                <p:panel id="layoutContent">
+                    <ui:insert name="content">
+                        <p:messages id="messages" showDetail="true" autoUpdate="true" closable="false" />
+                        <p>Admin Controller page:#{adminController.page}</p>
+                        <ui:include src="pages/#{adminController.page}.xhtml"/>
+                    </ui:insert>
+                </p:panel>
+            </p:layoutUnit>
+        </p:layout>
+
+    </h:body>
+
+</html>
