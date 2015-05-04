@@ -36,9 +36,7 @@ public class UserController implements Serializable {
     @PostConstruct
     public void init() {
         logger.info("********* Initializing USER CONTROLLER *************");
-        if (users.isEmpty()) {
-            fetchData();
-        }
+        fetchData();
     }
 
     @Transactional
@@ -57,15 +55,12 @@ public class UserController implements Serializable {
         fetchData();
     }
 
-//    public List<AppUser> initializeUsers() {
-//        if (users.isEmpty()) {
-//            logger.info("************** USERS IS EMPTY --- FETCHING DATA *************");
-//            fetchData();
-//        } else {
-//            logger.info("************** USERS ALREADY LOADED --- *************");
-//        }
-//        return users;
-//    }
+    @Transactional
+    public void updateUser() {
+        em.merge(user);
+        fetchData();
+    }
+
     public void fetchData() {
         logger.info("************** FETCHING DATA *************");
         users = em.createQuery("SELECT u FROM AppUser u", AppUser.class).getResultList();

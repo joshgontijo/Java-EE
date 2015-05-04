@@ -9,12 +9,14 @@
         <title>User</title>
     </h:head>
     <h:body>
+        
         <ui:composition>
-            <!--<f:event type="preRenderView" listener="#{userController.fetchData()}"/>-->
+            
 
             <p>List user</p>
-            <h:form id="myForm">
-                <p:dataTable value="#{userController.users}" var="item" id="usersTable">
+            <h:form>
+                <!--<f:event type="preRenderView" listener="#{userController.init()}"/>-->
+                <p:dataTable value="#{userController.users}" var="item">
                     <p:column>
                         <f:facet name="header">
                             <h:outputText value="Id"/>
@@ -35,9 +37,18 @@
                     </p:column>
                     <p:column>
                         <f:facet name="header">
-                            <h:outputText value="Delete"/>
+                            <h:outputText value="Actions"/>
                         </f:facet>
                         <p:commandLink action="#{userController.deleteUser(item)}" update="@form" process="@this" styleClass="ui-icon ui-icon-trash" />
+                        <p:commandLink action="#{adminController.setPage('user/update-user')}" process="@this" update=":layoutContent" styleClass="ui-icon ui-icon-pencil">
+
+                            <!-- most used for url string param -->
+                            <!--<f:param name="action" value="#{item}" />-->
+                            
+                            <!-- will be available in the update request, use this for passing objcts between requests -->
+                            <f:setPropertyActionListener target="#{userController.user}" value="#{item}" />
+                            <f:viewParam name="action" value="#{item.name}" />
+                        </p:commandLink>
                     </p:column>
                 </p:dataTable>
 
