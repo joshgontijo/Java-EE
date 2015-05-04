@@ -12,6 +12,9 @@
     </h:head>
 
     <h:body>
+
+        <p:growl id="growlMessage" showDetail="true" />
+
         <h:outputScript name="jsf.js" library="javax.faces" target="head" />
 
         <!-- JSF bugfix: http://stackoverflow.com/questions/11408130/jsf-commandbutton-works-on-second-click/11412138#11412138 -->
@@ -34,8 +37,6 @@
 
             <p:layoutUnit position="west" style="display: inline-block; border: 0;" collapsible="false" resizable="false">
                 <h:form>
-                    <p:growl autoUpdate="true"/>
-
                     <p:panelMenu>
                         <p:submenu label="Users">
                             <p:menuitem value="List" update=":layoutContent" action="#{adminController.setPage('user/list-users')}" icon="ui-icon-disk">
@@ -66,14 +67,20 @@
                 </h:form>
             </p:layoutUnit>
             <p:layoutUnit  position="center" style="border: 0;">
+                <f:view transient="true">
+                    <p:panel id="layoutContent">
+                        <ui:insert name="content">
+                            <p:messages id="messages" showDetail="true" autoUpdate="true" closable="false" />
+                            <p>Admin Controller page:#{adminController.page}</p>
+                            <!-- Main content -->
+                            <ui:include src="pages/#{adminController.page}.xhtml"/>
 
-                <p:panel id="layoutContent">
-                    <ui:insert name="content">
-                        <p:messages id="messages" showDetail="true" autoUpdate="true" closable="false" />
-                        <p>Admin Controller page:#{adminController.page}</p>
-                        <ui:include src="pages/#{adminController.page}.xhtml"/>
-                    </ui:insert>
-                </p:panel>
+                            <h:form>
+                                <p:commandLink action="#{adminController.setPage('main')}" value="Main" update=":layoutContent" />    
+                            </h:form>
+                        </ui:insert>
+                    </p:panel>
+                </f:view>
             </p:layoutUnit>
         </p:layout>
 

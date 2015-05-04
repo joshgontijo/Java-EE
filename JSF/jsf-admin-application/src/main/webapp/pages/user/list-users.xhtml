@@ -9,9 +9,9 @@
         <title>User</title>
     </h:head>
     <h:body>
-        
+
         <ui:composition>
-            
+
 
             <p>List user</p>
             <h:form>
@@ -35,29 +35,24 @@
                         </f:facet>
                         <h:outputText value="#{item.age}"/>
                     </p:column>
-                    <p:column>
-                        <f:facet name="header">
-                            <h:outputText value="Actions"/>
-                        </f:facet>
-                        <p:commandLink action="#{userController.deleteUser(item)}" update="@form" process="@this" styleClass="ui-icon ui-icon-trash" />
-                        <p:commandLink action="#{adminController.setPage('user/update-user')}" process="@this" update=":layoutContent" styleClass="ui-icon ui-icon-pencil">
-
-                            <!-- most used for url string param -->
-                            <!--<f:param name="action" value="#{item}" />-->
-                            
-                            <!-- will be available in the update request, use this for passing objcts between requests -->
-                            <f:setPropertyActionListener target="#{userController.user}" value="#{item}" />
-                            <f:viewParam name="action" value="#{item.name}" />
-                        </p:commandLink>
+                    <p:column style="text-align: center" width="25">
+                        <div align="center">
+                            <p:commandLink action="#{adminController.setPage('user/update-user')}" process="@this" update=":layoutContent" styleClass="ui-icon ui-icon-pencil">
+                                <!-- will be available in the update request, use this for passing objcts between requests -->
+                                <f:setPropertyActionListener target="#{userController.user}" value="#{item}" />
+                            </p:commandLink>
+                        </div>
                     </p:column>
+                    <p:column style="text-align: center" width="25">
+                        <div align="center">
+                            <p:commandLink action="#{userController.deleteUser(item)}" update="@form" process="@this" styleClass="ui-icon ui-icon-trash" />
+                        </div>
+                    </p:column>
+                    
                 </p:dataTable>
 
                 <p:commandLink action="#{adminController.setPage('user/create-user')}" value="Create" process="@form" update=":layoutContent" />
             </h:form> 
-
-            <h:form>
-                <p:commandLink action="#{adminController.setPage('main')}" value="Main" update=":layoutContent" />    
-            </h:form>
         </ui:composition>
     </h:body>
 </html>

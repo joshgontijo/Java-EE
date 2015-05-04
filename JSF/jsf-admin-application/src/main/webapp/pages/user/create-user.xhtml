@@ -10,10 +10,9 @@
     </h:head>
     <h:body>
         <ui:composition>
-            <p:panel id="userCreateContainer"> 
-                <p>Create user</p>
+            <p:panel header="Create"> 
                 <h:form>
-                    <p:panelGrid columns="2">
+                    <p:panelGrid columns="2" >
                         <p:outputLabel value="Name:" for="name" />
                         <p:inputText id="name" value="#{userController.user.name}" title="Name" />
                         <p:outputLabel value="Age:" for="age" />

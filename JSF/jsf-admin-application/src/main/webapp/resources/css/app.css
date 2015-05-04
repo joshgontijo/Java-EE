@@ -5,10 +5,20 @@
 }
 
 .ui-panelmenu .ui-panelmenu-header a {
-  color: cornflowerblue;
-  text-decoration: none;
+    color: cornflowerblue;
+    text-decoration: none;
 }
 
+.ui-panelgrid tr, .ui-panelgrid td {
+    border: none;
+}
+
+.ui-panelgrid .ui-panelgrid-cell {
+  border-width: 1px;
+  border-style: none;
+  border-color: inherit;
+  padding: 4px 10px;
+}
 
 .ui-widget, .ui-widget .ui-widget {
     font-size: 95%;
