@@ -6,6 +6,7 @@
 package com.josue.jsf.view.scope;
 
 import java.io.Serializable;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -30,7 +31,7 @@ public class ViewBoundary implements Serializable {
 
     @PostConstruct
     public void inti() {
-        logger.info("******** @PostConstruct **********");
+        logger.log(Level.INFO, "******** @PostConstruct {0}**********", toString());
     }
 
     public void increment() {
@@ -43,6 +44,11 @@ public class ViewBoundary implements Serializable {
 
     public void setCounter(int counter) {
         this.counter = counter;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
 }

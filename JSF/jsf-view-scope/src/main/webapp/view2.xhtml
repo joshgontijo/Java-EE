@@ -7,6 +7,7 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+        <h1>VIEW 2 - #{viewBoundary.toString()}</h1>
         <h:form>
             <h:panelGrid columns="1">
                 <h:outputText value="#{viewBoundary.counter}" />
@@ -14,6 +15,7 @@
                     <f:ajax execute="@form" render="@form" />
                 </h:commandButton>
                 <h:commandButton value="Non Ajax Increment" action="#{viewBoundary.increment()}" />
+                <h:commandButton value="Back to view 1" action="view1" />
                 <h:commandButton value="Done" action="index" />
             </h:panelGrid>
         </h:form>

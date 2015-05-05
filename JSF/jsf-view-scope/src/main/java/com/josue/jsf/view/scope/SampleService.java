@@ -5,11 +5,13 @@
  */
 package com.josue.jsf.view.scope;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Josue
  */
-public class SampleService {
+public class SampleService implements Serializable {
 
     public int getOne() {
         return 1;
