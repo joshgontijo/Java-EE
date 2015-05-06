@@ -3,17 +3,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.josue</groupId>
-    <artifactId>jsf-admin-application</artifactId>
+    <artifactId>pf-admin-application</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>jsf-admin-application</name>
+    <name>pf-admin-application</name>
 
     <properties>
-        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
     
     <dependencies>
@@ -25,8 +24,9 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>5.0</version>
+            <version>5.2</version>
         </dependency>
+        
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
@@ -36,17 +36,9 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
-        </plugins>
+        <finalName>${artifactId}</finalName>
     </build>
+
     <repositories>
         <repository>
             <url>http://repository.primefaces.org/</url>

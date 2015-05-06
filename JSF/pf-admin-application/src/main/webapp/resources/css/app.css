@@ -1,0 +1,25 @@
+.ui-menu.ui-widget li > .ui-menuitem-link {
+    border-width: 1px 0;
+    padding: 0.9em 0;
+    width: 100%;
+}
+
+.ui-panelmenu .ui-panelmenu-header a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+.ui-panelgrid tr, .ui-panelgrid td {
+    border: none;
+}
+
+.ui-panelgrid .ui-panelgrid-cell {
+  border-width: 1px;
+  border-style: none;
+  border-color: inherit;
+  padding: 4px 10px;
+}
+
+.ui-widget, .ui-widget .ui-widget {
+    font-size: 95%;
+}

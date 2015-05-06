@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../template/admin-template.xhtml">
+            <ui:define name="content">
+
+                <p:panel header="List" rendered="#{userController.step eq 'list'}">
+                    <h:form>
+                        <p:dataTable value="#{userController.users}" var="item">
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Id"/>
+                                </f:facet>
+                                <h:outputText value="#{item.id}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Name"/>
+                                </f:facet>
+                                <h:outputText value="#{item.name}"/>
+                            </p:column>
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="Age"/>
+                                </f:facet>
+                                <h:outputText value="#{item.age}"/>
+                            </p:column>
+                            <p:column style="text-align: center" width="25">
+                                <div align="center">
+                                    <p:commandLink action="#{userController.setStep('update')}" process="@this" update=":layoutContent" styleClass="ui-icon ui-icon-pencil">
+                                        <!-- will be available in the update request, use this for passing objcts between requests -->
+                                        <f:setPropertyActionListener target="#{userController.user}" value="#{item}" />
+                                    </p:commandLink>
+                                </div>
+                            </p:column>
+                            <p:column style="text-align: center" width="25">
+                                <div align="center">
+                                    <p:commandLink action="#{userController.deleteUser(item)}" update="@form" process="@this" styleClass="ui-icon ui-icon-trash" />
+                                </div>
+                            </p:column>
+                        </p:dataTable>
+                        <p:commandLink action="#{userController.setStep('create')}" value="Create" process="@form" update=":layoutContent" />
+                    </h:form> 
+                </p:panel>
+
+
+                <p:panel header="#{userController.step eq 'update' ? 'Update' : 'Create'}" rendered="#{userController.step eq 'create' or userController.step eq 'update'}"> 
+                    <h:form>
+                        <p:panelGrid columns="2" >
+                            <p:outputLabel value="Name:" for="name" />
+                            <p:inputText id="name" value="#{userController.user.name}" title="Name" />
+                            <p:outputLabel value="Age:" for="age" />
+                            <p:inputText id="age" value="#{userController.user.age}" title="Age" />
+                        </p:panelGrid>
+
+                        <p:commandButton action="#{userController.setStep('list')}"
+                                         value="Back" update=":layoutContent" />
+                        
+                        <p:commandButton action="#{userController.createUser()}"
+                                         value="Create" update=":layoutContent" rendered="#{userController.step eq 'create'}"/>
+                        
+                        <p:commandButton action="#{userController.updateUser()}"
+                                         value="Update" update=":layoutContent" rendered="#{userController.step eq 'update'}"/>
+                    </h:form>
+                </p:panel>
+
+            </ui:define>
+        </ui:composition>
+
+    </body>
+</html>
