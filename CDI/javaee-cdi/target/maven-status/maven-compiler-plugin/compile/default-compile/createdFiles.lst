@@ -1,7 +1,0 @@
-com\josue\jee\javaee\cdi\rest\MessageResource.class
-com\josue\jee\javaee\cdi\IMessage.class
-com\josue\jee\javaee\cdi\rest\ApplicationConfig.class
-com\josue\jee\javaee\cdi\qualifier\Message.class
-com\josue\jee\javaee\cdi\EmailMessage.class
-com\josue\jee\javaee\cdi\SMSMessage.class
-com\josue\jee\javaee\cdi\qualifier\MessageType.class

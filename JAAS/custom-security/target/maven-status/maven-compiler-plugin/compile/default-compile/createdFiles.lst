@@ -1,6 +1,0 @@
-com\josue\jee\custom\security\rest\ApplicationConfig.class
-com\josue\jee\custom\security\rest\NewJaxRsFilter.class
-com\josue\jee\custom\security\rest\hacking\MySimpleUsernamePasswordLoginModule.class
-com\josue\jee\custom\security\rest\hacking\DatabaseServerLoginModule.class
-com\josue\jee\custom\security\liquibase\MySQLLiquibaseHelper.class
-com\josue\jee\custom\security\rest\SimpleResource.class
