@@ -5,8 +5,8 @@
 }
 
 .ui-panelmenu .ui-panelmenu-header a {
-    color: cornflowerblue;
     text-decoration: none;
+    padding: 0.6em 0.6em 0.6em 4em;
 }
 
 .ui-panelgrid tr, .ui-panelgrid td {
@@ -14,12 +14,20 @@
 }
 
 .ui-panelgrid .ui-panelgrid-cell {
-  border-width: 1px;
-  border-style: none;
-  border-color: inherit;
-  padding: 4px 10px;
+    border-width: 1px;
+    border-style: none;
+    border-color: inherit;
+    padding: 4px 10px;
 }
 
 .ui-widget, .ui-widget .ui-widget {
-    font-size: 95%;
+    font-size: 95%; 
+}
+
+.ui-panelmenu .ui-widget{
+    width: 210px;
+}
+
+.ui-datatable-tablewrapper table tr td {
+    text-align: center;
 }

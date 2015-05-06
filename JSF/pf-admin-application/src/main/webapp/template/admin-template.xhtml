@@ -73,19 +73,15 @@
 
             <!-- Content -->
 
-            <p:layoutUnit  position="center" style="border: 0;">
-                <p:panel id="layoutContent">
-                    <p:messages id="messages" showDetail="true" autoUpdate="true" closable="false" />
+            <p:layoutUnit position="center" style="border: 0;" size="100%">
+                <p:messages  globalOnly="true" id="messages" showDetail="true" autoUpdate="true" closable="true" />
+                <p:outputPanel layout="block" id="layoutContent">
                     <ui:insert name="content">
                         Main Content
                         <p>Admin Controller page:#{adminController.page}</p>
                         <!-- Main content -->
-
                     </ui:insert>
-                    <h:form>
-                        <p:commandLink action="#{adminController.index()}" value="Main" update=":layoutContent" />    
-                    </h:form>
-                </p:panel>
+                </p:outputPanel>
             </p:layoutUnit>
         </p:layout>
     </h:body>

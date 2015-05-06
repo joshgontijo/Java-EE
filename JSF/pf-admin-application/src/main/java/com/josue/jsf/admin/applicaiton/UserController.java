@@ -54,9 +54,12 @@ public class UserController implements Serializable {
     }
 
     @Transactional
-    public String createUser() {
+    public void createUser() {
         em.persist(user);
-        return REFRESH;
+        Messages.infoMessage("User created !");
+        user = new AppUser();
+        step = LIST;
+        fetchData();
     }
 
     @Transactional
@@ -65,13 +68,17 @@ public class UserController implements Serializable {
         if (foundUser != null) {
             em.remove(foundUser);
         }
+        Messages.infoMessage("User deleted !");
         fetchData();
     }
 
     @Transactional
-    public String updateUser() {
+    public void updateUser() {
         em.merge(user);
-        return REFRESH;
+        Messages.infoMessage("User updated !");
+        user = new AppUser();
+        step = LIST;
+        fetchData();
     }
 
     public void fetchData() {

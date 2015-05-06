@@ -23,6 +23,10 @@ public class AdminController implements Serializable {
 
     private String page = "main";
 
+    public void message() {
+        Messages.infoMessage("asljdkadasd");
+    }
+
     @PostConstruct
     public void init() {
         logger.info("********* Initializing ADMIN CONTROLLER*************");

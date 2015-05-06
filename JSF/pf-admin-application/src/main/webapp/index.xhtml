@@ -12,11 +12,15 @@
             <ui:define name="content">
                 <p:panel header="Dashboard">
                     <h:form>
-                        <h:commandLink action="#{adminController.setPage('user')}" value="List Users">
+                        <h:commandLink action="#{adminController.navigate('pages/user.xhtml')}" value="List Users">
                             <f:ajax render=":layoutContent" />
                         </h:commandLink>
                         <br />
-                        <h:commandLink action="#{adminController.setPage('document')}" value="List Documents">
+                        <h:commandLink action="#{adminController.navigate('pages/document.xhtml')}" value="List Documents">
+                            <f:ajax render=":layoutContent" />
+                        </h:commandLink>
+                        <br />
+                        <h:commandLink action="#{adminController.message()}" value="Message">
                             <f:ajax render=":layoutContent" />
                         </h:commandLink>
                     </h:form>

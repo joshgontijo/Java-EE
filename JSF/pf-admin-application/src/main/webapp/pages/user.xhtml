@@ -11,8 +11,16 @@
         <ui:composition template="./../template/admin-template.xhtml">
             <ui:define name="content">
 
+
+
                 <p:panel header="List" rendered="#{userController.step eq 'list'}">
                     <h:form>
+                        <!-- message dialog -->
+                        <p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+                            <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="ui-icon-check" />
+                            <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+                        </p:confirmDialog>
+
                         <p:dataTable value="#{userController.users}" var="item">
                             <p:column>
                                 <f:facet name="header">
@@ -34,7 +42,7 @@
                             </p:column>
                             <p:column style="text-align: center" width="25">
                                 <div align="center">
-                                    <p:commandLink action="#{userController.setStep('update')}" process="@this" update=":layoutContent" styleClass="ui-icon ui-icon-pencil">
+                                    <p:commandLink actionListener="#{userController.setStep('update')}" process="@this" update=":layoutContent" styleClass="ui-icon ui-icon-pencil">
                                         <!-- will be available in the update request, use this for passing objcts between requests -->
                                         <f:setPropertyActionListener target="#{userController.user}" value="#{item}" />
                                     </p:commandLink>
@@ -42,12 +50,21 @@
                             </p:column>
                             <p:column style="text-align: center" width="25">
                                 <div align="center">
-                                    <p:commandLink action="#{userController.deleteUser(item)}" update="@form" process="@this" styleClass="ui-icon ui-icon-trash" />
+                                    <p:commandLink action="#{userController.deleteUser(item)}" update="@form" process="@this" styleClass="ui-icon ui-icon-trash">
+                                        <p:confirm header="Delete" message="Delete #{item.id}" icon="ui-icon-alert" />
+                                    </p:commandLink>
                                 </div>
                             </p:column>
                         </p:dataTable>
                         <p:commandLink action="#{userController.setStep('create')}" value="Create" process="@form" update=":layoutContent" />
                     </h:form> 
+                    <f:facet name="footer">
+                        <div class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all">
+                            <h:form>
+                                <p:commandLink action="#{adminController.index()}" value="Main" update=":layoutContent" />    
+                            </h:form>
+                        </div>
+                    </f:facet>
                 </p:panel>
 
 
@@ -62,10 +79,10 @@
 
                         <p:commandButton action="#{userController.setStep('list')}"
                                          value="Back" update=":layoutContent" />
-                        
+
                         <p:commandButton action="#{userController.createUser()}"
                                          value="Create" update=":layoutContent" rendered="#{userController.step eq 'create'}"/>
-                        
+
                         <p:commandButton action="#{userController.updateUser()}"
                                          value="Update" update=":layoutContent" rendered="#{userController.step eq 'update'}"/>
                     </h:form>
