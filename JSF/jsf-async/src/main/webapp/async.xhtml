@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <!--    <f:metadata>
+            <f:viewAction action="#{asyncController.executeAsync()}" onPostback="false" />
+        </f:metadata>-->
+
+    <h:head>
+        <title>Async</title>
+
+        <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+        <script type="text/javascript">
+            var poll = false;
+            setInterval(function () {
+                if (poll) {
+                    $("#someFormId\\:idOfButton").click();
+                }
+            }, 1000);
+
+            function stopPoll() {
+                console.log('Stopping poll');
+                poll = false;
+            }
+            function startPoll() {
+                console.log('Starting poll');
+                poll = true;
+            }
+
+        </script>
+    </h:head>
+    <h:body>
+
+        <h:form id="someFormId">
+            <h:commandLink id="idOfButton">
+                <f:ajax render=":main-panel" ></f:ajax>
+            </h:commandLink>
+        </h:form>
+
+
+        <h:panelGroup id="control-panel" layout="block">
+            <h:form>
+                <!--<p:poll update="main-panel" autoStart="true" interval="1" listener="#{asyncController.ping()}" widgetVar="poll"/>-->
+
+                <h:commandButton value="Async non-ajax" action="#{asyncController.executeAsync()}" />
+                <br />
+                <h:commandButton value="Async Ajax" action="#{asyncController.executeAsync()}" onclick="startPoll()">
+                    <f:ajax  execute="@form" /> <!-- ajax without render attribute.. js is the responsible for refresh the component -->
+                </h:commandButton>
+
+                <br />
+                <br />
+                <br />
+
+                <h:button outcome="/other-page.xhtml" value="Navigate while request" />
+            </h:form>
+        </h:panelGroup>
+
+
+        <br />
+        <hr />
+        <br />
+
+        <h:panelGroup id="main-panel" layout="block">
+            <div align="center" style="float: left; display: inline-block; width: 200px; border:2px solid black;">
+                <h:panelGroup layout="block" rendered="#{asyncController.loading}">
+                    <ui:include src="loader.xhtml" />
+                </h:panelGroup>
+                <h:panelGroup layout="block" rendered="#{asyncController.asyncResult != null and !asyncController.loading}">
+                    <h2>ASYNC RESULT: #{asyncController.asyncResult}</h2>
+                    <h:outputScript>stopPoll();</h:outputScript>
+                </h:panelGroup>
+            </div>
+        </h:panelGroup>
+
+    </h:body>
+</html>
+

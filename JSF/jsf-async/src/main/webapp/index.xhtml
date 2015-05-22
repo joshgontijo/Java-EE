@@ -3,81 +3,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
     <h:head>
         <title>JSF Async</title>
-        <h:outputStylesheet name="/css/loader.css"/>
-
-        <!--<script src="http://code.jquery.com/jquery-2.1.4.js"></script>-->
-        <!--        <script type="text/javascript">
-                    setInterval(function(){
-                        $("#someFormId\\:idOfButton").click();
-                    },3000);
-                </script>-->
-
-    </h:head>
+    </h:head> 
     <h:body>
-        <!--        <h:form id="someFormId">
-                    <h:commandButton id="idOfButton" value="AAAAAA">
-                        <f:ajax render=":main-panel" listener="#{asyncController.ping()}" ></f:ajax>
-                    </h:commandButton>
-                </h:form>-->
 
-        <h:panelGroup id="main-panel" layout="block">
-            <h:form>
-                <p:poll update="main-panel" autoStart="true" interval="1" listener="#{asyncController.ping()}" widgetVar="poll"/>
+        <h:form>
+            <h:button outcome="/sync.xhtml" value="Sync" />
+            <hr />
+            <h:button outcome="/async.xhtml" value="Async" />
+            <hr />
+            <h:button outcome="/multiple-async.xhtml" value="Multipl Async" />
+            <hr />
+            <h:button outcome="/async-primefaces.html" value="Primefaces Async" />
+        </h:form>
 
-                <h:commandButton value="Execute" action="#{syncController.execute()}" />
-                <br />
-                <h:commandButton value="Ajax Execute" action="#{syncController.execute()}">
-                    <f:ajax render=":main-panel" execute="@form" />
-                </h:commandButton>
-
-                <br />
-                <hr />
-                <br />
-
-                <h:commandButton value="Execute AsyncMethod" action="#{asyncController.executeAsync()}" />
-                <br />
-                <h:commandButton value="Ajax Execute AsyncMethod" action="#{asyncController.executeAsync()}" >
-                    <f:ajax render=":main-panel" execute="@form" />
-                </h:commandButton>
-
-                <br />
-                <hr />
-                <br />
-                <h:button outcome="/other-page.xhtml" value="Navigate while request" />
-            </h:form>
-
-            <h:panelGroup id="loading" layout="block" rendered="#{asyncController.loading}">
-                <div class="spinner">
-                    <div class="spinner-container container1">
-                        <div class="circle1"></div>
-                        <div class="circle2"></div>
-                        <div class="circle3"></div>
-                        <div class="circle4"></div>
-                    </div>
-                    <div class="spinner-container container2">
-                        <div class="circle1"></div>
-                        <div class="circle2"></div>
-                        <div class="circle3"></div>
-                        <div class="circle4"></div>
-                    </div>
-                    <div class="spinner-container container3">
-                        <div class="circle1"></div>
-                        <div class="circle2"></div>
-                        <div class="circle3"></div>
-                        <div class="circle4"></div>
-                    </div>
-                </div>
-            </h:panelGroup>
-            <h:panelGroup layout="block" rendered="#{syncController.result != null}">
-                <h2>SYNC RESULT: #{syncController.result}</h2>
-            </h:panelGroup>
-            <h:panelGroup layout="block" rendered="#{asyncController.asyncResult != null}">
-                <h2>ASYNC RESULT: #{asyncController.asyncResult}</h2>
-            </h:panelGroup>
-        </h:panelGroup>
     </h:body>
 </html>
 

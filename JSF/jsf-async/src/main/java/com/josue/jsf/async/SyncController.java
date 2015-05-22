@@ -22,9 +22,7 @@ public class SyncController implements Serializable {
     private static final Logger logger = Logger.getLogger(SyncController.class.getName());
 
     private boolean loading;
-
     private String result;
-    private String asyncResult;
 
     public void execute() throws InterruptedException {
         logger.info("**** STARTED EXECUTE *****");
@@ -44,14 +42,6 @@ public class SyncController implements Serializable {
 
     public void setResult(String result) {
         this.result = result;
-    }
-
-    public String getAsyncResult() {
-        return asyncResult;
-    }
-
-    public void setAsyncResult(String asyncResult) {
-        this.asyncResult = asyncResult;
     }
 
     public boolean isLoading() {
