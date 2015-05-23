@@ -7,102 +7,238 @@
     <h:head>
         <title>Unicorn</title>   
 
-        <!--<link rel="stylesheet" href="resources/css/bootstrap.min.css" />-->
-        <!--<link rel="stylesheet" href="resources/css/bootstrap-responsive.min.css" />-->
-        <!--<link rel="stylesheet" href="resources/css/fullcalendar.css" />-->	
-        <!--<link rel="stylesheet" href="resources/css/unicorn.main.css" />-->
-        <!--<link rel="stylesheet" href="resources/css/unicorn.grey.css" class="skin-color" />-->
-
-        <h:outputStylesheet library="css" name="bootstrap.min.css" />
-        <h:outputStylesheet library="css" name="bootstrap-responsive.min.css" />
-        <h:outputStylesheet library="css" name="fullcalendar.css" />
-        <h:outputStylesheet library="css" name="unicorn.main.css" />
-        <h:outputStylesheet library="css" name="unicorn.grey.css" />
-        <h:outputStylesheet library="css" name="app.css" />
-
-
     </h:head>
     <h:body>
 
-        <div id="header">
-            <h1><a href="./dashboard.html">Unicorn Admin</a></h1>		
-        </div>
+        <ui:composition template="/template/admin-template.xhtml">
+            <ui:define name="content">
+                <div id="content-header">
+                    <h1>Dashboard</h1>
+                    <div class="btn-group">
+                        <a class="btn btn-large tip-bottom" title="Manage Files"><i class="icon-calendar"></i></a>
+                        <a class="btn btn-large tip-bottom" title="Manage Users"><i class="icon-user"></i></a>
+                        <a class="btn btn-large tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a>
+                        <a class="btn btn-large tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div id="breadcrumb">
+                    <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a>
+                    <a href="#" class="current">Dashboard</a>
+                </div>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span12 center" style="text-align: center;">					
+                            <ul class="stat-boxes">
+                                <li class="popover-visits">
+                                    <div class="left peity_bar_good"><span>2,4,9,7,12,10,12</span>+10%</div>
+                                    <div class="right">
+                                        <strong>36094</strong>
+                                        Visits
+                                    </div>
+                                </li>
+                                <li class="popover-users">
+                                    <div class="left peity_bar_neutral"><span>20,15,18,14,10,9,9,9</span>0%</div>
+                                    <div class="right">
+                                        <strong>1433</strong>
+                                        Users
+                                    </div>
+                                </li>
+                                <li class="popover-orders">
+                                    <div class="left peity_bar_bad"><span>3,5,9,7,12,20,10</span>-50%</div>
+                                    <div class="right">
+                                        <strong>8650</strong>
+                                        Orders
+                                    </div>
+                                </li>
+                                <li class="popover-tickets">
+                                    <div class="left peity_line_good"><span>12,6,9,23,14,10,17</span>+70%</div>
+                                    <div class="right">
+                                        <strong>2968</strong>
+                                        Tickets
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>	
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <h:panelGroup id="messages" layout="block" >
+                                <h:panelGroup layout="block" class="alert alert-info" rendered="#{userController.successMessage ne null}">
+                                    #{userController.successMessage}
+                                    <a href="#" data-dismiss="alert" class="close">×</a>
+                                </h:panelGroup>
+                            </h:panelGroup>
 
-        <div id="search">
-            <input type="text" placeholder="Search here..."/><button type="submit" class="tip-right" title="Search"><i class="icon-search icon-white"></i></button>
-        </div>
-        <div id="user-nav" class="navbar navbar-inverse">
-            <ul class="nav btn-group">
-                <li class="btn btn-inverse" ><a title="" href="#"><i class="icon icon-user"></i> <span class="text">Profile</span></a></li>
-                <li class="btn btn-inverse dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="sAdd" title="" href="#">new message</a></li>
-                        <li><a class="sInbox" title="" href="#">inbox</a></li>
-                        <li><a class="sOutbox" title="" href="#">outbox</a></li>
-                        <li><a class="sTrash" title="" href="#">trash</a></li>
-                    </ul>
-                </li>
-                <li class="btn btn-inverse"><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-                <li class="btn btn-inverse"><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
-            </ul>
-        </div>
+                            <div class="widget-box">
+                                <div class="widget-title"><span class="icon"><i class="icon-signal"></i></span><h5>Create User</h5><div class="buttons"><a href="#" class="btn btn-mini"><i class="icon-refresh"></i> Update stats</a></div></div>
+                                <div class="widget-content">
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <div class="widget-content nopadding">
+                                                <h:form class="form-horizontal" id="userForm">
+                                                    <div class="control-group">
+                                                        <label class="control-label">ID</label>
+                                                        <div class="controls">
+                                                            <h:inputText value="#{userController.user.id}" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">Name</label>
+                                                        <div class="controls">
+                                                            <h:inputText value="#{userController.user.name}" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions">
+                                                        <h:commandButton value="Cancel" class="btn" action="#{userController.refresh()}"/>
+                                                        <h:commandButton value="Submit" class="btn btn-primary" action="#{userController.createUser()}">
+                                                            <f:ajax execute="@form" render=":messages tableContainer"/>
+                                                        </h:commandButton>
+                                                    </div>
+                                                </h:form>
+                                            </div>
+                                        </div>
+                                        <h:panelGroup class="span6" layout="block" id="tableContainer">
+                                            <div class="widget-content nopadding">
+                                                <h:form>
+                                                    <h:dataTable value="#{userController.users}" var="item" class="table table-hover">
+                                                        <h:column>
+                                                            <f:facet name="header">
+                                                                <h:outputText value="Id"/>
+                                                            </f:facet>
+                                                            <h:outputText value="#{item.id}"/>
+                                                        </h:column>
+                                                        <h:column>
+                                                            <f:facet name="header">
+                                                                <h:outputText value="Name"/>
+                                                            </f:facet>
+                                                            <h:outputText value="#{item.name}"/>
+                                                        </h:column>
+                                                    </h:dataTable>
+                                                </h:form>
+                                            </div>
+                                        </h:panelGroup>	
+                                    </div>							
+                                </div>
+                            </div>					
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <div class="widget-box">
+                                <div class="widget-title"><span class="icon"><i class="icon-file"></i></span><h5>Recent Posts</h5><span title="54 total posts" class="label label-info tip-left">54</span></div>
+                                <div class="widget-content nopadding">
+                                    <ul class="recent-posts">
+                                        <li>
+                                            <div class="user-thumb">
+                                                <img width="40" height="40" alt="User" src=""></img>
+                                            </div>
+                                            <div class="article-post">
+                                                <span class="user-info"> By: neytiri on 2 Aug 2012, 09:27 AM, IP: 186.56.45.7 </span>
+                                                <p>
+                                                    <a href="#">Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...</a>
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-mini">Edit</a> <a href="#" class="btn btn-success btn-mini">Publish</a> <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user-thumb">
+                                                <img width="40" height="40" alt="User" src=""></img>
+                                            </div>
+                                            <div class="article-post">
+                                                <span class="user-info"> By: john on on 24 Jun 2012, 04:12 PM, IP: 192.168.24.3 </span>
+                                                <p>
+                                                    <a href="#">Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...</a>
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-mini">Edit</a> <a href="#" class="btn btn-success btn-mini">Publish</a> <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user-thumb">
+                                                <img width="40" height="40" alt="User" src=""></img>
+                                            </div>
+                                            <div class="article-post">
+                                                <span class="user-info"> By: michelle on 22 Jun 2012, 02:44 PM, IP: 172.10.56.3 </span>
+                                                <p>
+                                                    <a href="#">Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...</a>
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-mini">Edit</a> <a href="#" class="btn btn-success btn-mini">Publish</a> <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                            </div>
+                                        </li>
+                                        <li class="viewall">
+                                            <a title="View all posts" class="tip-top" href="#"> + View all + </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="widget-box">
+                                <div class="widget-title"><span class="icon"><i class="icon-comment"></i></span><h5>Recent Comments</h5><span title="88 total comments" class="label label-info tip-left">88</span></div>
+                                <div class="widget-content nopadding">
+                                    <ul class="recent-comments">
+                                        <li>
+                                            <div class="user-thumb">
+                                                <img width="40" height="40" alt="User" src=""></img>
+                                            </div>
+                                            <div class="comments">
+                                                <span class="user-info"> User: michelle on IP: 172.10.56.3 </span>
+                                                <p>
+                                                    <a href="#">Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...</a>
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-mini">Edit</a> <a href="#" class="btn btn-success btn-mini">Approve</a> <a href="#" class="btn btn-warning btn-mini">Mark as spam</a> <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user-thumb">
+                                                <img width="40" height="40" alt="User" src=""></img>
+                                            </div>
+                                            <div class="comments">
+                                                <span class="user-info"> User: john on IP: 192.168.24.3 </span>
+                                                <p>
+                                                    <a href="#">Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...</a>
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-mini">Edit</a> <a href="#" class="btn btn-success btn-mini">Approve</a> <a href="#" class="btn btn-warning btn-mini">Mark as spam</a> <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="user-thumb">
+                                                <img width="40" height="40" alt="User" src=""></img>
+                                            </div>
+                                            <div class="comments">
+                                                <span class="user-info"> User: neytiri on IP: 186.56.45.7 </span>
+                                                <p>
+                                                    <a href="#">Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...</a>
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-mini">Edit</a> <a href="#" class="btn btn-success btn-mini">Approve</a> <a href="#" class="btn btn-warning btn-mini">Mark as spam</a> <a href="#" class="btn btn-danger btn-mini">Delete</a>
+                                            </div>
+                                        </li>
+                                        <li class="viewall">
+                                            <a title="View all comments" class="tip-top" href="#"> + View all + </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="widget-box widget-calendar">
+                                <div class="widget-title"><span class="icon"><i class="icon-calendar"></i></span><h5>Calendar</h5></div>
+                                <div class="widget-content nopadding">
+                                    <div class="calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div id="footer" class="span12">
+                            2012 - 2013 &copy; Unicorn Admin. Brought to you by <a href="https://wrapbootstrap.com/user/diablo9983">diablo9983</a>
+                        </div>
+                    </div>
+                </div>
 
-        <h:form>
-            <div id="sidebar">
-                <a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
-                <ul>
-                    
-                    <li class="active"><h:commandLink action="#{adminController.navigate('main')}"><i class="icon icon-home"></i><span>Dashboard</span></h:commandLink></li>
-                    <!--<li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>-->
-                    <li class="submenu">
-                        <a href="#"><i class="icon icon-th-list"></i> <span>Form elements</span> <span class="label">3</span></a>
-                        <ul>
-                            <li><h:commandLink action="#{adminController.navigate('form-common')}" value="Form Commons"/></li>
-                            <li><a href="form-validation.html">Validation</a></li>
-                            <li><a href="form-wizard.html">Wizard</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
-                    <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Interface elements</span></a></li>
-                    <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
-                    <li><a href="grid.html"><i class="icon icon-th-list"></i> <span>Grid Layout</span></a></li>
-                    <li class="submenu">
-                        <a href="#"><i class="icon icon-file"></i> <span>Sample pages</span> <span class="label">4</span></a>
-                        <ul>
-                            <li><a href="invoice.html">Invoice</a></li>
-                            <li><a href="chat.html">Support chat</a></li>
-                            <li><a href="calendar.html">Calendar</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a>
-                    </li>
-                    <li>
-                        <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a>
-                    </li>
-                </ul>
-            </div>
-        </h:form>
-
-        <div id="content">
-
-            <!-- INCLUDE HERE ALL THE CONTENT -->
-            <ui:include src="pages/#{adminController.page}.xhtml"/>
-
-        </div>
-
-
-        <h:outputScript library="js" name="excanvas.min.js" />
-        <h:outputScript library="js" name="jquery.min.js" />
-        <h:outputScript library="js" name="jquery-ui.custom.js" />
-        <h:outputScript library="js" name="bootstrap.min.js" />
-        <h:outputScript library="js" name="jquery.flot.min.js" />
-        <h:outputScript library="js" name="jquery.flot.resize.min.js" />
-        <h:outputScript library="js" name="jquery.peity.min.js" />
-        <h:outputScript library="js" name="fullcalendar.min.js" />
-        <h:outputScript library="js" name="unicorn.js" />
-        <h:outputScript library="js" name="unicorn.dashboard.js" />
+            </ui:define>
+        </ui:composition>
 
     </h:body>
 </html>
