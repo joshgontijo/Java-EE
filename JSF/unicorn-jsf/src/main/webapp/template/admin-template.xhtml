@@ -52,9 +52,9 @@
                 <a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
                 <ul>
 
-                    <li class="active"><h:link outcome="/index.xhtml"><i class="icon icon-home"></i><span>Dashboard</span></h:link></li>
+                    <li class="#{adminController.getMenuClass('index')}"><h:link outcome="/index.xhtml"><i class="icon icon-home"></i><span>Dashboard</span></h:link></li>
                     <!--<li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>-->
-                    <li class="submenu">
+                    <li class="submenu #{adminController.getMenuClass('form')}">
                         <a href="#"><i class="icon icon-th-list"></i> <span>Form elements</span> <span class="label">3</span></a>
                         <ul>
                             <li><h:link outcome="/pages/form-common.xhtml" value="Form Commons"/></li>
