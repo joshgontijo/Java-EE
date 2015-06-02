@@ -1,0 +1,11 @@
+<job id="import-job" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+    
+    <step id="body">
+        <chunk item-count="1">
+            <reader ref="importBodyItemReader"/>
+            <processor ref="importBodyItemProcessor"/>
+            <writer ref="importBodyItemWriter"/>
+        </chunk>
+    </step>
+</job>
+
