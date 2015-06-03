@@ -1,0 +1,22 @@
+<job id="split-job"  version="1.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
+    
+    <split id="split1" next="step3">
+        <!-- The flows will run concurrently -->
+        <flow id="flow1">
+            <step id="step1">
+                <batchlet ref="step1Batchlet"/>
+            </step>
+        </flow>
+         <!-- The flows will run concurrently -->
+        <flow id="flow2">
+            <step id="step2">
+                <batchlet ref="step2Batchlet"/>
+            </step>
+        </flow>
+    </split>
+    <step id="step3">
+        <batchlet ref="step3Batchlet"/>
+    </step>
+    
+</job>
+

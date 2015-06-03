@@ -1,0 +1,11 @@
+<job id="mapped-partition-job"  version="1.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
+    
+    <step id="body">
+        <batchlet ref="partitionedBatchlet" />
+        <partition>
+            <mapper ref="customPartitionMapper" />
+        </partition>
+    </step>
+    
+</job>
+

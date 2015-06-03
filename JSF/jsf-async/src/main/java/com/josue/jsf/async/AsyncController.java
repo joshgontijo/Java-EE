@@ -55,10 +55,7 @@ public class AsyncController implements Serializable {
     }
 
     public void ping() {
-//        logger.info("PING...");
-        if (asyncResult != null) {
-
-        }
+        logger.info("PING...");
     }
 
     public String getAsyncResult() {

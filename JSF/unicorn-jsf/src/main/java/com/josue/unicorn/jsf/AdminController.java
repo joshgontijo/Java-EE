@@ -6,10 +6,10 @@
 package com.josue.unicorn.jsf;
 
 import java.io.Serializable;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
 /**
@@ -29,18 +29,14 @@ public class AdminController implements Serializable {
         logger.info("********* Initializing ADMIN CONTROLLER*************");
     }
 
-    public String navigate(String page) {
-        logger.log(Level.INFO, "********* NAVIGATING TO {0}... ALL VIEWSCOPED WILL BE RESET*************", page);
-        this.page = page;
-        return "index.xhtml?faces-redirect=true";
-    }
-
-    public String getPage() {
-        return page;
-    }
-
-    public void setPage(String page) {
-        this.page = page;
+    public String getMenuClass(String menuSection) {
+        String viewId = FacesContext.getCurrentInstance().getViewRoot().getViewId();
+        String path = viewId.substring(viewId.lastIndexOf("/") + 1);
+        String pageName = path.substring(0, path.lastIndexOf("."));
+        if (pageName.contains(menuSection)) {
+            return "active";
+        }
+        return "";
     }
 
 }

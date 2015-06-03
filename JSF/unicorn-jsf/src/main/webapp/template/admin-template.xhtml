@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Unicorn</title>   
+
+        <!--<link rel="stylesheet" href="resources/css/bootstrap.min.css" />-->
+        <!--<link rel="stylesheet" href="resources/css/bootstrap-responsive.min.css" />-->
+        <!--<link rel="stylesheet" href="resources/css/fullcalendar.css" />-->	
+        <!--<link rel="stylesheet" href="resources/css/unicorn.main.css" />-->
+        <!--<link rel="stylesheet" href="resources/css/unicorn.grey.css" class="skin-color" />-->
+
+        <h:outputStylesheet library="css" name="bootstrap.min.css" />
+        <h:outputStylesheet library="css" name="bootstrap-responsive.min.css" />
+        <h:outputStylesheet library="css" name="fullcalendar.css" />
+        <h:outputStylesheet library="css" name="unicorn.main.css" />
+        <h:outputStylesheet library="css" name="unicorn.grey.css" />
+        <h:outputStylesheet library="css" name="app.css" />
+
+
+    </h:head>
+    <h:body>
+
+        <div id="header">
+            <h1><a href="./dashboard.html">Unicorn Admin</a></h1>		
+        </div>
+
+        <div id="search">
+            <input type="text" placeholder="Search here..."/><button type="submit" class="tip-right" title="Search"><i class="icon-search icon-white"></i></button>
+        </div>
+        <div id="user-nav" class="navbar navbar-inverse">
+            <ul class="nav btn-group">
+                <li class="btn btn-inverse" ><a title="" href="#"><i class="icon icon-user"></i> <span class="text">Profile</span></a></li>
+                <li class="btn btn-inverse dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="sAdd" title="" href="#">new message</a></li>
+                        <li><a class="sInbox" title="" href="#">inbox</a></li>
+                        <li><a class="sOutbox" title="" href="#">outbox</a></li>
+                        <li><a class="sTrash" title="" href="#">trash</a></li>
+                    </ul>
+                </li>
+                <li class="btn btn-inverse"><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
+                <li class="btn btn-inverse"><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+            </ul>
+        </div>
+
+        <h:form>
+            <div id="sidebar">
+                <a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
+                <ul>
+
+                    <li class="#{adminController.getMenuClass('index')}"><h:link outcome="/index.xhtml"><i class="icon icon-home"></i><span>Dashboard</span></h:link></li>
+                    <!--<li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a></li>-->
+                    <li class="submenu #{adminController.getMenuClass('form')}">
+                        <a href="#"><i class="icon icon-th-list"></i> <span>Form elements</span> <span class="label">3</span></a>
+                        <ul>
+                            <li><h:link outcome="/pages/form-common.xhtml" value="Form Commons"/></li>
+                            <li><a href="form-validation.html">Validation</a></li>
+                            <li><a href="form-wizard.html">Wizard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
+                    <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Interface elements</span></a></li>
+                    <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
+                    <li><a href="grid.html"><i class="icon icon-th-list"></i> <span>Grid Layout</span></a></li>
+                    <li class="submenu">
+                        <a href="#"><i class="icon icon-file"></i> <span>Sample pages</span> <span class="label">4</span></a>
+                        <ul>
+                            <li><a href="invoice.html">Invoice</a></li>
+                            <li><a href="chat.html">Support chat</a></li>
+                            <li><a href="calendar.html">Calendar</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a>
+                    </li>
+                </ul>
+            </div>
+        </h:form>
+
+        <div id="content">
+
+            <!-- INCLUDE HERE ALL THE CONTENT -->
+            <ui:insert name="content">
+                Content
+            </ui:insert>
+
+
+        </div>
+
+
+        <h:outputScript library="js" name="excanvas.min.js" />
+        <h:outputScript library="js" name="jquery.min.js" />
+        <h:outputScript library="js" name="jquery-ui.custom.js" />
+        <h:outputScript library="js" name="bootstrap.min.js" />
+        <h:outputScript library="js" name="jquery.flot.min.js" />
+        <h:outputScript library="js" name="jquery.flot.resize.min.js" />
+        <h:outputScript library="js" name="jquery.peity.min.js" />
+        <h:outputScript library="js" name="fullcalendar.min.js" />
+        <h:outputScript library="js" name="unicorn.js" />
+        <h:outputScript library="js" name="unicorn.dashboard.js" />
+
+    </h:body>
+</html>
+

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Batch</title>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <h:outputStylesheet name="css/bootstrap.css" />
+        <h:outputScript name="js/bootstrap.js" />
+    </h:head>
+    <h:body>
+        <h:outputScript name="jsf.js" library="javax.faces" target="head" />
+        <!-- JSF bugfix: http://stackoverflow.com/questions/11408130/jsf-commandbutton-works-on-second-click/11412138#11412138 -->
+        <h:outputScript library="js" name="jsf-bugfix.js" target="head" />
+        <h:outputScript name="js/app.js" target="body" />
+
+
+
+        <h:form id="someFormId">
+            <h:commandLink id="idOfButton" action="#{batchController.load()}">
+                <f:ajax render="batch-container"></f:ajax>
+            </h:commandLink>
+        </h:form>
+
+        <h:panelGroup layout="block" id="batch-container" class="container">
+            <!-- actions panel -->
+
+            <div class="panel-heading" >
+                <h3 class="panel-title"><b>ACTIONS</b></h3>
+            </div>
+            <h:form>
+                <div class="panel-body">
+                    <h:commandButton class="btn btn-success" value="NEW JOB" action="#{batchController.startJob()}" />
+                </div>
+            </h:form>
+
+            <!-- outer panel JOBINSTANCE-->
+            <ui:repeat value="#{batchController.jobInstances}" var="jobInstance">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #269abc">
+                        <h3 class="panel-title"><b>JOBINSTANCE ID: #{jobInstance.instanceId}</b></h3>
+                    </div>
+                    <div class="panel-body" style="background-color: #afd9ee">
+                        <div class="panel panel-default">
+
+                            <!-- inner panel JOBEXECUTION-->
+                            <ui:repeat value="#{batchController.jobExecutions.get(jobInstance)}" var="jobExecution">
+                                <div class="panel-heading" style="background-color: #398439">
+                                    <h:form>
+                                        <h3 class="panel-title" style="height: 40px"><b>JOBEXECUTION #{jobExecution.executionId}  :::   #{jobExecution.batchStatus}</b>
+                                            <h:commandButton value="Stop" action="#{batchController.stopJob(jobExecution)}" style="float: right" class="btn btn-warning" rendered="#{jobExecution.batchStatus eq 'STARTED'}"/>
+                                            <h:commandButton value="Resume" action="#{batchController.resumeJob(jobExecution)}" style="float: right"  class="btn btn-info" rendered="#{jobExecution.batchStatus eq 'STOPPED'}"/>
+                                            <h:commandButton value="Abandon" action="#{batchController.abandonJob(jobExecution)}" style="float: right"  class="btn btn-danger" rendered="#{jobExecution.batchStatus eq 'STOPPED'}"/>
+                                        </h3>
+                                    </h:form>
+                                </div>
+                                <div class="panel-body" style="background-color: #67b168">
+
+
+                                    <!-- inner-INNER panel STEPEXECUTION-->
+                                    <ui:repeat value="#{batchController.stepExecutions.get(jobExecution)}" var="stepExecution">
+                                        <div class="panel-heading" style="background-color: #c7254e; margin: 15px">
+                                            <h3 class="panel-title"><b>STEPEXECUTION #{stepExecution.stepExecutionId}  :::  #{stepExecution.stepName}   :::  #{stepExecution.batchStatus}</b></h3>
+                                        </div>
+                                    </ui:repeat>
+                                    <!-- inner-INNER panel -->
+
+                                </div>
+                            </ui:repeat>
+                            <!-- inner panel -->
+
+                        </div>
+                    </div>
+                </div>
+            </ui:repeat>
+            <!-- outer panel -->
+
+        </h:panelGroup>
+    </h:body>
+</html>
+
