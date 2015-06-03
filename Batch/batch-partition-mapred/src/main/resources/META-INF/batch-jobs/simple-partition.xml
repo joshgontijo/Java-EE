@@ -1,0 +1,19 @@
+<job id="partition-job"  version="1.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee">
+    
+    <step id="body">
+        <batchlet ref="partitionedBatchlet">
+            <properties>
+                <property name="start" value="#{partitionPlan['start']}"  />
+                <property name="end" value="#{partitionPlan['end']}"  />
+            </properties>
+        </batchlet>
+        <partition>
+            <mapper ref="customPartitionMapper" />
+            <collector ref="customPartitionCollector" />
+            <analyzer ref="customPartitionAnalyzer" />
+            <reducer ref="customPartitionReducer" />
+        </partition>
+    </step>
+    
+</job>
+
