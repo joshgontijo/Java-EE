@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:j="http://xmlns.jcp.org/jsf/composite/josue"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/bootstrap.css" />
+        <h:outputStylesheet name="css/modal.css" />
+        <h:outputStylesheet name="css/jquery.gritter.css" />
+
+        <h:outputScript name="js/jquery.js" />
+        <h:outputScript name="js/jquery-ui.custom.js" />
+        <h:outputScript name="js/bootstrap.js" />
+        <h:outputScript name="js/jquery.gritter.js" />
+
+    </h:head>
+    <h:body>
+
+        <j:dialogButton modalId="confirmDialog" value="Open confirm dialog" styleClass="btn btn-danger"/>
+        <h:form>
+            <j:confirmDialog id="confirmDialog" confirmAction="#{modalController.confirm()}" cancelAction="#{modalController.cancel()}" header="Header title">
+                <p>Content here !!! </p>
+            </j:confirmDialog>
+        </h:form>
+
+
+        <j:dialogButton modalId="simpleDialog" styleClass="btn btn-info"/>
+        <h:form>
+            <j:dialog id="simpleDialog" header="Header title">
+                <p>Content here !!! </p>
+            </j:dialog>
+        </h:form>
+
+
+        <j:message id="msg" />
+        <h:form>
+            <h:commandButton value="Show messages" action="#{messageBean.addMessage()}" class="btn btn-warning">
+                <f:ajax render="msg"/>
+            </h:commandButton>
+        </h:form>
+
+        
+        <j:notification id="notifications" timeout="5000" sticky="false"/>
+         <h:form>
+             <h:commandButton value="Show notifications" action="#{messageBean.addNotification()}" class="btn btn-primary">
+                <f:ajax render="notifications"/>
+            </h:commandButton>
+        </h:form>
+
+    </h:body>
+</html>
+

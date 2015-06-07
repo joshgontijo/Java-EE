@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="timeout" type="java.lang.Integer" default="3000"/>
+        <cc:attribute name="sticky" type="java.lang.Boolean" default="false"/>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <div id="#{cc.id}">
+            <ui:repeat value="#{facesContext.messageList}" var="facesMessage">
+                <script>
+                    $.gritter.add({
+                        // heading of the notification
+                        title: '#{facesMessage.detail}',
+                        // the text inside the notification
+                        text: '#{facesMessage.detail}',
+                        // the image to display on the left
+//                            image: '',
+                        // if you want it to fade out on its own or just sit there
+                        sticky: #{cc.attrs.sticky},
+                        // the time you want it to be alive for before fading out
+                        time: #{cc.attrs.timeout},
+                        // the class name you want to apply to that specific message
+//                        class_name: 'gritter',
+                        // custom the position
+                        position: '',
+                        // how fast notifications fade in
+                        fade_in_speed: 'medium',
+                        // how fast the notices fade out
+                        fade_out_speed: 'medium'
+                    });
+                </script>
+            </ui:repeat>
+        </div>
+    </cc:implementation>
+</html>

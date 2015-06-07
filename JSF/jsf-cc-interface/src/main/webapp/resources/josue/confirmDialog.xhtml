@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="header" default="Dialog Header" type="java.lang.String"/>
+        <cc:attribute name="confirmAction" method-signature="void action()" required="true" />
+        <cc:attribute name="cancelAction" method-signature="void action()" required="true" />
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <div id="#{cc.id}" class="modal hide">
+            <div class="modal-header">
+                 <h:commandLink p:data-dismiss="modal" class="close" action="#{cc.attrs.confirmAction}">
+                    ×
+                    <f:ajax />
+                </h:commandLink>
+                <h3>#{cc.attrs.header}</h3>
+            </div>
+            <div class="modal-body">
+                <cc:insertChildren />
+            </div>
+            <div class="modal-footer">
+                <h:commandLink p:data-dismiss="modal" class="btn" action="#{cc.attrs.cancelAction}" >
+                    Cancel
+                    <f:ajax />
+                </h:commandLink>
+                <h:commandLink p:data-dismiss="modal" class="btn btn-primary" action="#{cc.attrs.confirmAction}">
+                    Confirm
+                    <f:ajax />
+                </h:commandLink>
+            </div>
+        </div>
+    </cc:implementation>
+</html>
