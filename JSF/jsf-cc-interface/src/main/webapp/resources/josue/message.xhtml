@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="timeout" type="java.lang.Integer" default="3000"/>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <div id="#{cc.id}">
+            <ui:repeat value="#{facesContext.messageList}" var="facesMessage" varStatus="messageIdx">
+                <div id="#{cc.id.concat(messageIdx.index)}" layout="block" 
+                     class="alert 
+                     #{facesMessage.severity.toString().contains('INFO') ? 'alert-info' : ''}
+                     #{facesMessage.severity.toString().contains('WARN') ? '' : ''}
+                     #{facesMessage.severity.toString().contains('ERROR') ? 'alert-error' : ''}
+                     #{facesMessage.severity.toString().contains('FATAL') ? 'alert-error' : ''}">
+                    <script>
+                        $('##{cc.id.concat(messageIdx.index)}').delay(#{cc.attrs.timeout}).fadeOut('slow');
+                    </script>
+                    <button class="close" data-dismiss="alert">×</button>
+                    <strong>#{facesMessage.severity}</strong>    #{facesMessage.detail}
+                </div>
+            </ui:repeat>
+        </div>
+    </cc:implementation>
+</html>

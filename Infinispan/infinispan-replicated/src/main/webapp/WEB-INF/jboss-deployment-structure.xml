@@ -2,7 +2,7 @@
     <deployment>  
         <dependencies>  
             <module name="org.infinispan" export="true"/>  
+            <module name="org.infinispan.commons" export="true"/>  
         </dependencies>  
     </deployment>  
-  
 </jboss-deployment-structure>  

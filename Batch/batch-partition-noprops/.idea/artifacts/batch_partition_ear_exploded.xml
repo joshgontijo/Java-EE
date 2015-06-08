@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="batch-partition:ear exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/batch_partition_ear_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="batch-partition/javaeeApplication/javaEEApplication" />
+    </root>
+  </artifact>
+</component>
