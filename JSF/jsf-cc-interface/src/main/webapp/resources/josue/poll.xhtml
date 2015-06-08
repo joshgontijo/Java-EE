@@ -8,9 +8,9 @@
 
     <!-- INTERFACE -->
     <cc:interface>
-        <cc:attribute name="modalId" required="true"/>
-        <cc:attribute name="value" default="Open dialog" />
-        <cc:attribute name="styleClass" />
+        <cc:attribute name="interval" type="java.lang.Integer"/>
+        <cc:attribute name="update" />
+        <cc:attribute name="action" method-signature="void action()"/>
     </cc:interface>
 
     <!-- IMPLEMENTATION -->
@@ -24,12 +24,26 @@
         <h:outputScript library="josue" name="js/bootstrap.js" target="head" />
         <h:outputScript library="josue" name="js/jquery.gritter.js" target="head" />
         
-        <script>
-            function openDialog(modalId) {
-                $('#' + modalId).modal('toggle');
+        <h:commandLink id="pollingLink" action="#{cc.attrs.action}">
+            <f:ajax render="#{cc.attrs.update}" />
+        </h:commandLink>
+
+        <script type="text/javascript">
+            var pollingLinkId = '#{cc.clientId}:pollingLink';
+            var poll = true;
+            setInterval(function () {
+                if (poll) {
+                    $(document.getElementById(pollingLinkId)).click();
+                }
+            }, #{cc.attrs.interval});
+            function stopPoll() {
+                console.log('Stopping poll');
+                poll = false;
+            }
+            function startPoll() {
+                console.log('Starting poll');
+                poll = true;
             }
         </script>
-        <button onclick="openDialog('#{cc.attrs.modalId}')" class="#{cc.attrs.styleClass}" value="#{cc.attrs.value}">#{cc.attrs.value}</button>
-
     </cc:implementation>
 </html>
