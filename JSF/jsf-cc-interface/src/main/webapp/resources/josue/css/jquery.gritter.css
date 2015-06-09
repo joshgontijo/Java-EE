@@ -64,7 +64,7 @@
     position:absolute;
     top:-5px;
     right:-5px;
-    background:url("#{resource['img/gritter.png']}") no-repeat left top;
+    background:url("#{resource['josue/img/gritter.png']}") no-repeat left top;
     cursor:pointer;
     width:30px;
     height:30px;
@@ -95,7 +95,7 @@
 .gritter-light .gritter-bottom,
 .gritter-light .gritter-top,
 .gritter-light .gritter-close {
-    background-image: url("#{resource['img/gritter-light.png']}");
+    background-image: url("#{resource['josue/img/gritter-light.png']}");
     color: #222;
 }
 .gritter-light .gritter-title {

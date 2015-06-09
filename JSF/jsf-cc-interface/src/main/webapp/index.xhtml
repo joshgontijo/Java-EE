@@ -6,22 +6,13 @@
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
-        <h:outputStylesheet name="css/bootstrap.css" />
-        <h:outputStylesheet name="css/modal.css" />
-        <h:outputStylesheet name="css/jquery.gritter.css" />
-
-        <h:outputScript name="js/jquery.js" />
-        <h:outputScript name="js/jquery-ui.custom.js" />
-        <h:outputScript name="js/bootstrap.js" />
-        <h:outputScript name="js/jquery.gritter.js" />
-
+        <title>Commons interface components</title>
     </h:head>
     <h:body>
 
         <j:dialogButton modalId="confirmDialog" value="Open confirm dialog" styleClass="btn btn-danger"/>
         <h:form>
-            <j:confirmDialog id="confirmDialog" confirmAction="#{modalController.confirm()}" cancelAction="#{modalController.cancel()}" header="Header title">
+            <j:confirmDialog id="confirmDialog" confirmAction="#{sampleBean.confirm()}" cancelAction="#{sampleBean.cancel()}" header="Header title">
                 <p>Content here !!! </p>
             </j:confirmDialog>
         </h:form>
@@ -37,19 +28,26 @@
 
         <j:message id="msg" />
         <h:form>
-            <h:commandButton value="Show messages" action="#{messageBean.addMessage()}" class="btn btn-warning">
+            <h:commandButton value="Show messages" action="#{sampleBean.addMessage()}" class="btn btn-warning">
                 <f:ajax render="msg"/>
             </h:commandButton>
         </h:form>
 
-        
+
         <j:notification id="notifications" timeout="5000" sticky="false"/>
-         <h:form>
-             <h:commandButton value="Show notifications" action="#{messageBean.addNotification()}" class="btn btn-primary">
+        <h:form>
+            <h:commandButton value="Show notifications" action="#{sampleBean.addNotification()}" class="btn btn-primary">
                 <f:ajax render="notifications"/>
             </h:commandButton>
         </h:form>
 
+        <h:form>
+            <j:poll id="abc" interval="3000" update="counter1" action="#{sampleBean.pollMethod()}" />
+        </h:form>
+
+        <h:panelGroup id="counter1" layout="block">
+            COUNTER: <span  class="label label-success">#{sampleBean.count}</span>
+        </h:panelGroup>
     </h:body>
 </html>
 
