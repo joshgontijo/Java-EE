@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="interval" type="java.lang.Integer" default="1000" />
+        <cc:attribute name="value" type="java.lang.Integer" required="true" method-signature="java.lang.Integer action()"/>
+        <cc:attribute name="span" type="java.lang.Integer" default="5"/>
+        <cc:attribute name="title" default="Title"/>
+        <cc:attribute name="yTitle" default="Value"/>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <h:outputScript library="josue" name="js/highcharts.js" />
+        <div id="#{cc.id}_highchart" style="min-width: 310px; height: 400px; margin: 0 auto"/>
+
+
+        <h:outputText id="hiddenVal" value="#{cc.attrs.value}" style="display: none"/>
+        <h:commandLink id="pollingLink">
+            <f:ajax execute="@form" render="hiddenVal" onevent="setUpdated()"/>
+        </h:commandLink>
+
+
+        <script type="text/javascript">
+            var pollingLinkId = '#{cc.clientId}:pollingLink';
+            setInterval(function () {
+                $(document.getElementById(pollingLinkId)).click();
+            }, #{cc.attrs.interval});
+        </script>
+
+        <h:panelGroup id="scriptPanel">
+            <script type="text/javascript">
+                var yValue = 0;
+                var updated = true;
+
+                function getY() {
+                    if (updated) {
+                        updated = false;
+                        var hiddenValElement = '#{cc.clientId}:hiddenVal';
+                        yValue = document.getElementById(hiddenValElement).innerHTML;
+                        return Number(yValue);
+                    }
+                    return 0;
+                }
+
+                function setUpdated() {
+                    updated = true;
+                }
+            </script>
+        </h:panelGroup>
+
+
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+
+            $(document).ready(function () {
+                Highcharts.setOptions({
+                    global: {
+                        useUTC: false
+                    }
+                });
+                $('##{cc.id}_highchart').highcharts({
+                    chart: {
+                        type: 'spline',
+                        animation: Highcharts.svg, // don't animate in old IE
+                        marginRight: 10,
+                        events: {
+                            load: function () {
+                                // set up the updating of the chart each second
+                                var series = this.series[0];
+                                setInterval(function () {
+                                    var x = (new Date()).getTime(); // current time
+                                    series.addPoint([x, getY()], true, true);
+                                }, #{cc.attrs.interval});
+                            }
+                        }
+                    },
+                    title: {
+                        text: '#{cc.attrs.title}'
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        tickPixelInterval: 150
+                    },
+                    yAxis: {
+                        title: {
+                            text: '#{cc.attrs.yTitle}'
+                        },
+                        plotLines: [{
+                                value: 0,
+                                width: 1,
+                                color: '#808080'
+                            }]
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return '<b>' + this.series.name + '</b><br/>' +
+                                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                                    Highcharts.numberFormat(this.y, 2);
+                        }
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    series: [{
+                            name: 'Random data',
+                            data: (function () {
+                                // generate an array of random data
+                                var data = [],
+                                        time = (new Date()).getTime(),
+                                        i;
+
+                                for (i = -#{cc.attrs.span}; i < 0; i++) {
+                                    data.push({
+                                        x: time,
+                                        y: 0
+                                    });
+                                }
+                                return data;
+                            }())
+                        }]
+                });
+            });
+            //]]>
+        </script>
+    </cc:implementation>
+</html>
