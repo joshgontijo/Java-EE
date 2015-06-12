@@ -20,16 +20,16 @@
         <h:outputStylesheet library="josue" name="css/jquery.gritter.css" />
 
         <h:outputScript library="josue" name="js/jquery.js" target="head" />
-        <h:outputScript library="josue" name="js/jquery-ui.custom.js" target="head" />
         <h:outputScript library="josue" name="js/bootstrap.js" target="head" />
         <h:outputScript library="josue" name="js/jquery.gritter.js" target="head" />
-        
+
         <script>
             function openDialog(modalId) {
                 $('#' + modalId).modal('toggle');
             }
         </script>
-        <button onclick="openDialog('#{cc.attrs.modalId}')" class="#{cc.attrs.styleClass}" value="#{cc.attrs.value}">#{cc.attrs.value}</button>
-
+        <h:commandButton onclick="openDialog('#{cc.attrs.modalId}')" class="#{cc.attrs.styleClass}" value="#{cc.attrs.value}">
+            <f:ajax />
+        </h:commandButton>
     </cc:implementation>
 </html>

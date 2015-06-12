@@ -10,16 +10,17 @@
     </h:head>
     <h:body>
 
-        <j:dialogButton modalId="confirmDialog" value="Open confirm dialog" styleClass="btn btn-danger"/>
         <h:form>
+            <j:dialogButton modalId="confirmDialog" value="Open confirm dialog" styleClass="btn btn-danger"/>
             <j:confirmDialog id="confirmDialog" confirmAction="#{sampleBean.confirm()}" cancelAction="#{sampleBean.cancel()}" header="Header title">
                 <p>Content here !!! </p>
             </j:confirmDialog>
         </h:form>
 
 
-        <j:dialogButton modalId="simpleDialog" styleClass="btn btn-info"/>
+
         <h:form>
+            <j:dialogButton modalId="simpleDialog" styleClass="btn btn-info"/>
             <j:dialog id="simpleDialog" header="Header title">
                 <p>Content here !!! </p>
             </j:dialog>
