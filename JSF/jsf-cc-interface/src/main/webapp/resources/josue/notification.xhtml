@@ -13,15 +13,6 @@
 
     <!-- IMPLEMENTATION -->
     <cc:implementation>
-        <h:outputStylesheet library="josue" name="css/bootstrap.css" />
-        <h:outputStylesheet library="josue" name="css/modal.css" />
-        <h:outputStylesheet library="josue" name="css/jquery.gritter.css" />
-
-        <h:outputScript library="josue" name="js/jquery.js" target="head" />
-        <h:outputScript library="josue" name="js/jquery-ui.custom.js" target="head" />
-        <h:outputScript library="josue" name="js/bootstrap.js" target="head" />
-        <h:outputScript library="josue" name="js/jquery.gritter.js" target="head" />
-        
         <div id="#{cc.id}">
             <ui:repeat value="#{facesContext.messageList}" var="facesMessage">
                 <script>
