@@ -10,13 +10,27 @@
     </h:head>
     <h:body>
 
+        <h:outputScript name="jsf.js" library="javax.faces" target="head" />
+        <!-- JSF bugfix: http://stackoverflow.com/questions/11408130/jsf-commandbutton-works-on-second-click/11412138#11412138 -->
+        <h:outputScript name="js/jsf-bugfix.js" library="josue"  target="head" />
+
+        <h:outputStylesheet library="josue" name="css/bootstrap.css" />
+        <h:outputStylesheet library="josue" name="css/modal.css" />
+        <h:outputStylesheet library="josue" name="css/jquery.gritter.css" />
+
+        <!-- REQUIRED LIBRARIES -->
+        <h:outputScript library="josue" name="js/jquery.js" target="head" />
+        <h:outputScript library="josue" name="js/jquery-ui.custom.js" target="head" />
+        <h:outputScript library="josue" name="js/bootstrap.js" target="head" />
+        <h:outputScript library="josue" name="js/jquery.gritter.js" target="head" />
+
+
         <h:form>
             <j:dialogButton modalId="confirmDialog" value="Open confirm dialog" styleClass="btn btn-danger"/>
             <j:confirmDialog id="confirmDialog" confirmAction="#{sampleBean.confirm()}" cancelAction="#{sampleBean.cancel()}" header="Header title">
                 <p>Content here !!! </p>
             </j:confirmDialog>
         </h:form>
-
 
 
         <h:form>
@@ -42,12 +56,35 @@
             </h:commandButton>
         </h:form>
 
-        <h:form>
-            <j:poll id="abc" interval="3000" update="counter1" action="#{sampleBean.pollMethod()}" />
-        </h:form>
+        <!-- ONLY ONE PER PAGE IS ALLOWED -->
+        <j:poll id="pollForm" interval="3" update="counter1" listener="#{sampleBean.pollMethod()}" stop="#{sampleBean.stop}" />
 
         <h:panelGroup id="counter1" layout="block">
             COUNTER: <span  class="label label-success">#{sampleBean.count}</span>
+        </h:panelGroup>
+        
+        <!-- poll commands -->
+        <h:panelGroup>
+            <h:form>
+                <h:commandLink value="Start" action="#{sampleBean.changePollStatus(false)}" class="btn btn-small btn-success">
+                    <!-- re-render the TRIGGER FORM, this way the script element is not re rendered-->
+                    <f:ajax render="pollForm:trigger" />
+                </h:commandLink>
+                <h:commandLink value="Stop" action="#{sampleBean.changePollStatus(true)}" class="btn btn-small btn-danger">
+                    <!-- re-render the TRIGGER FORM, this way the script element is not re rendered-->
+                    <f:ajax render="pollForm:trigger" />
+                </h:commandLink>
+                
+                <br />
+                <br />
+                 <h:commandLink value="JS Start" onclick="startPoll()"  class="btn btn-small btn-success">
+                    <!-- re-render the TRIGGER FORM, this way the script element is not re rendered-->
+                    <f:ajax render="pollForm:trigger" />
+                </h:commandLink>
+                <h:commandLink value="JS Stop" onclick="stopPoll()"  class="btn btn-small btn-danger">
+                    <f:ajax render="pollForm:trigger" />
+                </h:commandLink>
+            </h:form>
         </h:panelGroup>
     </h:body>
 </html>

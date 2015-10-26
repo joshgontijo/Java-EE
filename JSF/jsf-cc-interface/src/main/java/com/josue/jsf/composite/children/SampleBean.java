@@ -6,6 +6,7 @@
 package com.josue.jsf.composite.children;
 
 import java.io.Serializable;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -22,10 +23,25 @@ public class SampleBean implements Serializable {
 
     private static final Logger logger = Logger.getLogger(SampleBean.class.getName());
     private int count = 1;
+    private boolean stop = false;
+
+    public boolean isStop() {
+        return stop;
+    }
+
+    public void setStop(boolean stop) {
+        this.stop = stop;
+    }
+
+    public void changePollStatus(Boolean newStatus) {
+        logger.log(Level.INFO, "CHANGING STATS TO: {0}", newStatus);
+        stop = newStatus;
+    }
 
     //POLLING
     public void pollMethod() {
         count++;
+        logger.log(Level.INFO, "POLLING... COUNT: {0} -> POLL STATUS {1}", new Object[]{count, stop});
     }
 
     public int getCount() {

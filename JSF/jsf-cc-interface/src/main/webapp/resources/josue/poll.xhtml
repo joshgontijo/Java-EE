@@ -3,39 +3,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:cc="http://xmlns.jcp.org/jsf/composite"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <!-- INTERFACE -->
     <cc:interface>
-        <cc:attribute name="interval" type="java.lang.Integer"/>
-        <cc:attribute name="update" />
-        <cc:attribute name="action" method-signature="void action()"/>
+        <cc:attribute name="interval" default="3" type="java.lang.Integer"/>
+        <cc:attribute name="stop" default="false" type="java.lang.Boolean"/>
+        <cc:attribute name="update" type="java.lang.String" />
+        <cc:attribute name="listener" method-signature="void action()"/>
     </cc:interface>
 
     <!-- IMPLEMENTATION -->
     <cc:implementation>
-        <h:outputStylesheet library="josue" name="css/bootstrap.css" />
-        <h:outputStylesheet library="josue" name="css/modal.css" />
-        <h:outputStylesheet library="josue" name="css/jquery.gritter.css" />
-
-        <h:outputScript library="josue" name="js/jquery.js" target="head" />
-        <h:outputScript library="josue" name="js/jquery-ui.custom.js" target="head" />
-        <h:outputScript library="josue" name="js/bootstrap.js" target="head" />
-        <h:outputScript library="josue" name="js/jquery.gritter.js" target="head" />
+        <!-- this trigger can be used for external access -->
+        <h:form id="trigger">
+            <h:commandLink id="link" action="#{cc.attrs.listener}" disabled="#{cc.attrs.stop}">
+                <f:ajax render="#{cc.attrs.update} trigger" />
+            </h:commandLink>
+        </h:form>
         
-        <h:commandLink id="pollingLink" action="#{cc.attrs.action}">
-            <f:ajax render="#{cc.attrs.update}" />
-        </h:commandLink>
-
         <script type="text/javascript">
-            var pollingLinkId = '#{cc.clientId}:pollingLink';
+            var pollingLinkId = '#{cc.clientId}:trigger:link';
             var poll = true;
             setInterval(function () {
                 if (poll) {
+                    console.log('Polling');
                     $(document.getElementById(pollingLinkId)).click();
                 }
-            }, #{cc.attrs.interval});
+            }, #{cc.attrs.interval} * 1000);
             function stopPoll() {
                 console.log('Stopping poll');
                 poll = false;
