@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.josue</groupId>
+    <artifactId>json-provider</artifactId>
+    <version>1.0</version>
+    <packaging>war</packaging>
+
+    <name>json-provider</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>6.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- REF: http://stackoverflow.com/questions/16876482/jersey-jackson-and-codehaus-vs-fasterxml
+                  http://stackoverflow.com/questions/30782706/org-codehaus-jackson-versus-com-fasterxml-jackson-core
+        -->
+        <!-- use dependency if you dont want to depend on the internal impl of jersey / resteasy / etc -->
+        <!-- DOESNT NOT NEED TO REGISTER-->
+        <!-- DO NOT USE WITH 'jersey-json' -->
+        <!--        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>2.1.4</version>
+        </dependency>-->
+        
+        
+        <!-- client dependencies (using jersey client directly, no jaxrs standard here)-->
+         <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <!-- client specific json, it provides a internal jackson @Provider DO NOT use with 'jackson-jaxrs-json-provider' -->
+         <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.19</version>
+        </dependency>
+        
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+
+</project>

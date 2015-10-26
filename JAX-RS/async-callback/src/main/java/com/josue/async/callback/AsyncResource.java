@@ -47,7 +47,7 @@ public class AsyncResource {
             }
         });
 
-        //SUBMIT A NEW RUNNALE
+        //SUBMIT A NEW RUNNABLE
         mes.execute(new Runnable() {
 
             @Override
