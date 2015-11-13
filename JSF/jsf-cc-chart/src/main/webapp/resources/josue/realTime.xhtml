@@ -16,6 +16,7 @@
 
     <!-- IMPLEMENTATION -->
     <cc:implementation>
+        <h:outputScript library="josue" name="js/jquery.js" />
         <h:outputScript library="josue" name="js/highcharts.js" />
         <div id="#{cc.id}_highchart" style="min-width: 310px; height: 400px; margin: 0 auto"/>
 
@@ -26,7 +27,7 @@
         </h:commandLink>
 
 
-        <script type="text/javascript">
+        <script>
             var pollingLinkId = '#{cc.clientId}:pollingLink';
             setInterval(function () {
                 $(document.getElementById(pollingLinkId)).click();
