@@ -6,11 +6,11 @@
         <title>Index</title>
     </h:head>
     <h:body>
-        <h:messages globalOnly="true"  />
+        <h:messages showDetail="true"  />
         <h:form>
             <h:commandButton value="Check Exception" action="#{simpleController.checkedException()}" />
             <hr />
-            <h:commandButton value="Unchecked Exception" action="#{simpleController.checkedException()}" />
+            <h:commandButton value="Unchecked Exception" action="#{simpleController.uncheckedException()}" />
             <hr />
             <h:commandButton value="Exception Message" action="#{simpleController.exceptionMessage()}" />
         </h:form>

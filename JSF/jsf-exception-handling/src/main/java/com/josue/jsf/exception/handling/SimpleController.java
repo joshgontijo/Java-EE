@@ -30,7 +30,7 @@ public class SimpleController {
         try {
             throw new Exception("SOMETHING WRONG HAPPENED !!! OMG *EXCEPTION MESSAGE*");
         } catch (Exception e) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(e.getMessage()));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "summary", e.getMessage()));
         }
     }
 
