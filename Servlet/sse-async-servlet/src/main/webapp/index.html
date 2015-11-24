@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        Time: <span id="time"></span>
+
+        <br><br>
+        <button onclick="start()">Start</button>
+        <script type="text/javascript">
+            function start() {
+                var eventSource = new EventSource("AsyncServlet");
+                eventSource.onmessage = function (event) {
+                    document.getElementById('time').innerHTML = event.data;
+                };
+            }
+        </script>
+    </body>
+</html>
