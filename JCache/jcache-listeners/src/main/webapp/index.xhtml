@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Hazelcast simple</title>
+    </h:head>
+    <h:body>
+        Hazelcat simple example
+
+        <f:view>
+            <h:form>
+                Find by Key: <h:inputText value="#{cacheBoundary.key}" />
+                <h:commandButton value="Find" action="#{cacheBoundary.findByKey()}" />
+                <br />
+                <br />
+            </h:form>
+            <h:form>
+                Key: <h:inputText value="#{cacheBoundary.key}" />
+                <br />
+                Value: <h:inputText value="#{cacheBoundary.val}" />
+                <br />
+                <h:commandButton value="Add to Cache" action="#{cacheBoundary.addTocache()}" />
+            </h:form>
+            <h:form>
+                <h:dataTable value="#{cacheBoundary.cache.entrySet().toArray()}" var="item" style="border: 2px">
+                    <h:column>
+                        <f:facet name="header">Key</f:facet>
+                            #{item.key}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Value</f:facet>
+                            #{item.value}
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+            
+            
+        </f:view>
+
+
+    </h:body>
+</html>
+
