@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jcache-hazelcast:war">
+    <output-path>$PROJECT_DIR$/../JCache/jcache-hazelcast/target</output-path>
+    <root id="archive" name="jcache-hazelcast.war">
+      <element id="artifact" artifact-name="jcache-hazelcast:war exploded" />
+    </root>
+  </artifact>
+</component>

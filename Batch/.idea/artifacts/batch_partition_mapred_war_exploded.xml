@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="batch-partition-mapred:war exploded">
+    <output-path>$PROJECT_DIR$/batch-partition-mapred/target/batch-partition-mapred</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="batch-partition-mapred" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/batch-partition-mapred/target/batch-partition-mapred/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="batch-partition-mapred/web/Web" />
+    </root>
+  </artifact>
+</component>

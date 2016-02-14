@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/batch-checkpoint" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-complete-jpa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-cross-transaction" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-csv-database" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-flow" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-partition" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-partition-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-partition-mapred" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-partition-mapredanalyzer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-partition-noprops" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch-split" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simple-batch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../JCache/jcache-hazelcast" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

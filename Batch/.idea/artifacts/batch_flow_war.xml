@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-flow:war">
+    <output-path>$PROJECT_DIR$/batch-flow/target</output-path>
+    <root id="archive" name="batch-flow.war">
+      <element id="artifact" artifact-name="batch-flow:war exploded" />
+    </root>
+  </artifact>
+</component>

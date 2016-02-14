@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="simple-batch:war">
+    <output-path>$PROJECT_DIR$/simple-batch/target</output-path>
+    <root id="archive" name="simple-batch.war">
+      <element id="artifact" artifact-name="simple-batch:war exploded" />
+    </root>
+  </artifact>
+</component>

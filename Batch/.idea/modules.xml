@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/batch-checkpoint/batch-checkpoint.iml" filepath="$PROJECT_DIR$/batch-checkpoint/batch-checkpoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-cross-transaction/batch-cross-transaction.iml" filepath="$PROJECT_DIR$/batch-cross-transaction/batch-cross-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-csv-database/batch-csv-database.iml" filepath="$PROJECT_DIR$/batch-csv-database/batch-csv-database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-flow/batch-flow.iml" filepath="$PROJECT_DIR$/batch-flow/batch-flow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-complete-jpa/batch-jpa-solr.iml" filepath="$PROJECT_DIR$/batch-complete-jpa/batch-jpa-solr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-partition-noprops/batch-partition (1).iml" filepath="$PROJECT_DIR$/batch-partition-noprops/batch-partition (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-partition/batch-partition (2).iml" filepath="$PROJECT_DIR$/batch-partition/batch-partition (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-partition-mapper/batch-partition-mapper.iml" filepath="$PROJECT_DIR$/batch-partition-mapper/batch-partition-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-partition-mapred/batch-partition-mapred.iml" filepath="$PROJECT_DIR$/batch-partition-mapred/batch-partition-mapred.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-partition-mapredanalyzer/batch-partition-mapredanalyzer.iml" filepath="$PROJECT_DIR$/batch-partition-mapredanalyzer/batch-partition-mapredanalyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-split/batch-split.iml" filepath="$PROJECT_DIR$/batch-split/batch-split.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JCache/jcache-hazelcast/jcache-hazelcast.iml" filepath="$PROJECT_DIR$/../JCache/jcache-hazelcast/jcache-hazelcast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-batch/simple-batch.iml" filepath="$PROJECT_DIR$/simple-batch/simple-batch.iml" />
+    </modules>
+  </component>
+</project>

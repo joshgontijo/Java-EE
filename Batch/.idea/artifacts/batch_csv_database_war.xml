@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-csv-database:war">
+    <output-path>$PROJECT_DIR$/batch-csv-database/target</output-path>
+    <root id="archive" name="batch-csv-database-0.1.war">
+      <element id="artifact" artifact-name="batch-csv-database:war exploded" />
+    </root>
+  </artifact>
+</component>

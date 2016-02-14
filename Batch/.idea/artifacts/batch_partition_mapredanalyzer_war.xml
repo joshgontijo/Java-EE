@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-partition-mapredanalyzer:war">
+    <output-path>$PROJECT_DIR$/batch-partition-mapredanalyzer/target</output-path>
+    <root id="archive" name="batch-partition-mapredanalyzer.war">
+      <element id="artifact" artifact-name="batch-partition-mapredanalyzer:war exploded" />
+    </root>
+  </artifact>
+</component>

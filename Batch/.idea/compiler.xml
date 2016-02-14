@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-flow" />
+        <module name="batch-partition (1)" />
+        <module name="batch-partition (2)" />
+        <module name="batch-partition-mapper" />
+        <module name="batch-partition-mapred" />
+        <module name="batch-partition-mapredanalyzer" />
+        <module name="batch-split" />
+        <module name="jcache-hazelcast" />
+        <module name="simple-batch" />
+      </profile>
+      <profile default="false" name="Annotation profile for batch-checkpoint" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-checkpoint" />
+      </profile>
+      <profile default="false" name="Annotation profile for batch-jpa-solr" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-jpa-solr" />
+      </profile>
+      <profile default="false" name="Annotation profile for batch-cross-transaction" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-cross-transaction" />
+      </profile>
+      <profile default="false" name="Annotation profile for batch-csv-database" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="batch-csv-database" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="batch-checkpoint" target="1.7" />
+      <module name="batch-cross-transaction" target="1.7" />
+      <module name="batch-csv-database" target="1.7" />
+      <module name="batch-flow" target="1.7" />
+      <module name="batch-jpa-solr" target="1.7" />
+      <module name="batch-partition (1)" target="1.7" />
+      <module name="batch-partition (2)" target="1.7" />
+      <module name="batch-partition-mapper" target="1.7" />
+      <module name="batch-partition-mapred" target="1.7" />
+      <module name="batch-partition-mapredanalyzer" target="1.7" />
+      <module name="batch-split" target="1.7" />
+      <module name="jcache-hazelcast" target="1.7" />
+      <module name="simple-batch" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-cross-transaction:war">
+    <output-path>$PROJECT_DIR$/batch-cross-transaction/target</output-path>
+    <root id="archive" name="batch-cross-transaction-1.0.war">
+      <element id="artifact" artifact-name="batch-cross-transaction:war exploded" />
+    </root>
+  </artifact>
+</component>

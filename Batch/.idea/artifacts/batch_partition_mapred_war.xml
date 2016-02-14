@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-partition-mapred:war">
+    <output-path>$PROJECT_DIR$/batch-partition-mapred/target</output-path>
+    <root id="archive" name="batch-partition-mapred.war">
+      <element id="artifact" artifact-name="batch-partition-mapred:war exploded" />
+    </root>
+  </artifact>
+</component>

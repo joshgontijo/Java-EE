@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-partition (2):war">
+    <output-path>$PROJECT_DIR$/batch-partition/target</output-path>
+    <root id="archive" name="batch-partition.war">
+      <element id="artifact" artifact-name="batch-partition (2):war exploded" />
+    </root>
+  </artifact>
+</component>

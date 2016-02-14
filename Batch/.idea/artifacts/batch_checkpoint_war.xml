@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-checkpoint:war">
+    <output-path>$PROJECT_DIR$/batch-checkpoint/target</output-path>
+    <root id="archive" name="batch-checkpoint-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="batch-checkpoint:war exploded" />
+    </root>
+  </artifact>
+</component>
