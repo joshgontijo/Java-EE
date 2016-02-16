@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jcache-listeners:war">
+    <output-path>$PROJECT_DIR$/jcache-listeners/target</output-path>
+    <root id="archive" name="jcache-listeners.war">
+      <element id="artifact" artifact-name="jcache-listeners:war exploded" />
+    </root>
+  </artifact>
+</component>

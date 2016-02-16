@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="infinispan-basic:war">
+    <output-path>$PROJECT_DIR$/infinispan-basic/target</output-path>
+    <root id="archive" name="infinispan-basic-0.1.war">
+      <element id="artifact" artifact-name="infinispan-basic:war exploded" />
+    </root>
+  </artifact>
+</component>

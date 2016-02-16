@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hazelcast-lock/hazelcast-lock.iml" filepath="$PROJECT_DIR$/hazelcast-lock/hazelcast-lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infinispan-basic/infinispan-basic.iml" filepath="$PROJECT_DIR$/infinispan-basic/infinispan-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infinispan-replicated/infinispan-replicated.iml" filepath="$PROJECT_DIR$/infinispan-replicated/infinispan-replicated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/infinispan-rest/infinispan-rest.iml" filepath="$PROJECT_DIR$/infinispan-rest/infinispan-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcache-hazelcast/jcache-hazelcast.iml" filepath="$PROJECT_DIR$/jcache-hazelcast/jcache-hazelcast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jcache-listeners/jcache-listeners.iml" filepath="$PROJECT_DIR$/jcache-listeners/jcache-listeners.iml" />
+    </modules>
+  </component>
+</project>

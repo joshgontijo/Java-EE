@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jgroups:jgroups:3.5.0.Beta5">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jgroups/jgroups/3.5.0.Beta5/jgroups-3.5.0.Beta5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jgroups/jgroups/3.5.0.Beta5/jgroups-3.5.0.Beta5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jgroups/jgroups/3.5.0.Beta5/jgroups-3.5.0.Beta5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

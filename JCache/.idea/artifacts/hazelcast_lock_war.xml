@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hazelcast-lock:war">
+    <output-path>$PROJECT_DIR$/hazelcast-lock/target</output-path>
+    <root id="archive" name="hazelcast-lock.war">
+      <element id="artifact" artifact-name="hazelcast-lock:war exploded" />
+    </root>
+  </artifact>
+</component>

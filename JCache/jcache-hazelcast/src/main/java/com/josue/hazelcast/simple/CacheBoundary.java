@@ -5,16 +5,16 @@
  */
 package com.josue.hazelcast.simple;
 
+import javax.cache.Cache;
+import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.cache.Cache;
-import javax.faces.view.ViewScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
 
 /**
  *
@@ -37,7 +37,7 @@ public class CacheBoundary implements Serializable {
         cache.put(key, val);
     }
 
-    public void findByKey() {
+    public void findByKey() throws InterruptedException {
         Object get = cache.get(key);
         if (get != null) {
             logger.log(Level.INFO, "Found from Cache: {0}={1}", new Object[]{key, val});

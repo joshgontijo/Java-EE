@@ -19,7 +19,7 @@ public class JMSAsyncConsumer implements MessageListener {
     @Override
     public void onMessage(Message message) {
         try {
-            String payload = message.getBody(String.class);
+            String payload =  message.getBody(String.class);
             logger.info("Message received: " + payload);
         } catch (JMSException e) {
             logger.severe(e.getMessage());
