@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/cdi-app-config" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-async" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-async-observer" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-async-observer2" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-contructor" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-dynamic-injection" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-envstages-param" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-envstages2-param" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-jsf-conversation-scope" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-producer" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-startup" />
+    <file type="web" url="file://$PROJECT_DIR$/event-observer-pattern" />
+    <file type="web" url="file://$PROJECT_DIR$/injection-defaultt" />
+    <file type="web" url="file://$PROJECT_DIR$/javaee-cdi" />
+    <file type="web" url="file://$PROJECT_DIR$/transaction-listener" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/javaee-cdi/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-startup/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-app-config/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-contructor/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-async-observer/pom.xml" />
+        <option value="$PROJECT_DIR$/injection-defaultt/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-envstages-param/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-envstages2-param/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs-LIB/pom.xml" />
+        <option value="$PROJECT_DIR$/transaction-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-dynamic-injection/pom.xml" />
+        <option value="$PROJECT_DIR$/event-observer-pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-jsf-conversation-scope/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-async/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-async-observer2/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Assignment issuesGroovy</id>
+          </State>
+          <State>
+            <id>Assignment issuesJava</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesJava</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpellCheckingInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

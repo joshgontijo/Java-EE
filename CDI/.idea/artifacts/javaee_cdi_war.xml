@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="javaee-cdi:war">
+    <output-path>$PROJECT_DIR$/javaee-cdi/target</output-path>
+    <root id="archive" name="javaee-cdi-0.1.war">
+      <element id="artifact" artifact-name="javaee-cdi:war exploded" />
+    </root>
+  </artifact>
+</component>

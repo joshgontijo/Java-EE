@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cdi-app-config/cdi-app-config.iml" filepath="$PROJECT_DIR$/cdi-app-config/cdi-app-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-async/cdi-async.iml" filepath="$PROJECT_DIR$/cdi-async/cdi-async.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-async-observer/cdi-async-observer.iml" filepath="$PROJECT_DIR$/cdi-async-observer/cdi-async-observer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-async-observer2/cdi-async-observer2.iml" filepath="$PROJECT_DIR$/cdi-async-observer2/cdi-async-observer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-contructor/cdi-contructor.iml" filepath="$PROJECT_DIR$/cdi-contructor/cdi-contructor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-dynamic-injection/cdi-dynamic-injection.iml" filepath="$PROJECT_DIR$/cdi-dynamic-injection/cdi-dynamic-injection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-envstages-param/cdi-envstages-param.iml" filepath="$PROJECT_DIR$/cdi-envstages-param/cdi-envstages-param.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-envstages2-param/cdi-envstages2-param.iml" filepath="$PROJECT_DIR$/cdi-envstages2-param/cdi-envstages2-param.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs/cdi-inject-on-libs.iml" filepath="$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs/cdi-inject-on-libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs-LIB/cdi-inject-on-libs-LIB.iml" filepath="$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs-LIB/cdi-inject-on-libs-LIB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-jsf-conversation-scope/cdi-jsf-conversation-scope.iml" filepath="$PROJECT_DIR$/cdi-jsf-conversation-scope/cdi-jsf-conversation-scope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-producer/cdi-producer.iml" filepath="$PROJECT_DIR$/cdi-producer/cdi-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-startup/cdi-startup.iml" filepath="$PROJECT_DIR$/cdi-startup/cdi-startup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-observer-pattern/event-observer-pattern.iml" filepath="$PROJECT_DIR$/event-observer-pattern/event-observer-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/injection-defaultt/injection-defaultt.iml" filepath="$PROJECT_DIR$/injection-defaultt/injection-defaultt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaee-cdi/javaee-cdi.iml" filepath="$PROJECT_DIR$/javaee-cdi/javaee-cdi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/transaction-listener/transaction-listener.iml" filepath="$PROJECT_DIR$/transaction-listener/transaction-listener.iml" />
+    </modules>
+  </component>
+</project>

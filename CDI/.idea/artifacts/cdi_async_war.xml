@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cdi-async:war">
+    <output-path>$PROJECT_DIR$/cdi-async/target</output-path>
+    <root id="archive" name="cdi-async.war">
+      <element id="artifact" artifact-name="cdi-async:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cdi-inject-on-libs:war">
+    <output-path>$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs/target</output-path>
+    <root id="archive" name="cdi-inject-on-libs-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="cdi-inject-on-libs:war exploded" />
+    </root>
+  </artifact>
+</component>

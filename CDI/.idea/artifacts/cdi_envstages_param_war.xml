@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cdi-envstages-param:war">
+    <output-path>$PROJECT_DIR$/cdi-envstages-param/target</output-path>
+    <root id="archive" name="cdi-annot-param.war">
+      <element id="artifact" artifact-name="cdi-envstages-param:war exploded" />
+    </root>
+  </artifact>
+</component>

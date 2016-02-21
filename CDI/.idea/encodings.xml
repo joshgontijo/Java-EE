@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/cdi-app-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-contructor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-dynamic-injection" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-envstages-param" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-envstages2-param" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs-LIB" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-jsf-conversation-scope" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-producer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-startup" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/event-observer-pattern" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/injection-defaultt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/javaee-cdi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/transaction-listener" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

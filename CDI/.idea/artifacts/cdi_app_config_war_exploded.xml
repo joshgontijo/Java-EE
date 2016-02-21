@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cdi-app-config:war exploded">
+    <output-path>$PROJECT_DIR$/cdi-app-config/target/cdi-app-config-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cdi-app-config" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/cdi-app-config/target/cdi-app-config-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="cdi-app-config/web/Web" />
+    </root>
+  </artifact>
+</component>

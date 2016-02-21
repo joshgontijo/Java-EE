@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="transaction-listener:war">
+    <output-path>$PROJECT_DIR$/transaction-listener/target</output-path>
+    <root id="archive" name="transaction-listener-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="transaction-listener:war exploded" />
+    </root>
+  </artifact>
+</component>

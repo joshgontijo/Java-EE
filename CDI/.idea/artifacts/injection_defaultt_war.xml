@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="injection-defaultt:war">
+    <output-path>$PROJECT_DIR$/injection-defaultt/target</output-path>
+    <root id="archive" name="injection-defaultt-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="injection-defaultt:war exploded" />
+    </root>
+  </artifact>
+</component>

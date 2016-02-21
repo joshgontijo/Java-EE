@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cdi-dynamic-injection:war">
+    <output-path>$PROJECT_DIR$/cdi-dynamic-injection/target</output-path>
+    <root id="archive" name="cdi-dynamic-injection-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="cdi-dynamic-injection:war exploded" />
+    </root>
+  </artifact>
+</component>
