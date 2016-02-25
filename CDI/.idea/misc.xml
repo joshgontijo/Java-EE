@@ -16,6 +16,7 @@
     <file type="web" url="file://$PROJECT_DIR$/cdi-jsf-conversation-scope" />
     <file type="web" url="file://$PROJECT_DIR$/cdi-producer" />
     <file type="web" url="file://$PROJECT_DIR$/cdi-startup" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-synchronized" />
     <file type="web" url="file://$PROJECT_DIR$/event-observer-pattern" />
     <file type="web" url="file://$PROJECT_DIR$/injection-defaultt" />
     <file type="web" url="file://$PROJECT_DIR$/javaee-cdi" />
@@ -41,6 +42,7 @@
         <option value="$PROJECT_DIR$/cdi-jsf-conversation-scope/pom.xml" />
         <option value="$PROJECT_DIR$/cdi-async/pom.xml" />
         <option value="$PROJECT_DIR$/cdi-async-observer2/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-synchronized/pom.xml" />
       </list>
     </option>
   </component>
@@ -126,55 +128,5 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

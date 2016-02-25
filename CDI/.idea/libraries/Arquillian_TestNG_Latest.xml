@@ -1,0 +1,8 @@
+<component name="libraryTable">
+  <library name="Arquillian TestNG:Latest" type="repository">
+    <properties maven-id="org.jboss.arquillian.testng:arquillian-testng-container:LATEST" />
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

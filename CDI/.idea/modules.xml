@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/cdi-jsf-conversation-scope/cdi-jsf-conversation-scope.iml" filepath="$PROJECT_DIR$/cdi-jsf-conversation-scope/cdi-jsf-conversation-scope.iml" />
       <module fileurl="file://$PROJECT_DIR$/cdi-producer/cdi-producer.iml" filepath="$PROJECT_DIR$/cdi-producer/cdi-producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/cdi-startup/cdi-startup.iml" filepath="$PROJECT_DIR$/cdi-startup/cdi-startup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-synchronized/cdi-synchronized.iml" filepath="$PROJECT_DIR$/cdi-synchronized/cdi-synchronized.iml" />
       <module fileurl="file://$PROJECT_DIR$/event-observer-pattern/event-observer-pattern.iml" filepath="$PROJECT_DIR$/event-observer-pattern/event-observer-pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/injection-defaultt/injection-defaultt.iml" filepath="$PROJECT_DIR$/injection-defaultt/injection-defaultt.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaee-cdi/javaee-cdi.iml" filepath="$PROJECT_DIR$/javaee-cdi/javaee-cdi.iml" />

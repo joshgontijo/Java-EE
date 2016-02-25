@@ -24,13 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="cdi-jsf-conversation-scope" />
       </profile>
-      <profile default="false" name="Annotation profile for cdi-app-config" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="cdi-app-config" />
-      </profile>
       <profile default="false" name="Annotation profile for cdi-startup" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -55,6 +48,7 @@
         <module name="cdi-envstages-param" />
         <module name="cdi-envstages2-param" />
         <module name="cdi-inject-on-libs-LIB" />
+        <module name="cdi-synchronized" />
       </profile>
       <profile default="false" name="Annotation profile for cdi-inject-on-libs" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -120,6 +114,7 @@
       <module name="cdi-jsf-conversation-scope" target="1.7" />
       <module name="cdi-producer" target="1.7" />
       <module name="cdi-startup" target="1.7" />
+      <module name="cdi-synchronized" target="1.7" />
       <module name="event-observer-pattern" target="1.7" />
       <module name="injection-defaultt" target="1.7" />
       <module name="javaee-cdi" target="1.7" />
