@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/admin-application-ajax/admin-application-ajax.iml" filepath="$PROJECT_DIR$/admin-application-ajax/admin-application-ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-async/jsf-async.iml" filepath="$PROJECT_DIR$/jsf-async/jsf-async.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-cc-chart/jsf-cc-chart.iml" filepath="$PROJECT_DIR$/jsf-cc-chart/jsf-cc-chart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-cc-interface/jsf-cc-interface.iml" filepath="$PROJECT_DIR$/jsf-cc-interface/jsf-cc-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-exception-handling/jsf-exception-handling.iml" filepath="$PROJECT_DIR$/jsf-exception-handling/jsf-exception-handling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-exception-interceptor/jsf-exception-interceptor.iml" filepath="$PROJECT_DIR$/jsf-exception-interceptor/jsf-exception-interceptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-multiplefiles-upload/jsf-multiplefiles-upload.iml" filepath="$PROJECT_DIR$/jsf-multiplefiles-upload/jsf-multiplefiles-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-selectonemenu-converter/jsf-selectonemenu-converter.iml" filepath="$PROJECT_DIR$/jsf-selectonemenu-converter/jsf-selectonemenu-converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsf-view-scope/jsf-view-scope.iml" filepath="$PROJECT_DIR$/jsf-view-scope/jsf-view-scope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pf-admin-application/pf-admin-application.iml" filepath="$PROJECT_DIR$/pf-admin-application/pf-admin-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/primefaces-basic/primefaces-basic.iml" filepath="$PROJECT_DIR$/primefaces-basic/primefaces-basic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sbadmin-jsf/sbadmin-jsf.iml" filepath="$PROJECT_DIR$/sbadmin-jsf/sbadmin-jsf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unicorn-jsf/unicorn-jsf.iml" filepath="$PROJECT_DIR$/unicorn-jsf/unicorn-jsf.iml" />
+    </modules>
+  </component>
+</project>

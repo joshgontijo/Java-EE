@@ -4,6 +4,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/cache-annotation" />
     <file type="web" url="file://$PROJECT_DIR$/hazelcast-lock" />
     <file type="web" url="file://$PROJECT_DIR$/infinispan-basic" />
     <file type="web" url="file://$PROJECT_DIR$/infinispan-replicated" />
@@ -14,12 +15,13 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/hazelcast-lock/pom.xml" />
         <option value="$PROJECT_DIR$/infinispan-rest/pom.xml" />
         <option value="$PROJECT_DIR$/infinispan-basic/pom.xml" />
         <option value="$PROJECT_DIR$/jcache-hazelcast/pom.xml" />
         <option value="$PROJECT_DIR$/jcache-listeners/pom.xml" />
         <option value="$PROJECT_DIR$/infinispan-replicated/pom.xml" />
-        <option value="$PROJECT_DIR$/hazelcast-lock/pom.xml" />
+        <option value="$PROJECT_DIR$/cache-annotation/pom.xml" />
       </list>
     </option>
   </component>
@@ -35,5 +37,55 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

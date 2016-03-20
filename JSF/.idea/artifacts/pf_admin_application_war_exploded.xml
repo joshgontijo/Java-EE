@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pf-admin-application:war exploded">
+    <output-path>$PROJECT_DIR$/pf-admin-application/target/pf-admin-application</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pf-admin-application" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.primefaces.themes:all-themes:1.0.10" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:5.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/pf-admin-application/target/pf-admin-application/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="pf-admin-application/web/Web" />
+    </root>
+  </artifact>
+</component>

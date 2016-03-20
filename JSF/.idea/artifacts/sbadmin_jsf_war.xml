@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sbadmin-jsf:war">
+    <output-path>$PROJECT_DIR$/sbadmin-jsf/target</output-path>
+    <root id="archive" name="sbadmin-jsf-0.1.war">
+      <element id="artifact" artifact-name="sbadmin-jsf:war exploded" />
+    </root>
+  </artifact>
+</component>

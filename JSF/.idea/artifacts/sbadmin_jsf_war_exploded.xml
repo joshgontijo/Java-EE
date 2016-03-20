@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sbadmin-jsf:war exploded">
+    <output-path>$PROJECT_DIR$/sbadmin-jsf/target/sbadmin-jsf-0.1</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sbadmin-jsf" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/sbadmin-jsf/target/sbadmin-jsf-0.1/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="sbadmin-jsf/web/Web" />
+    </root>
+  </artifact>
+</component>

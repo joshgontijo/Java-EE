@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="primefaces-basic:war">
+    <output-path>$PROJECT_DIR$/primefaces-basic/target</output-path>
+    <root id="archive" name="primefaces-basic-0.1.war">
+      <element id="artifact" artifact-name="primefaces-basic:war exploded" />
+    </root>
+  </artifact>
+</component>

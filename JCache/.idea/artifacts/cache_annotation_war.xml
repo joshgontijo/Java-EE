@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cache-annotation:war">
+    <output-path>$PROJECT_DIR$/cache-annotation/target</output-path>
+    <root id="archive" name="cache-annotation.war">
+      <element id="artifact" artifact-name="cache-annotation:war exploded" />
+    </root>
+  </artifact>
+</component>

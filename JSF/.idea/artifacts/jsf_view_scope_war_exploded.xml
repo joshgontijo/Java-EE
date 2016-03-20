@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jsf-view-scope:war exploded">
+    <output-path>$PROJECT_DIR$/jsf-view-scope/target/jsf-view-scope-1.0</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jsf-view-scope" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jsf-view-scope/target/jsf-view-scope-1.0/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jsf-view-scope/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pf-admin-application:war">
+    <output-path>$PROJECT_DIR$/pf-admin-application/target</output-path>
+    <root id="archive" name="pf-admin-application.war">
+      <element id="artifact" artifact-name="pf-admin-application:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="admin-application-ajax" />
+        <module name="jsf-async" />
+        <module name="jsf-cc-chart" />
+        <module name="jsf-cc-interface" />
+        <module name="jsf-multiplefiles-upload" />
+        <module name="pf-admin-application" />
+        <module name="unicorn-jsf" />
+      </profile>
+      <profile default="false" name="Annotation profile for jsf-view-scope" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jsf-view-scope" />
+      </profile>
+      <profile default="false" name="Annotation profile for primefaces-basic" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="primefaces-basic" />
+      </profile>
+      <profile default="false" name="Annotation profile for sbadmin-jsf" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="sbadmin-jsf" />
+      </profile>
+      <profile default="false" name="Annotation profile for jsf-exception-handling" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jsf-exception-handling" />
+      </profile>
+      <profile default="false" name="Annotation profile for jsf-exception-interceptor" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jsf-exception-interceptor" />
+      </profile>
+      <profile default="false" name="Annotation profile for jsf-selectonemenu-converter" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="jsf-selectonemenu-converter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-application-ajax" target="1.7" />
+      <module name="jsf-async" target="1.7" />
+      <module name="jsf-cc-chart" target="1.7" />
+      <module name="jsf-cc-interface" target="1.7" />
+      <module name="jsf-exception-handling" target="1.7" />
+      <module name="jsf-exception-interceptor" target="1.7" />
+      <module name="jsf-multiplefiles-upload" target="1.7" />
+      <module name="jsf-selectonemenu-converter" target="1.7" />
+      <module name="jsf-view-scope" target="1.7" />
+      <module name="pf-admin-application" target="1.7" />
+      <module name="primefaces-basic" target="1.7" />
+      <module name="sbadmin-jsf" target="1.7" />
+      <module name="unicorn-jsf" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

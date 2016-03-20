@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jsf-selectonemenu-converter:war">
+    <output-path>$PROJECT_DIR$/jsf-selectonemenu-converter/target</output-path>
+    <root id="archive" name="jsf-selectonemenu-converter-0.1.war">
+      <element id="artifact" artifact-name="jsf-selectonemenu-converter:war exploded" />
+    </root>
+  </artifact>
+</component>

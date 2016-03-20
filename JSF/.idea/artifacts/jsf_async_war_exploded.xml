@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jsf-async:war exploded">
+    <output-path>$PROJECT_DIR$/jsf-async/target/jsf-async</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jsf-async" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:5.2" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jsf-async/target/jsf-async/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jsf-async/web/Web" />
+    </root>
+  </artifact>
+</component>

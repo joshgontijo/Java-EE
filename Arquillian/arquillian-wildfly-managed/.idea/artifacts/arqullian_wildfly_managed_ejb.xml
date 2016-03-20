@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="ejb-jar" name="arqullian-wildfly-managed:ejb">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="arqullian-wildfly-managed-0.1.jar">
+      <element id="artifact" artifact-name="arqullian-wildfly-managed:ejb exploded" />
+    </root>
+  </artifact>
+</component>

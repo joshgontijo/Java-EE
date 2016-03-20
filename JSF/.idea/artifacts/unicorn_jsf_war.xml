@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="unicorn-jsf:war">
+    <output-path>$PROJECT_DIR$/unicorn-jsf/target</output-path>
+    <root id="archive" name="unicorn-jsf.war">
+      <element id="artifact" artifact-name="unicorn-jsf:war exploded" />
+    </root>
+  </artifact>
+</component>

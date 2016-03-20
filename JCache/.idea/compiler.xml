@@ -29,6 +29,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="cache-annotation" />
         <module name="hazelcast-lock" />
         <module name="infinispan-replicated" />
         <module name="jcache-hazelcast" />
@@ -43,6 +44,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cache-annotation" target="1.7" />
       <module name="hazelcast-lock" target="1.7" />
       <module name="infinispan-basic" target="1.7" />
       <module name="infinispan-replicated" target="1.7" />

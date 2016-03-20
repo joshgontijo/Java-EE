@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jsf-multiplefiles-upload:war exploded">
+    <output-path>$PROJECT_DIR$/jsf-multiplefiles-upload/target/jsf-multiplefiles-upload</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jsf-multiplefiles-upload" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jsf-multiplefiles-upload/target/jsf-multiplefiles-upload/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jsf-multiplefiles-upload/web/Web" />
+    </root>
+  </artifact>
+</component>

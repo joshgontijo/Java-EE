@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/jsf-cc-chart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsf-cc-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsf-exception-handling" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsf-exception-interceptor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsf-multiplefiles-upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsf-selectonemenu-converter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jsf-view-scope" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/primefaces-basic" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sbadmin-jsf" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
