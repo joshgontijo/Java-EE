@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/cdi-dynamic-injection/cdi-dynamic-injection.iml" filepath="$PROJECT_DIR$/cdi-dynamic-injection/cdi-dynamic-injection.iml" />
       <module fileurl="file://$PROJECT_DIR$/cdi-envstages-param/cdi-envstages-param.iml" filepath="$PROJECT_DIR$/cdi-envstages-param/cdi-envstages-param.iml" />
       <module fileurl="file://$PROJECT_DIR$/cdi-envstages2-param/cdi-envstages2-param.iml" filepath="$PROJECT_DIR$/cdi-envstages2-param/cdi-envstages2-param.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cdi-envstages3-flex-param/cdi-envstages3-flex-param/cdi-envstages3-flexi-param.iml" filepath="$PROJECT_DIR$/cdi-envstages3-flex-param/cdi-envstages3-flex-param/cdi-envstages3-flexi-param.iml" />
       <module fileurl="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs/cdi-inject-on-libs.iml" filepath="$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs/cdi-inject-on-libs.iml" />
       <module fileurl="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs-LIB/cdi-inject-on-libs-LIB.iml" filepath="$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs-LIB/cdi-inject-on-libs-LIB.iml" />
       <module fileurl="file://$PROJECT_DIR$/cdi-jsf-conversation-scope/cdi-jsf-conversation-scope.iml" filepath="$PROJECT_DIR$/cdi-jsf-conversation-scope/cdi-jsf-conversation-scope.iml" />

@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/cdi-dynamic-injection" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cdi-envstages-param" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cdi-envstages2-param" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cdi-envstages3-flex-param/cdi-envstages3-flex-param" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs-LIB" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cdi-jsf-conversation-scope" charset="UTF-8" />

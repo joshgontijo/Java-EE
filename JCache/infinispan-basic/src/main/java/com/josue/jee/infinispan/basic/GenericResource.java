@@ -5,6 +5,9 @@
  */
 package com.josue.jee.infinispan.basic;
 
+import org.infinispan.Cache;
+import org.infinispan.manager.CacheContainer;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.ejb.Stateless;
@@ -12,8 +15,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import org.infinispan.Cache;
-import org.infinispan.manager.CacheContainer;
 
 /**
  * REST Web Service
@@ -24,7 +25,6 @@ import org.infinispan.manager.CacheContainer;
 @Stateless
 public class GenericResource {
 
-    @SuppressWarnings("unused")
     //java:jboss/infinispan/container/server --- cluster ready
     @Resource(lookup = "java:jboss/infinispan/container/server")
     private CacheContainer container;

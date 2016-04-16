@@ -47,6 +47,8 @@
         <module name="cdi-async-observer2" />
         <module name="cdi-envstages-param" />
         <module name="cdi-envstages2-param" />
+        <module name="cdi-envstages2-param (1)" />
+        <module name="cdi-envstages3-flexi-param" />
         <module name="cdi-inject-on-libs-LIB" />
         <module name="cdi-synchronized" />
       </profile>
@@ -109,6 +111,8 @@
       <module name="cdi-dynamic-injection" target="1.7" />
       <module name="cdi-envstages-param" target="1.7" />
       <module name="cdi-envstages2-param" target="1.7" />
+      <module name="cdi-envstages2-param (1)" target="1.7" />
+      <module name="cdi-envstages3-flexi-param" target="1.7" />
       <module name="cdi-inject-on-libs" target="1.7" />
       <module name="cdi-inject-on-libs-LIB" target="1.7" />
       <module name="cdi-jsf-conversation-scope" target="1.7" />

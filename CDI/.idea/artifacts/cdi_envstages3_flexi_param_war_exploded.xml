@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cdi-envstages3-flexi-param:war exploded">
+    <output-path>$PROJECT_DIR$/cdi-envstages3-flex-param/cdi-envstages3-flex-param/target/cdi-envstages3-flexi-param</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cdi-envstages3-flexi-param" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/cdi-envstages3-flex-param/cdi-envstages3-flex-param/target/cdi-envstages3-flexi-param/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="cdi-envstages3-flexi-param/web/Web" />
+    </root>
+  </artifact>
+</component>

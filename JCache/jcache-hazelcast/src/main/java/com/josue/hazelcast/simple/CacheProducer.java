@@ -47,5 +47,4 @@ public class CacheProducer {
     public Cache<String, Object> produceCache() {
         return cache;
     }
-
 }
