@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="startup-listener:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="startup-listener.war">
+      <element id="artifact" artifact-name="startup-listener:war exploded" />
+    </root>
+  </artifact>
+</component>
