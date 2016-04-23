@@ -2,209 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4533f28f-f9c3-4a27-a912-716ed799a357" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Batch/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Batch/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Batch/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JerseyViewable_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JerseyViewable_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/async_callback_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/async_callback_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/async_jaxrs_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/async_jaxrs_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs2_bean_param_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs2_bean_param_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_base64_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_base64_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_filter_binding_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_filter_binding_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_filter_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_filter_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_multiple_applications_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_multiple_applications_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_subresources_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_subresources_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_testing_client_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jaxrs_testing_client_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jboss_custom_jackson_provider_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jboss_custom_jackson_provider_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/json_provider_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/json_provider_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/rest_apikey_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/rest_apikey_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/resteasy_file_upload_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/resteasy_file_upload_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/streaming_output_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/streaming_output_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/wildfly_jackson_provider_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/wildfly_jackson_provider_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_jaxrs_jackson_jaxrs_json_provider_2_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_2_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_18_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_18_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javassist_javassist_3_12_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_api_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jsr173_api_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_james_apache_mime4j_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_jaxrs_api_3_0_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_jackson_provider_3_0_6_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_jaxb_provider_3_0_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_jaxrs_3_0_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_multipart_provider_3_0_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_annotation_jboss_annotations_api_1_1_spec_1_0_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scannotation_scannotation_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_5_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_5_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/streaming-output/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/JaxrsApp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/StreamingResource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/streaming-output/src/main/resources/sample.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Arquillian/arquillian-batch/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Arquillian/arquillian-service-stub/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Arquillian/arquillian-wildfly-embedded/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/.idea/artifacts/jcache_hazelcast_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/.idea/artifacts/jcache_hazelcast_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/.idea/libraries/Maven__com_hazelcast_hazelcast_3_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/.idea/libraries/Maven__javax_cache_cache_api_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-checkpoint/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-cross-transaction/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-csv-database/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-partition-mapper/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-partition-mapred/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-partition-noprops/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-partition/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/batch-split/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Batch/simple-batch/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../BeanValidation/custom-validator/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../BeanValidation/simple-beanvalidation/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-app-config/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-contructor/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-dynamic-injection/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-envstages-param/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-inject-using-lib/cdi-inject-on-libs/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-jsf-conversation-scope/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-producer/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/cdi-startup/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/event-observer-pattern/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/injection-defaultt/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/javaee-cdi/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../CDI/transaction-listener/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Concurrency/managed-executor-service/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Concurrency/managed-task-listener/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Concurrency/scheduled-service/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JAAS/apikey-login-module/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JAAS/custom-security/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JAAS/jaas-basic-security/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JAAS/jaas-logout/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JAAS/jaas-secured-resources/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JAAS/jboss-custom-loginmodule/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/JerseyViewable/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/async-callback/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/async-jaxrs/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jaxrs-base64/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jaxrs-filter-binding/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jaxrs-filter/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jaxrs-multiple-applications/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jaxrs-subresources/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jaxrs-testing-client/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jaxrs2-bean-param/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jboss-custom-jackson-provider/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json-provider/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rest-apikey/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resteasy-file-upload/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wildfly-jackson-provider/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JCache/infinispan-basic/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JCache/infinispan-replicated/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JCache/infinispan-rest/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JCache/jcache-hazelcast/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JCache/jcache-listeners/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/cdi-dynamic-database/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/jpa-elementcollection/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/jpa-it-liquibase-test/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/jpa-it-test/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/jpa-jta-basics/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/jpa-lock/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/jpa-tableperclass-inheritance/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JPA/multiple-datasources/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/admin-application-ajax/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-async/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-cc-chart/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-cc-interface/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-exception-handling/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-exception-interceptor/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-multiplefiles-upload/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-selectonemenu-converter/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/jsf-view-scope/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/pf-admin-application/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/primefaces-basic/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/sbadmin-jsf/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JSF/unicorn-jsf/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Servlet/AsyncServlet/nb-configuration.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Servlet/sse-async-servlet/nb-configuration.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Batch/.idea/compiler.xml" afterPath="$PROJECT_DIR$/../Batch/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Batch/.idea/encodings.xml" afterPath="$PROJECT_DIR$/../Batch/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Batch/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Batch/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Batch/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Batch/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Batch/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Batch/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Batch/simple-batch/src/main/java/com/josue/simple/batch/ImportBodyItemProcessor.java" afterPath="$PROJECT_DIR$/../Batch/simple-batch/src/main/java/com/josue/simple/batch/ImportBodyItemProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Batch/simple-batch/src/main/java/com/josue/simple/batch/jsf/BatchController.java" afterPath="$PROJECT_DIR$/../Batch/simple-batch/src/main/java/com/josue/simple/batch/jsf/BatchController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CDI/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CDI/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CDI/cdi-envstages3-flex-param/cdi-envstages3-flex-param/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CDI/cdi-envstages3-flex-param/cdi-envstages3-flex-param/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CDI/startup-listener/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CDI/startup-listener/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/StreamingResource.java" afterPath="$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/StreamingResource.java" />
     </list>
     <ignored path="JAX-RS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -265,12 +64,12 @@
       <file leaf-file-name="StreamingResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/StreamingResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47241378">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.73920864">
+              <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#965#1485#0" expanded="true" />
-                <element signature="e#1484#1485#0" expanded="true" />
+                <element signature="e#1532#2052#0" expanded="true" />
+                <element signature="e#2051#2052#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -314,8 +113,8 @@
       <list>
         <option value="$PROJECT_DIR$/streaming-output/pom.xml" />
         <option value="$PROJECT_DIR$/streaming-output/src/main/resources/sample.txt" />
-        <option value="$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/StreamingResource.java" />
         <option value="$PROJECT_DIR$/streaming-output/.gitignore" />
+        <option value="$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/StreamingResource.java" />
       </list>
     </option>
   </component>
@@ -975,12 +774,12 @@
       <created>1461442037718</created>
       <option name="number" value="Default" />
       <updated>1461442037718</updated>
-      <workItem from="1461442038877" duration="2985000" />
+      <workItem from="1461442038877" duration="3933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2985000" />
+    <option name="totallyTimeSpent" value="3933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1003,11 +802,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3496659" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="104" y="95" width="1736" height="856" />
+      <window_info id="Documentation" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3496659" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="104" y="95" width="1736" height="856" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -1073,12 +872,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/streaming-output/src/main/java/com/josue/javaee/jaxrs/StreamingResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47241378">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.73920864">
+          <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#965#1485#0" expanded="true" />
-            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1532#2052#0" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
           </folding>
         </state>
       </provider>
