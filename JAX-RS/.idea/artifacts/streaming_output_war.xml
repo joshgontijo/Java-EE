@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="streaming-output:war">
+    <output-path>$PROJECT_DIR$/streaming-output/target</output-path>
+    <root id="archive" name="streaming-output.war">
+      <element id="artifact" artifact-name="streaming-output:war exploded" />
+    </root>
+  </artifact>
+</component>

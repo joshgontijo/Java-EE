@@ -13,7 +13,6 @@
       <module fileurl="file://$PROJECT_DIR$/batch-partition-mapred/batch-partition-mapred.iml" filepath="$PROJECT_DIR$/batch-partition-mapred/batch-partition-mapred.iml" />
       <module fileurl="file://$PROJECT_DIR$/batch-partition-mapredanalyzer/batch-partition-mapredanalyzer.iml" filepath="$PROJECT_DIR$/batch-partition-mapredanalyzer/batch-partition-mapredanalyzer.iml" />
       <module fileurl="file://$PROJECT_DIR$/batch-split/batch-split.iml" filepath="$PROJECT_DIR$/batch-split/batch-split.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../JCache/jcache-hazelcast/jcache-hazelcast.iml" filepath="$PROJECT_DIR$/../JCache/jcache-hazelcast/jcache-hazelcast.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple-batch/simple-batch.iml" filepath="$PROJECT_DIR$/simple-batch/simple-batch.iml" />
     </modules>
   </component>

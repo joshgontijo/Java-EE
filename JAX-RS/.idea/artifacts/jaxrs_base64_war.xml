@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jaxrs-base64:war">
+    <output-path>$PROJECT_DIR$/jaxrs-base64/target</output-path>
+    <root id="archive" name="jaxrs-base64-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jaxrs-base64:war exploded" />
+    </root>
+  </artifact>
+</component>

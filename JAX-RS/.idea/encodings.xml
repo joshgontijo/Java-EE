@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/JerseyViewable" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/async-callback" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/async-jaxrs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jaxrs-base64" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jaxrs-filter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jaxrs-filter-binding" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jaxrs-multiple-applications" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jaxrs-subresources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jaxrs-testing-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jaxrs2-bean-param" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jboss-custom-jackson-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/json-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rest-apikey" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resteasy-file-upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wildfly-jackson-provider" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

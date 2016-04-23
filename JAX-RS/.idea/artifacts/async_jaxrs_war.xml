@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="async-jaxrs:war">
+    <output-path>$PROJECT_DIR$/async-jaxrs/target</output-path>
+    <root id="archive" name="async-jaxrs-0.1.war">
+      <element id="artifact" artifact-name="async-jaxrs:war exploded" />
+    </root>
+  </artifact>
+</component>

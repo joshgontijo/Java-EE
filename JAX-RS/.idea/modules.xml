@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JerseyViewable/JerseyViewable.iml" filepath="$PROJECT_DIR$/JerseyViewable/JerseyViewable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/async-callback/async-callback.iml" filepath="$PROJECT_DIR$/async-callback/async-callback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/async-jaxrs/async-jaxrs.iml" filepath="$PROJECT_DIR$/async-jaxrs/async-jaxrs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxrs-base64/jaxrs-base64.iml" filepath="$PROJECT_DIR$/jaxrs-base64/jaxrs-base64.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxrs-filter/jaxrs-filter.iml" filepath="$PROJECT_DIR$/jaxrs-filter/jaxrs-filter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxrs-filter-binding/jaxrs-filter-binding.iml" filepath="$PROJECT_DIR$/jaxrs-filter-binding/jaxrs-filter-binding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxrs-multiple-applications/jaxrs-multiple-applications.iml" filepath="$PROJECT_DIR$/jaxrs-multiple-applications/jaxrs-multiple-applications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxrs-subresources/jaxrs-subresources.iml" filepath="$PROJECT_DIR$/jaxrs-subresources/jaxrs-subresources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxrs-testing-client/jaxrs-testing-client.iml" filepath="$PROJECT_DIR$/jaxrs-testing-client/jaxrs-testing-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaxrs2-bean-param/jaxrs2-bean-param.iml" filepath="$PROJECT_DIR$/jaxrs2-bean-param/jaxrs2-bean-param.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jboss-custom-jackson-provider/jboss-custom-jackson-provider.iml" filepath="$PROJECT_DIR$/jboss-custom-jackson-provider/jboss-custom-jackson-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/json-provider/json-provider.iml" filepath="$PROJECT_DIR$/json-provider/json-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rest-apikey/rest-apikey.iml" filepath="$PROJECT_DIR$/rest-apikey/rest-apikey.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resteasy-file-upload/resteasy-file-upload.iml" filepath="$PROJECT_DIR$/resteasy-file-upload/resteasy-file-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streaming-output/streaming-output.iml" filepath="$PROJECT_DIR$/streaming-output/streaming-output.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wildfly-jackson-provider/wildfly-jackson-provider.iml" filepath="$PROJECT_DIR$/wildfly-jackson-provider/wildfly-jackson-provider.iml" />
+    </modules>
+  </component>
+</project>

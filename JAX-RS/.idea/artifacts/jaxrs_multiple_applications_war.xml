@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jaxrs-multiple-applications:war">
+    <output-path>$PROJECT_DIR$/jaxrs-multiple-applications/target</output-path>
+    <root id="archive" name="jaxrs-multiple-applications-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jaxrs-multiple-applications:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jaxrs2-bean-param:war">
+    <output-path>$PROJECT_DIR$/jaxrs2-bean-param/target</output-path>
+    <root id="archive" name="jaxrs2-bean-param-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jaxrs2-bean-param:war exploded" />
+    </root>
+  </artifact>
+</component>

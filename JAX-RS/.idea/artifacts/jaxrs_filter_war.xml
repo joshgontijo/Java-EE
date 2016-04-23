@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jaxrs-filter:war">
+    <output-path>$PROJECT_DIR$/jaxrs-filter/target</output-path>
+    <root id="archive" name="jaxrs-filter-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jaxrs-filter:war exploded" />
+    </root>
+  </artifact>
+</component>

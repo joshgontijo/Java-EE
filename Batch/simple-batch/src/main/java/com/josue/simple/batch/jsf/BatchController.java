@@ -5,14 +5,6 @@
  */
 package com.josue.simple.batch.jsf;
 
-import java.io.Serializable;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.batch.runtime.BatchRuntime;
 import javax.batch.runtime.BatchStatus;
@@ -21,6 +13,14 @@ import javax.batch.runtime.JobInstance;
 import javax.batch.runtime.StepExecution;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
+import java.io.Serializable;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -81,11 +81,12 @@ public class BatchController implements Serializable {
     }
 
     public void stopJob(JobExecution jobExecution) {
-        if (jobExecution.getBatchStatus().equals(BatchStatus.STARTED)) {
-            BatchRuntime.getJobOperator().stop(jobExecution.getExecutionId());
-            logger.log(Level.INFO, ":: STOPPED JOBEXECUTION: {0} ::", jobExecution.getExecutionId());
-        }
-        logger.log(Level.INFO, ":: CANNOT STOP - JOB NOT RUNNING: {0} ::", jobExecution.getExecutionId());
+            logger.log(Level.INFO, ":: TRYING STOP JOBEXECUTION: {0} ::", jobExecution.getExecutionId());
+        BatchRuntime.getJobOperator().stop(jobExecution.getExecutionId());
+//        if (jobExecution.getBatchStatus().equals(BatchStatus.STARTED)) {
+//            BatchRuntime.getJobOperator().stop(jobExecution.getExecutionId());
+//        }
+//        logger.log(Level.INFO, ":: CANNOT STOP - JOB NOT RUNNING: {0} ::", jobExecution.getExecutionId());
     }
 
     public void stopAllJobs(JobInstance jobInstance) {

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jboss-custom-jackson-provider:war">
+    <output-path>$PROJECT_DIR$/jboss-custom-jackson-provider/target</output-path>
+    <root id="archive" name="jboss-custom-jackson-provider-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="jboss-custom-jackson-provider:war exploded" />
+    </root>
+  </artifact>
+</component>

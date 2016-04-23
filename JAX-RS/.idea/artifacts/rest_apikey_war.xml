@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="rest-apikey:war">
+    <output-path>$PROJECT_DIR$/rest-apikey/target</output-path>
+    <root id="archive" name="rest-apikey-0.1.war">
+      <element id="artifact" artifact-name="rest-apikey:war exploded" />
+    </root>
+  </artifact>
+</component>

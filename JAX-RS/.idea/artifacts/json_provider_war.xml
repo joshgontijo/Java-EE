@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="json-provider:war">
+    <output-path>$PROJECT_DIR$/json-provider/target</output-path>
+    <root id="archive" name="json-provider.war">
+      <element id="artifact" artifact-name="json-provider:war exploded" />
+    </root>
+  </artifact>
+</component>

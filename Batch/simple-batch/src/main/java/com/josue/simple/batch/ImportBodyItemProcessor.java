@@ -5,10 +5,10 @@
  */
 package com.josue.simple.batch;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.batch.api.chunk.ItemProcessor;
 import javax.inject.Named;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Named
 public class ImportBodyItemProcessor implements ItemProcessor {
@@ -18,7 +18,7 @@ public class ImportBodyItemProcessor implements ItemProcessor {
     @Override
     public String processItem(Object rawValue) {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             String updated = ":PROCESSED:" + rawValue;
             return updated;
         } catch (InterruptedException ex) {

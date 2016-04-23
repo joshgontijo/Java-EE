@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="resteasy-file-upload:war">
+    <output-path>$PROJECT_DIR$/resteasy-file-upload/target</output-path>
+    <root id="archive" name="resteasy-file-upload-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="resteasy-file-upload:war exploded" />
+    </root>
+  </artifact>
+</component>

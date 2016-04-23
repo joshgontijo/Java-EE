@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jboss-custom-jackson-provider:war exploded">
+    <output-path>$PROJECT_DIR$/jboss-custom-jackson-provider/target/jboss-custom-jackson-provider-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jboss-custom-jackson-provider" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.1.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.1.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.1.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.1.4" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.1.4" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jboss-custom-jackson-provider/target/jboss-custom-jackson-provider-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jboss-custom-jackson-provider/web/Web" />
+    </root>
+  </artifact>
+</component>
