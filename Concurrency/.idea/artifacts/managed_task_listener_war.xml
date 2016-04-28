@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="managed-task-listener:war">
+    <output-path>$PROJECT_DIR$/managed-task-listener/target</output-path>
+    <root id="archive" name="managed-task-listener.war">
+      <element id="artifact" artifact-name="managed-task-listener:war exploded" />
+    </root>
+  </artifact>
+</component>

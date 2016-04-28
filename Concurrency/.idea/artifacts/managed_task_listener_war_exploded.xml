@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="managed-task-listener:war exploded">
+    <output-path>$PROJECT_DIR$/managed-task-listener/target/managed-task-listener</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="managed-task-listener" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/managed-task-listener/target/managed-task-listener/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="managed-task-listener/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="managed-executor-service:war">
+    <output-path>$PROJECT_DIR$/managed-executor-service/target</output-path>
+    <root id="archive" name="managed-executor-service.war">
+      <element id="artifact" artifact-name="managed-executor-service:war exploded" />
+    </root>
+  </artifact>
+</component>

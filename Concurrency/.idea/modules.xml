@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/configurable-executor/configurable-executor.iml" filepath="$PROJECT_DIR$/configurable-executor/configurable-executor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managed-executor-service/managed-executor-service.iml" filepath="$PROJECT_DIR$/managed-executor-service/managed-executor-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/managed-task-listener/managed-task-listener.iml" filepath="$PROJECT_DIR$/managed-task-listener/managed-task-listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scheduled-service/scheduled-service.iml" filepath="$PROJECT_DIR$/scheduled-service/scheduled-service.iml" />
+    </modules>
+  </component>
+</project>
