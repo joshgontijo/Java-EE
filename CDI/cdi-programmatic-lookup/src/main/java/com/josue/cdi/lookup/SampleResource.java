@@ -24,9 +24,9 @@ public class SampleResource {
     @GET
     @Path("by-type")
     public String getMessageByType(){
-        Bean<ControlB> bean = (Bean<ControlB>) beanManager.getBeans(ControlB.class).iterator().next();
-        CreationalContext<ControlB> ctx = beanManager.createCreationalContext(bean);
-        ControlB control = (ControlB) beanManager.getReference(bean, ControlB.class, ctx);
+        Bean<Control> bean = (Bean<Control>) beanManager.getBeans(ControlB.class).iterator().next();
+        CreationalContext<Control> ctx = beanManager.createCreationalContext(bean);
+        Control control = (Control) beanManager.getReference(bean, ControlB.class, ctx);
 
         return control.getMessage();
     }
@@ -36,7 +36,7 @@ public class SampleResource {
     public String getMessageByName(@QueryParam("bean") @DefaultValue("controlB") String beanName){
         Bean bean = beanManager.getBeans(beanName).iterator().next();
         CreationalContext ctx = beanManager.createCreationalContext(bean);
-        ControlB control = beanManager.getReference(bean, bean.getClass(), ctx);
+        Control control = (Control) beanManager.getReference(bean, bean.getBeanClass(), ctx);
 
         return control.getMessage();
     }

@@ -9,6 +9,6 @@ import javax.inject.Named;
 public class ControlB implements Control{
     @Override
     public String getMessage() {
-        return "Control A message";
+        return "Control B message";
     }
 }
