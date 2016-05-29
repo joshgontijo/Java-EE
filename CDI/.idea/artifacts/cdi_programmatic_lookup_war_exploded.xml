@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="cdi-programmatic-lookup:war exploded">
+    <output-path>$PROJECT_DIR$/cdi-programmatic-lookup/target/cdi-programmatic-lookup</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="cdi-programmatic-lookup" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/cdi-programmatic-lookup/target/cdi-programmatic-lookup/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="cdi-programmatic-lookup/web/Web" />
+    </root>
+  </artifact>
+</component>

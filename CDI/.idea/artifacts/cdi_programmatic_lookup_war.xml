@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cdi-programmatic-lookup:war">
+    <output-path>$PROJECT_DIR$/cdi-programmatic-lookup/target</output-path>
+    <root id="archive" name="cdi-programmatic-lookup.war">
+      <element id="artifact" artifact-name="cdi-programmatic-lookup:war exploded" />
+    </root>
+  </artifact>
+</component>

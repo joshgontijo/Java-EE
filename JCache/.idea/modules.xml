@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cache-annotation/cache-annotation.iml" filepath="$PROJECT_DIR$/cache-annotation/cache-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-queue/distributed-queue.iml" filepath="$PROJECT_DIR$/distributed-queue/distributed-queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entry-processor/entry-processor.iml" filepath="$PROJECT_DIR$/entry-processor/entry-processor.iml" />
       <module fileurl="file://$PROJECT_DIR$/hazelcast-lock/hazelcast-lock.iml" filepath="$PROJECT_DIR$/hazelcast-lock/hazelcast-lock.iml" />
       <module fileurl="file://$PROJECT_DIR$/infinispan-basic/infinispan-basic.iml" filepath="$PROJECT_DIR$/infinispan-basic/infinispan-basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/infinispan-replicated/infinispan-replicated.iml" filepath="$PROJECT_DIR$/infinispan-replicated/infinispan-replicated.iml" />

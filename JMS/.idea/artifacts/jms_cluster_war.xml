@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jms-cluster:war">
+    <output-path>$PROJECT_DIR$/jms-cluster/target</output-path>
+    <root id="archive" name="jms-cluster.war">
+      <element id="artifact" artifact-name="jms-cluster:war exploded" />
+    </root>
+  </artifact>
+</component>

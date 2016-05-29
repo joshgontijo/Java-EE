@@ -5,6 +5,8 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/cache-annotation" />
+    <file type="web" url="file://$PROJECT_DIR$/distributed-queue" />
+    <file type="web" url="file://$PROJECT_DIR$/entry-processor" />
     <file type="web" url="file://$PROJECT_DIR$/hazelcast-lock" />
     <file type="web" url="file://$PROJECT_DIR$/infinispan-basic" />
     <file type="web" url="file://$PROJECT_DIR$/infinispan-replicated" />

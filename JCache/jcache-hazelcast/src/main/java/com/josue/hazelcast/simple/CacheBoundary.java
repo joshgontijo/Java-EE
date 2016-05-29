@@ -38,7 +38,7 @@ public class CacheBoundary implements Serializable {
     }
 
     public void findByKey() throws InterruptedException {
-        Object get = cache.get(key);
+        Object get = cache.getAndRemove(key);
         if (get != null) {
             logger.log(Level.INFO, "Found from Cache: {0}={1}", new Object[]{key, val});
             val = get.toString();

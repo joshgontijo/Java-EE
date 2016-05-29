@@ -16,6 +16,7 @@
     <file type="web" url="file://$PROJECT_DIR$/cdi-inject-using-lib/cdi-inject-on-libs" />
     <file type="web" url="file://$PROJECT_DIR$/cdi-jsf-conversation-scope" />
     <file type="web" url="file://$PROJECT_DIR$/cdi-producer" />
+    <file type="web" url="file://$PROJECT_DIR$/cdi-programmatic-lookup" />
     <file type="web" url="file://$PROJECT_DIR$/cdi-startup" />
     <file type="web" url="file://$PROJECT_DIR$/cdi-synchronized" />
     <file type="web" url="file://$PROJECT_DIR$/event-observer-pattern" />
@@ -45,6 +46,7 @@
         <option value="$PROJECT_DIR$/cdi-async-observer2/pom.xml" />
         <option value="$PROJECT_DIR$/cdi-synchronized/pom.xml" />
         <option value="$PROJECT_DIR$/cdi-envstages3-flex-param/cdi-envstages3-flex-param/pom.xml" />
+        <option value="$PROJECT_DIR$/cdi-programmatic-lookup/pom.xml" />
       </list>
     </option>
   </component>

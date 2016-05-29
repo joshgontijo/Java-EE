@@ -50,6 +50,7 @@
         <module name="cdi-envstages2-param (1)" />
         <module name="cdi-envstages3-flexi-param" />
         <module name="cdi-inject-on-libs-LIB" />
+        <module name="cdi-programmatic-lookup" />
         <module name="cdi-synchronized" />
       </profile>
       <profile default="false" name="Annotation profile for cdi-inject-on-libs" enabled="true">
@@ -117,6 +118,7 @@
       <module name="cdi-inject-on-libs-LIB" target="1.7" />
       <module name="cdi-jsf-conversation-scope" target="1.7" />
       <module name="cdi-producer" target="1.7" />
+      <module name="cdi-programmatic-lookup" target="1.7" />
       <module name="cdi-startup" target="1.7" />
       <module name="cdi-synchronized" target="1.7" />
       <module name="event-observer-pattern" target="1.7" />

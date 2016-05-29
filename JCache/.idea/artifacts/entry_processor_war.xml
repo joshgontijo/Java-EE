@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="entry-processor:war">
+    <output-path>$PROJECT_DIR$/entry-processor/target</output-path>
+    <root id="archive" name="entry-processor.war">
+      <element id="artifact" artifact-name="entry-processor:war exploded" />
+    </root>
+  </artifact>
+</component>

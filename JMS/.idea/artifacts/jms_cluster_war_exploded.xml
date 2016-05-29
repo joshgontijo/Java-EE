@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jms-cluster:war exploded">
+    <output-path>$PROJECT_DIR$/jms-cluster/target/jms-cluster</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jms-cluster" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jms-cluster/target/jms-cluster/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jms-cluster/web/Web" />
+    </root>
+  </artifact>
+</component>
