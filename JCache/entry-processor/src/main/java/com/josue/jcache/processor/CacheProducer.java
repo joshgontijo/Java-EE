@@ -45,6 +45,9 @@ public class CacheProducer {
     public void destroy() {
         cache.close();
         cachingProvider.close();
+
+
+
     }
 
     @Produces

@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sample-messaging:war exploded">
+    <output-path>$PROJECT_DIR$/target/sample-messaging</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="hazelcast-queue" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.cache:cache-api:1.0.0" />
+          <element id="library" level="project" name="Maven: com.hazelcast:hazelcast:3.5.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/sample-messaging/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="hazelcast-queue/web/Web" />
+    </root>
+  </artifact>
+</component>

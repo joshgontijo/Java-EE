@@ -1,0 +1,13 @@
+<datasource jndi-name="java:jboss/datasources/queue-ds" pool-name="QueuePool" enabled="true" use-java-context="true">
+    <connection-url>jdbc:mysql://localhost:3306/test-queue</connection-url>
+    <driver>mysql</driver>
+    <pool>
+        <min-pool-size>10</min-pool-size>
+        <max-pool-size>50</max-pool-size>
+        <prefill>true</prefill>
+    </pool>
+    <security>
+        <user-name>root</user-name>
+        <password>root</password>
+    </security>
+</datasource>
