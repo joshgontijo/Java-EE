@@ -18,6 +18,7 @@ import javax.ejb.Startup;
 import javax.enterprise.concurrent.ManagedExecutorService;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
+import java.util.UUID;
 import java.util.concurrent.BlockingQueue;
 
 /**
@@ -31,6 +32,8 @@ public class QueueManager {
     private BlockingQueue<Chunk> queue;
     private HazelcastInstance hazelcastInstance;
     public static final String QUEUE_KEY = "QUEUE";
+
+    public static final String SERVER_NAME = UUID.randomUUID().toString().substring(0,4);
 
     //consumer
     @Resource
@@ -52,8 +55,12 @@ public class QueueManager {
 
     @PreDestroy
     public void destroy() {
-        queue.clear();
-        hazelcastInstance.shutdown();
+        try {
+            queue.clear();
+            hazelcastInstance.shutdown();
+        }catch (Exception ex){
+            //do nothing
+        }
 
 //        mes.shutdown();
     }

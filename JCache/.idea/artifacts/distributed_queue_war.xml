@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="distributed-queue:war">
-    <output-path>$PROJECT_DIR$/distributed-queue/target</output-path>
-    <root id="archive" name="distributed-queue.war">
-      <element id="artifact" artifact-name="distributed-queue:war exploded" />
-    </root>
-  </artifact>
-</component>

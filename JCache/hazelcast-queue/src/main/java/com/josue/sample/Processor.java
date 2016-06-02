@@ -43,6 +43,8 @@ public class Processor implements Runnable {
                 Chunk poll = queue.poll(3, TimeUnit.SECONDS);
                 if (poll != null) {
                     poll.setStatus(Status.COMPLETED);
+                    poll.setServerId(QueueManager.SERVER_NAME);
+                    poll.setThreadId(String.valueOf(Thread.currentThread().getId()));
 
                     utx.begin();
                     em.merge(poll);
