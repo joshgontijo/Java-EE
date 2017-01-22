@@ -5,13 +5,13 @@
  */
 package com.josue.sse.async.servlet;
 
+import javax.servlet.AsyncContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.servlet.AsyncContext;
 
 /**
  *
@@ -31,14 +31,16 @@ public class AsyncService implements Runnable {
     public void run() {
         try {
             PrintWriter writer = context.getResponse().getWriter();
-            for (int i = 0; i <= 10; i++) {
+            for (int i = 0; i <= 1000; i++) {
                 Thread.sleep(1000);
 
                 String currentTime = new SimpleDateFormat("hh:mm:ss").format(new Date());
 
                 logger.log(Level.INFO, ":: PUSHING {0} ::", currentTime);
 
-                writer.write("data: " + currentTime + "\n\n"); //double line break is needed... TODO why ?
+                //The response payload must start with 'data:' and end with '\n\n'
+                //ref: https://www.html5rocks.com/en/tutorials/eventsource/basics/
+                writer.write("data: " + currentTime + "\n\n");
                 writer.flush();
             }
 

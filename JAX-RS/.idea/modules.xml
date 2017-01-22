@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/JerseyViewable/JerseyViewable.iml" filepath="$PROJECT_DIR$/JerseyViewable/JerseyViewable.iml" />
       <module fileurl="file://$PROJECT_DIR$/async-callback/async-callback.iml" filepath="$PROJECT_DIR$/async-callback/async-callback.iml" />
       <module fileurl="file://$PROJECT_DIR$/async-jaxrs/async-jaxrs.iml" filepath="$PROJECT_DIR$/async-jaxrs/async-jaxrs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bean-validation/bean-validation.iml" filepath="$PROJECT_DIR$/bean-validation/bean-validation.iml" />
       <module fileurl="file://$PROJECT_DIR$/jaxrs-base64/jaxrs-base64.iml" filepath="$PROJECT_DIR$/jaxrs-base64/jaxrs-base64.iml" />
       <module fileurl="file://$PROJECT_DIR$/jaxrs-filter/jaxrs-filter.iml" filepath="$PROJECT_DIR$/jaxrs-filter/jaxrs-filter.iml" />
       <module fileurl="file://$PROJECT_DIR$/jaxrs-filter-binding/jaxrs-filter-binding.iml" filepath="$PROJECT_DIR$/jaxrs-filter-binding/jaxrs-filter-binding.iml" />

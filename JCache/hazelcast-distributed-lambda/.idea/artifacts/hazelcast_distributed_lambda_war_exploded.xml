@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="hazelcast-distributed-lambda:war exploded">
+    <output-path>$PROJECT_DIR$/target/hazelcast-distributed-lambda</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="hazelcast-distributed-lambda" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.hazelcast:hazelcast:3.6.4" />
+          <element id="library" level="project" name="Maven: com.esotericsoftware.kryo:kryo:2.24.0" />
+          <element id="library" level="project" name="Maven: com.esotericsoftware.minlog:minlog:1.2" />
+          <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/hazelcast-distributed-lambda/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="hazelcast-distributed-lambda/web/Web" />
+    </root>
+  </artifact>
+</component>

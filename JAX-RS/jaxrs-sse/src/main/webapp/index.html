@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSE</title>
+
+    <script>
+        window.onload = function () {
+            console.log("Connecting to events resource");
+            var eventSource = new EventSource("api/sse");
+
+            eventSource.onopen = function (e) {
+                console.log("Waiting message..");
+            };
+
+            eventSource.onerror = function (e) {
+                console.log(e);
+                throw Error(e);
+            };
+
+            eventSource.onmessage = function (e) {
+                console.log(e);
+                var dataJson = JSON.parse(e.data);
+
+                var node = document.getElementById("events");
+                node.innerHTML = "<p><b>" + dataJson.date + "</b> -> " + dataJson.message + "</p>";
+            };
+        }
+    </script>
+
+</head>
+<body>
+
+<div id="events">
+    <h4>Events</h4>
+    <hr/>
+</div>
+
+</body>
+</html>

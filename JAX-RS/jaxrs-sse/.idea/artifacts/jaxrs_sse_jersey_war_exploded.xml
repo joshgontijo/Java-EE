@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jaxrs-sse-jersey:war exploded">
+    <output-path>$PROJECT_DIR$/jaxrs-sse-jersey/target/jaxrs-sse-jersey</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="jaxrs-sse-jersey" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/jaxrs-sse-jersey/target/jaxrs-sse-jersey/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="jaxrs-sse-jersey/web/Web" />
+    </root>
+  </artifact>
+</component>

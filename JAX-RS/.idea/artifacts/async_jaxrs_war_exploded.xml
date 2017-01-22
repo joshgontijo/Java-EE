@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="async-jaxrs:war exploded">
-    <output-path>$PROJECT_DIR$/async-jaxrs/target/async-jaxrs-0.1</output-path>
+    <output-path>$PROJECT_DIR$/async-jaxrs/target/async-jaxrs</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -8,7 +8,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/async-jaxrs/target/async-jaxrs-0.1/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/async-jaxrs/target/async-jaxrs/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="async-jaxrs/web/Web" />
     </root>

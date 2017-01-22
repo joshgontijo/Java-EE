@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="async-jaxrs" />
+        <module name="cache-annotation" />
+        <module name="entry-processor" />
+        <module name="jaxrs-sse" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="async-jaxrs" target="1.8" />
+      <module name="cache-annotation" target="1.7" />
+      <module name="distributed-queue" target="1.7" />
+      <module name="entry-processor" target="1.7" />
+      <module name="jaxrs-sse" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

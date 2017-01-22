@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/websocket-standalone/client/client.iml" filepath="$PROJECT_DIR$/websocket-standalone/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket-standalone/server/server.iml" filepath="$PROJECT_DIR$/websocket-standalone/server/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket-standalone/websocket-standalone.iml" filepath="$PROJECT_DIR$/websocket-standalone/websocket-standalone.iml" />
+    </modules>
+  </component>
+</project>

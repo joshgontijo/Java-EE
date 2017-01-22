@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java EE.iml" filepath="$PROJECT_DIR$/.idea/Java EE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAX-RS/async-jaxrs/async-jaxrs.iml" filepath="$PROJECT_DIR$/JAX-RS/async-jaxrs/async-jaxrs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JCache/cache-annotation/cache-annotation.iml" filepath="$PROJECT_DIR$/JCache/cache-annotation/cache-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JCache/distributed-queue/distributed-queue.iml" filepath="$PROJECT_DIR$/JCache/distributed-queue/distributed-queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JCache/entry-processor/entry-processor.iml" filepath="$PROJECT_DIR$/JCache/entry-processor/entry-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAX-RS/jaxrs-sse/jaxrs-sse.iml" filepath="$PROJECT_DIR$/JAX-RS/jaxrs-sse/jaxrs-sse.iml" />
+    </modules>
+  </component>
+</project>

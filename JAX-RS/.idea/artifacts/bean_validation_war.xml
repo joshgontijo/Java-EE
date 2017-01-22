@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bean-validation:war">
+    <output-path>$PROJECT_DIR$/bean-validation/target</output-path>
+    <root id="archive" name="bean-validation.war">
+      <element id="artifact" artifact-name="bean-validation:war exploded" />
+    </root>
+  </artifact>
+</component>

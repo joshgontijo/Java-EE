@@ -23,112 +23,42 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="async-callback" />
+        <module name="async-jaxrs" />
+        <module name="bean-validation" />
+        <module name="jaxrs-base64" />
+        <module name="jaxrs-filter" />
+        <module name="jaxrs-filter-binding" />
+        <module name="jaxrs-multiple-applications" />
+        <module name="jaxrs-subresources" />
+        <module name="jaxrs-testing-client" />
+        <module name="jaxrs2-bean-param" />
+        <module name="jboss-custom-jackson-provider" />
         <module name="JerseyViewable" />
         <module name="json-provider" />
-        <module name="streaming-output" />
-      </profile>
-      <profile default="false" name="Annotation profile for jaxrs2-bean-param" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jaxrs2-bean-param" />
-      </profile>
-      <profile default="false" name="Annotation profile for rest-apikey" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="rest-apikey" />
-      </profile>
-      <profile default="false" name="Annotation profile for jaxrs-filter" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jaxrs-filter" />
-      </profile>
-      <profile default="false" name="Annotation profile for jaxrs-filter-binding" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jaxrs-filter-binding" />
-      </profile>
-      <profile default="false" name="Annotation profile for resteasy-file-upload" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
         <module name="resteasy-file-upload" />
-      </profile>
-      <profile default="false" name="Annotation profile for jaxrs-multiple-applications" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jaxrs-multiple-applications" />
-      </profile>
-      <profile default="false" name="Annotation profile for jaxrs-testing-client" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jaxrs-testing-client" />
-      </profile>
-      <profile default="false" name="Annotation profile for jboss-custom-jackson-provider" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jboss-custom-jackson-provider" />
-      </profile>
-      <profile default="false" name="Annotation profile for async-jaxrs" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="async-jaxrs" />
-      </profile>
-      <profile default="false" name="Annotation profile for jaxrs-subresources" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jaxrs-subresources" />
-      </profile>
-      <profile default="false" name="Annotation profile for jaxrs-base64" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="jaxrs-base64" />
-      </profile>
-      <profile default="false" name="Annotation profile for wildfly-jackson-provider" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
+        <module name="streaming-output" />
         <module name="wildfly-jackson-provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="async-callback" target="1.7" />
-      <module name="async-jaxrs" target="1.7" />
-      <module name="jaxrs-base64" target="1.7" />
-      <module name="jaxrs-filter" target="1.7" />
-      <module name="jaxrs-filter-binding" target="1.7" />
-      <module name="jaxrs-multiple-applications" target="1.7" />
-      <module name="jaxrs-subresources" target="1.7" />
-      <module name="jaxrs-testing-client" target="1.7" />
-      <module name="jaxrs2-bean-param" target="1.7" />
-      <module name="jboss-custom-jackson-provider" target="1.7" />
+      <module name="async-jaxrs" target="1.8" />
+      <module name="bean-validation" target="1.8" />
+      <module name="jaxrs-base64" target="1.5" />
+      <module name="jaxrs-filter" target="1.5" />
+      <module name="jaxrs-filter-binding" target="1.5" />
+      <module name="jaxrs-multiple-applications" target="1.5" />
+      <module name="jaxrs-subresources" target="1.5" />
+      <module name="jaxrs-testing-client" target="1.5" />
+      <module name="jaxrs2-bean-param" target="1.5" />
+      <module name="jboss-custom-jackson-provider" target="1.5" />
       <module name="JerseyViewable" target="1.5" />
       <module name="json-provider" target="1.7" />
-      <module name="rest-apikey" target="1.7" />
-      <module name="resteasy-file-upload" target="1.7" />
+      <module name="rest-apikey" target="1.5" />
+      <module name="resteasy-file-upload" target="1.5" />
       <module name="streaming-output" target="1.7" />
-      <module name="wildfly-jackson-provider" target="1.7" />
+      <module name="wildfly-jackson-provider" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

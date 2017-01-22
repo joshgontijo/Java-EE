@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/entry-processor/entry-processor.iml" filepath="$PROJECT_DIR$/entry-processor/entry-processor.iml" />
       <module fileurl="file://$PROJECT_DIR$/hazelcast-lock/hazelcast-lock.iml" filepath="$PROJECT_DIR$/hazelcast-lock/hazelcast-lock.iml" />
       <module fileurl="file://$PROJECT_DIR$/hazelcast-queue/hazelcast-queue.iml" filepath="$PROJECT_DIR$/hazelcast-queue/hazelcast-queue.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hazelcast-queue/hazelcast-queue.iml" filepath="$PROJECT_DIR$/hazelcast-queue/hazelcast-queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/infinispan-basic/infinispan-basic.iml" filepath="$PROJECT_DIR$/infinispan-basic/infinispan-basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/infinispan-replicated/infinispan-replicated.iml" filepath="$PROJECT_DIR$/infinispan-replicated/infinispan-replicated.iml" />
       <module fileurl="file://$PROJECT_DIR$/infinispan-rest/infinispan-rest.iml" filepath="$PROJECT_DIR$/infinispan-rest/infinispan-rest.iml" />
